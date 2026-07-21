@@ -1,17 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-<title>こども家庭庁 新着・更新（非公式変換フィード）</title>
+<title>政府サイト新着(こども政策関連・非公式変換フィード)</title>
 <link>https://www.cfa.go.jp/news</link>
-<description>こども家庭庁ウェブサイトの新着・更新情報をRSSに変換した非公式フィードです（社内情報収集用）</description>
+<description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Tue, 21 Jul 2026 17:00:11 +0900</lastBuildDate>
+<lastBuildDate>Tue, 21 Jul 2026 17:19:49 +0900</lastBuildDate>
+<item>
+<title>【内閣府】第6回人工知能（AI）技術の利用と消費者問題に関する専門調査会【7月17日開催】</title>
+<link>https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/006/shiryou/index.html</link>
+<guid isPermaLink="false">f4d3bcf09785729c7eafff95590330c6</guid>
+<pubDate>Tue, 21 Jul 2026 15:57:00 +0900</pubDate>
+<category>内閣府</category>
+</item>
+<item>
+<title>【こ家庁/会議等】こども家庭審議会障害児支援部会（第20回）について資料掲載しました</title>
+<link>https://www.cfa.go.jp/councils/shingikai/shougaiji_shien/f5a425ea</link>
+<guid isPermaLink="false">2f75ce7f604d373acb8050fd3b8e6b0e</guid>
+<pubDate>Tue, 21 Jul 2026 09:00:00 +0900</pubDate>
+<category>会議等</category>
+</item>
+<item>
+<title>【こ家庁/政策】「児童福祉司の階層別研修等業務一式」概要版資料、報告書について掲載しました</title>
+<link>https://www.cfa.go.jp/policies/jidougyakutai/chosakenkyu-r07</link>
+<guid isPermaLink="false">d4b9f500e7bc11b4d98f9d7c7e62c98d</guid>
+<pubDate>Tue, 21 Jul 2026 09:00:00 +0900</pubDate>
+<category>政策</category>
+</item>
 <item>
 <title>【政策】「児童福祉司の階層別研修等業務一式」概要版資料、報告書について掲載しました</title>
 <link>https://www.cfa.go.jp/policies/jidougyakutai/chosakenkyu-r07</link>
 <guid isPermaLink="false">69133011be5fe98cce15f8d312980ab8</guid>
 <pubDate>Tue, 21 Jul 2026 09:00:00 +0900</pubDate>
 <category>政策</category>
+</item>
+<item>
+<title>【デジタル庁】【ガバメントAI 源内活用事例】冨安デジタル審議官が語る「源内は相棒」を掲載しました</title>
+<link>https://www.digital.go.jp/policies/genai/movie_20260717</link>
+<guid isPermaLink="false">b1ea269243c4fea89390cf5d16c7570d</guid>
+<pubDate>Fri, 17 Jul 2026 15:00:00 +0900</pubDate>
+<category>デジタル庁</category>
+</item>
+<item>
+<title>【厚労省】令和８年度 「こども霞が関見学デー」の詳細が決まりました</title>
+<link>https://www.mhlw.go.jp/stf/houdou/newpage_00238.html</link>
+<guid isPermaLink="false">fd730a6e7ec85ae7f04acbe40630b8a3</guid>
+<pubDate>Fri, 17 Jul 2026 14:00:00 +0900</pubDate>
+<category>厚労省</category>
+</item>
+<item>
+<title>【こ家庁/報道発表】こども家庭庁とシンガポール社会・家庭振興省との協力覚書の署名式について掲載しました</title>
+<link>https://www.cfa.go.jp/press/23403113-51cc-408c-9ced-c091de1a01f2</link>
+<guid isPermaLink="false">9faddb45575bd5a9be0f7844c72ae21a</guid>
+<pubDate>Fri, 17 Jul 2026 09:00:00 +0900</pubDate>
+<category>報道発表</category>
+</item>
+<item>
+<title>【こ家庁/会見】黄川田大臣記者会見（令和8年7月17日）を掲載しました</title>
+<link>https://www.cfa.go.jp/speech/e5a6f0b8</link>
+<guid isPermaLink="false">7317057f85eeb1b135525405e8db8229</guid>
+<pubDate>Fri, 17 Jul 2026 09:00:00 +0900</pubDate>
+<category>会見</category>
+</item>
+<item>
+<title>【こ家庁/報道発表】第17回 人工妊娠中絶一時金認定審査部会の開催について掲載しました</title>
+<link>https://www.cfa.go.jp/press/6a52329c-3761-4a32-92d8-ee78f9bcd8fd</link>
+<guid isPermaLink="false">4b856b127c6b1f5f8205381df93cb725</guid>
+<pubDate>Fri, 17 Jul 2026 09:00:00 +0900</pubDate>
+<category>報道発表</category>
+</item>
+<item>
+<title>【こ家庁/報道発表】「こども性暴力防止法」事業者マークの「こまもろう」が公式キャラクターに</title>
+<link>https://www.cfa.go.jp/press/36f5fcaa-670a-4b5c-8872-3db9efc4d482</link>
+<guid isPermaLink="false">96c9f379bf62ff4a3498a8f73c41ca02</guid>
+<pubDate>Fri, 17 Jul 2026 09:00:00 +0900</pubDate>
+<category>報道発表</category>
+</item>
+<item>
+<title>【こ家庁/報道発表】第17回補償金・優生手術等一時金認定審査部会の審査結果について掲載しました</title>
+<link>https://www.cfa.go.jp/press/533ae4d5-b9f0-4720-9510-a4873859d555</link>
+<guid isPermaLink="false">f9236cf84c323edffe7808401dbb464b</guid>
+<pubDate>Fri, 17 Jul 2026 09:00:00 +0900</pubDate>
+<category>報道発表</category>
+</item>
+<item>
+<title>【こ家庁/報道発表】第4回CDR（Child Death Review：こどもの死亡検証）の制度のあり方に関する検討会の開催のお知らせと検討会当日の頭撮り・事後記者ブリーフィングの実施について掲載しました</title>
+<link>https://www.cfa.go.jp/press/adda2eed-8655-4c56-bc09-09a0f5b8af52</link>
+<guid isPermaLink="false">1732a9bfb35f81e1819138eb9356e9ff</guid>
+<pubDate>Fri, 17 Jul 2026 09:00:00 +0900</pubDate>
+<category>報道発表</category>
+</item>
+<item>
+<title>【こ家庁/報道発表】夏休みはこども家庭庁へ！「こども霞が関見学デー」 7月29日（水）～30日（木）開催</title>
+<link>https://www.cfa.go.jp/press/f761aee3-c297-4a64-ab2f-d44616a8f8f6</link>
+<guid isPermaLink="false">e459ff03b4ac8d384bf60d5382fe902d</guid>
+<pubDate>Fri, 17 Jul 2026 09:00:00 +0900</pubDate>
+<category>報道発表</category>
+</item>
+<item>
+<title>【こ家庁/会議等】補償金・優生手術等一時金認定審査部会（第17回）の議事要旨を掲載しました</title>
+<link>https://www.cfa.go.jp/councils/hoshokin-yuseishujutsu/4774bf7e</link>
+<guid isPermaLink="false">cdde187078e7cd088807d9159ce59027</guid>
+<pubDate>Fri, 17 Jul 2026 09:00:00 +0900</pubDate>
+<category>会議等</category>
 </item>
 <item>
 <title>【報道発表】こども家庭庁とシンガポール社会・家庭振興省との協力覚書の署名式について掲載しました</title>
@@ -63,17 +154,24 @@
 <category>報道発表</category>
 </item>
 <item>
-<title>【調達情報】国立武蔵野学院：国立武蔵野学院新学習棟屋上防水工事の公告を掲載しました</title>
-<link>https://www.cfa.go.jp/musashino/others/choutatsu-jouhou</link>
-<guid isPermaLink="false">4e0598ea58d45c13c12a8b5892371b62</guid>
-<pubDate>Fri, 17 Jul 2026 09:00:00 +0900</pubDate>
-<category>調達情報</category>
-</item>
-<item>
 <title>【会議等】補償金・優生手術等一時金認定審査部会（第17回）の議事要旨を掲載しました</title>
 <link>https://www.cfa.go.jp/councils/hoshokin-yuseishujutsu/4774bf7e</link>
 <guid isPermaLink="false">f42af0fde30ccdd259c44032e15b8894</guid>
 <pubDate>Fri, 17 Jul 2026 09:00:00 +0900</pubDate>
+<category>会議等</category>
+</item>
+<item>
+<title>【こ家庁/報道発表】第20回こども家庭審議会障害児支援部会の開催について掲載しました</title>
+<link>https://www.cfa.go.jp/press/094b5616-ae58-4d26-a265-c77f312c5000</link>
+<guid isPermaLink="false">9ea2a0b0d852e63be31e2886bca3cb7f</guid>
+<pubDate>Thu, 16 Jul 2026 09:00:00 +0900</pubDate>
+<category>報道発表</category>
+</item>
+<item>
+<title>【こ家庁/会議等】CDR（Child Death Review ：こどもの死亡検証）の制度のあり方に関する検討会 （第4回）を掲載しました</title>
+<link>https://www.cfa.go.jp/councils/cdr-seidonoarikata/f9bd9c14</link>
+<guid isPermaLink="false">a26555ea0ccdb99c6bd9a6f48bb7f6b1</guid>
+<pubDate>Thu, 16 Jul 2026 09:00:00 +0900</pubDate>
 <category>会議等</category>
 </item>
 <item>
@@ -84,18 +182,46 @@
 <category>報道発表</category>
 </item>
 <item>
-<title>【調達情報】一般競争入札：地域における家庭支援機能強化促進事業の入札公告を掲載しました</title>
-<link>https://www.cfa.go.jp/procurement/portal</link>
-<guid isPermaLink="false">65cf6bc29198d14a7157a66aa2ac7321</guid>
-<pubDate>Thu, 16 Jul 2026 09:00:00 +0900</pubDate>
-<category>調達情報</category>
-</item>
-<item>
 <title>【会議等】CDR（Child Death Review ：こどもの死亡検証）の制度のあり方に関する検討会 （第4回）を掲載しました</title>
 <link>https://www.cfa.go.jp/councils/cdr-seidonoarikata/f9bd9c14</link>
 <guid isPermaLink="false">48ed52fe49507c2ad5a618e643094406</guid>
 <pubDate>Thu, 16 Jul 2026 09:00:00 +0900</pubDate>
 <category>会議等</category>
+</item>
+<item>
+<title>【デジタル庁】自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）に係る「自治体・自治体システムベンダー向けの情報」、「医療機関・薬局システムベンダー向けの情報」を更新しました</title>
+<link>https://www.digital.go.jp/policies/health/public-medical-hub</link>
+<guid isPermaLink="false">4158f763ff628ed0864335568118fca8</guid>
+<pubDate>Wed, 15 Jul 2026 15:00:00 +0900</pubDate>
+<category>デジタル庁</category>
+</item>
+<item>
+<title>【こ家庁/報道発表】第4回こども性暴力防止法施行準備委員会の開催について掲載しました</title>
+<link>https://www.cfa.go.jp/press/aa46c11d-db2a-40cc-a989-5f13d6d40c75</link>
+<guid isPermaLink="false">4fa4e811359374b0c21117e558872d76</guid>
+<pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
+<category>報道発表</category>
+</item>
+<item>
+<title>【こ家庁/会議等】補償金・優生手術等一時金認定審査部会（第17回）の会議資料を掲載しました</title>
+<link>https://www.cfa.go.jp/councils/hoshokin-yuseishujutsu/4774bf7e</link>
+<guid isPermaLink="false">241899ea2d8aa1056fe34add20f82370</guid>
+<pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
+<category>会議等</category>
+</item>
+<item>
+<title>【こ家庁/会議等】こども性暴力防止法施行準備委員会（第4回）を掲載しました</title>
+<link>https://www.cfa.go.jp/councils/koseibo-preparation-committee/04</link>
+<guid isPermaLink="false">33b5d4c791550663216a2867b63ad8c9</guid>
+<pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
+<category>会議等</category>
+</item>
+<item>
+<title>【こ家庁/報道発表】みてかんじてつながる劇体験 ～優良児童劇等公演事業～令和8年8月8日（土）愛媛県西予市にて開催</title>
+<link>https://www.cfa.go.jp/press/6032ff05-b877-441e-b3ff-716ad16389f6</link>
+<guid isPermaLink="false">cf906e8caa7a2212eb8c65b0cb96109d</guid>
+<pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
+<category>報道発表</category>
 </item>
 <item>
 <title>【報道発表】第4回こども性暴力防止法施行準備委員会の開催について掲載しました</title>
@@ -119,18 +245,25 @@
 <category>会議等</category>
 </item>
 <item>
-<title>【調達情報】一般競争入札：令和8年度社会総がかりで取り組むいじめ対策等に係る広報啓発事業を掲載しました</title>
-<link>https://www.cfa.go.jp/procurement/portal</link>
-<guid isPermaLink="false">14e905c2160e62dcb4bb3126fd73c672</guid>
-<pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
-<category>調達情報</category>
-</item>
-<item>
 <title>【報道発表】みてかんじてつながる劇体験 ～優良児童劇等公演事業～令和8年8月8日（土）愛媛県西予市にて開催</title>
 <link>https://www.cfa.go.jp/press/6032ff05-b877-441e-b3ff-716ad16389f6</link>
 <guid isPermaLink="false">0cfea3a3ab9c30e90b638ec911210140</guid>
 <pubDate>Wed, 15 Jul 2026 09:00:00 +0900</pubDate>
 <category>報道発表</category>
+</item>
+<item>
+<title>【デジタル庁】第5回先進的AI利活用アドバイザリーボードの会議資料等を掲載しました</title>
+<link>https://www.digital.go.jp/councils/ai-advisory-board/770d4c48-7f40-49a6-a49d-56a763800a42</link>
+<guid isPermaLink="false">896712d865f430976d2c335ee8804251</guid>
+<pubDate>Tue, 14 Jul 2026 16:08:00 +0900</pubDate>
+<category>デジタル庁</category>
+</item>
+<item>
+<title>【こ家庁/会見】黄川田大臣記者会見（令和8年7月14日）を掲載しました</title>
+<link>https://www.cfa.go.jp/speech/e60b7b5e</link>
+<guid isPermaLink="false">0772954d1c7e12d20730cb0d75563bfe</guid>
+<pubDate>Tue, 14 Jul 2026 09:00:00 +0900</pubDate>
+<category>会見</category>
 </item>
 <item>
 <title>【会見】黄川田大臣記者会見（令和8年7月14日）を掲載しました</title>
@@ -145,6 +278,13 @@
 <guid isPermaLink="false">0917f7394a20f4942be9b0cdf6dbcae4</guid>
 <pubDate>Tue, 14 Jul 2026 09:00:00 +0900</pubDate>
 <category>会議等</category>
+</item>
+<item>
+<title>【首相官邸】高市総理は第５回人工知能戦略本部を開催しました</title>
+<link>https://www.kantei.go.jp/jp/105/actions/202607/10jinkoutchinou.html</link>
+<guid isPermaLink="false">a1266195e68c621a7bf5dab310793e08</guid>
+<pubDate>Fri, 10 Jul 2026 17:35:00 +0900</pubDate>
+<category>首相官邸</category>
 </item>
 </channel>
 </rss>
