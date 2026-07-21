@@ -1,0 +1,38 @@
+name: build-feed
+
+on:
+  schedule:
+    # 日本時間 7:00〜21:00 の間、2時間おきに実行（cronはUTC表記）
+    - cron: "0 22,0,2,4,6,8,10,12 * * *"
+  workflow_dispatch: {}   # 手動実行ボタンも有効化
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Build feed
+        run: python scraper.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "feed-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/feed.xml docs/feed_items.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update feed $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
