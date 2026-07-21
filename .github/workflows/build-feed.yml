@@ -2,8 +2,8 @@ name: build-feed
 
 on:
   schedule:
-    # 日本時間 7:00〜21:00 の間、2時間おきに実行（cronはUTC表記）
-    - cron: "0 22,0,2,4,6,8,10,12 * * *"
+    # 24時間・30分おきに実行
+    - cron: "*/30 * * * *"
   workflow_dispatch: {}   # 手動実行ボタンも有効化
 
 permissions:
@@ -20,7 +20,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4
+        run: pip install requests beautifulsoup4 feedparser
 
       - name: Build feed
         run: python scraper.py
