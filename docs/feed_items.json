@@ -1,5 +1,68 @@
 [
  {
+  "guid": "dba9b64281988ca6c8b0b327d908775d",
+  "title": "【デジタル庁】ガバメントAI 源内の公式ロゴをリリースしました",
+  "link": "https://www.digital.go.jp/news/bfe6c5a3-8f12-4555-a98d-8a3502a307df",
+  "category": "デジタル庁",
+  "pub_iso": "2026-07-29T15:50:00+09:00"
+ },
+ {
+  "guid": "2bbe7d5070ae77ffabdbd14e3a801cb9",
+  "title": "【デジタル庁】熊本地震の被災自治体等へ、ガバメントAI 源内を緊急提供します",
+  "link": "https://www.digital.go.jp/news/cb912b3b-49c9-4a02-aa46-4056b96c1d4f",
+  "category": "デジタル庁",
+  "pub_iso": "2026-07-29T11:23:00+09:00"
+ },
+ {
+  "guid": "f1fbc171758d7be4436bbfb37f823bec",
+  "title": "【こ家庁/報道発表】第14回ヒト受精胚等を用いる生殖補助医療研究等に関する専門委員会の開催について掲載しました",
+  "link": "https://www.cfa.go.jp/press/b2332a91-7ffc-47a4-b4fd-649b4170a132",
+  "category": "報道発表",
+  "pub_iso": "2026-07-29T09:00:00+09:00"
+ },
+ {
+  "guid": "a97183b9b493aad10247f97425a4a38b",
+  "title": "【こ家庁/政策】国立きぬ川学院：西公務員宿舎改修工事の入札公告を掲載しました",
+  "link": "https://www.cfa.go.jp/kinugawa/nyuusatu-r8",
+  "category": "政策",
+  "pub_iso": "2026-07-29T09:00:00+09:00"
+ },
+ {
+  "guid": "1aa6ae1fa45e9f638aa85b1a0c63b1d7",
+  "title": "【こ家庁/政策】令和7年「教育・保育施設等における事故報告集計」を公表しました",
+  "link": "https://www.cfa.go.jp/policies/child-safety/effort/shukei",
+  "category": "政策",
+  "pub_iso": "2026-07-29T09:00:00+09:00"
+ },
+ {
+  "guid": "0cccd30cc2bc3db4686bbc70ab3a22c4",
+  "title": "【こ家庁/報道発表】「令和6年教育・保育施設等における事故報告集計」の修正及び公表について掲載しました",
+  "link": "https://www.cfa.go.jp/press/e109e058-a3e5-48a8-a598-a6357da035d3",
+  "category": "報道発表",
+  "pub_iso": "2026-07-29T09:00:00+09:00"
+ },
+ {
+  "guid": "c7144013996176b75e750a578db2a076",
+  "title": "【こ家庁/報道発表】「令和5年教育・保育施設等における事故報告集計」の修正及び公表について 掲載しました",
+  "link": "https://www.cfa.go.jp/press/c905954a-260b-48f6-8a96-8865461f9086",
+  "category": "報道発表",
+  "pub_iso": "2026-07-29T09:00:00+09:00"
+ },
+ {
+  "guid": "9566c2690eb207d283ef40f073fe3ed4",
+  "title": "【こ家庁/報道発表】「令和7年教育・保育施設等における事故報告集計」の公表について掲載しました",
+  "link": "https://www.cfa.go.jp/press/c690699b-b0bd-4491-8c4a-9b5de173a4b0",
+  "category": "報道発表",
+  "pub_iso": "2026-07-29T09:00:00+09:00"
+ },
+ {
+  "guid": "90abafab8bf724ced3737dbe8f6dc122",
+  "title": "【こ家庁/報道発表】みてかんじてつながる劇体験～優良児童劇等公演事業～令和8年9月5日（土）宮城県気仙沼市にて開催",
+  "link": "https://www.cfa.go.jp/press/00501ed6-7a3b-4345-b3fc-cc0216ea751e",
+  "category": "報道発表",
+  "pub_iso": "2026-07-29T09:00:00+09:00"
+ },
+ {
   "guid": "4c20d63d60a2fcd52be9489cfc5b6715",
   "title": "【デジタル庁】企画競争：自治体からの照会事務の自動化などの国・地方AI共通サービスに関する実証事業を掲載しました",
   "link": "https://www.digital.go.jp/procurement",
