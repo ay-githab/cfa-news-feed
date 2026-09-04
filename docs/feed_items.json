@@ -1,5 +1,26 @@
 [
  {
+  "guid": "af5b98a252c642875f406d63c91187b4",
+  "title": "【こ家庁/報道発表】保育士養成課程等検討会（第5回）を令和8年9月10日（木）に開催します",
+  "link": "https://www.cfa.go.jp/press/8644ae52-ec3e-41ab-8ea7-30409e82be25",
+  "category": "報道発表",
+  "pub_iso": "2026-09-04T09:00:00+09:00"
+ },
+ {
+  "guid": "cd8827201c37ea4b46860b682f3c3b6f",
+  "title": "【こ家庁/政策】令和9年度放課後児童対策・こども・子育て支援関連予算概算要求の概要について掲載しました",
+  "link": "https://www.cfa.go.jp/policies/kosodateshien/budget",
+  "category": "政策",
+  "pub_iso": "2026-09-04T09:00:00+09:00"
+ },
+ {
+  "guid": "e5e022f3b861cb8be3ce6a3b9b98897d",
+  "title": "【こ家庁/報道発表】悩みを抱えるこども・若者への「声かけ」～その一言が誰かの支えになる～「声かけキャンペーン」特設サイトを公開しました",
+  "link": "https://www.cfa.go.jp/press/20fe1404-5c10-4f02-bd5a-2f7d3c9339ad",
+  "category": "報道発表",
+  "pub_iso": "2026-09-04T09:00:00+09:00"
+ },
+ {
   "guid": "b681650e3cca01a283ec069d048a93fa",
   "title": "【こ家庁/政策】令和9年度予算概算要求について（障害児支援関係）掲載しました",
   "link": "https://www.cfa.go.jp/policies/shougaijishien",
@@ -1027,26 +1048,5 @@
   "link": "https://www.cfa.go.jp/press/6032ff05-b877-441e-b3ff-716ad16389f6",
   "category": "報道発表",
   "pub_iso": "2026-07-15T09:00:00+09:00"
- },
- {
-  "guid": "896712d865f430976d2c335ee8804251",
-  "title": "【デジタル庁】第5回先進的AI利活用アドバイザリーボードの会議資料等を掲載しました",
-  "link": "https://www.digital.go.jp/councils/ai-advisory-board/770d4c48-7f40-49a6-a49d-56a763800a42",
-  "category": "デジタル庁",
-  "pub_iso": "2026-07-14T16:08:00+09:00"
- },
- {
-  "guid": "0772954d1c7e12d20730cb0d75563bfe",
-  "title": "【こ家庁/会見】黄川田大臣記者会見（令和8年7月14日）を掲載しました",
-  "link": "https://www.cfa.go.jp/speech/e60b7b5e",
-  "category": "会見",
-  "pub_iso": "2026-07-14T09:00:00+09:00"
- },
- {
-  "guid": "dc669ce16367408721666c0109892dec",
-  "title": "【会見】黄川田大臣記者会見（令和8年7月14日）を掲載しました",
-  "link": "https://www.cfa.go.jp/speech/e60b7b5e",
-  "category": "会見",
-  "pub_iso": "2026-07-14T09:00:00+09:00"
  }
 ]
