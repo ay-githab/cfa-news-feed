@@ -1,5 +1,19 @@
 [
  {
+  "guid": "b681650e3cca01a283ec069d048a93fa",
+  "title": "【こ家庁/政策】令和9年度予算概算要求について（障害児支援関係）掲載しました",
+  "link": "https://www.cfa.go.jp/policies/shougaijishien",
+  "category": "政策",
+  "pub_iso": "2026-09-04T09:00:00+09:00"
+ },
+ {
+  "guid": "99c0eb44c8fbf2f1e801125736ee6c52",
+  "title": "【こ家庁/政策】令和9年度保育関係予算概算要求の概要について掲載しました",
+  "link": "https://www.cfa.go.jp/policies/hoiku/yosan",
+  "category": "政策",
+  "pub_iso": "2026-09-04T09:00:00+09:00"
+ },
+ {
   "guid": "85d5621136ff59a4dc738ab5b04f09d6",
   "title": "【こ家庁/報道発表】第7回 こどものケアニーズに応じた支援の在り方に関する専門委員会の開催についてを掲載しました",
   "link": "https://www.cfa.go.jp/press/cc08f710-c1c1-425e-b0b0-ddbf95576e20",
@@ -1034,19 +1048,5 @@
   "link": "https://www.cfa.go.jp/speech/e60b7b5e",
   "category": "会見",
   "pub_iso": "2026-07-14T09:00:00+09:00"
- },
- {
-  "guid": "0917f7394a20f4942be9b0cdf6dbcae4",
-  "title": "【会議等】ヒト受精胚を用いる生殖補助医療研究等に関する専門委員会（第12回）の会議情報を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/shingikai/kagaku_gijutsu/art/3ea88f79",
-  "category": "会議等",
-  "pub_iso": "2026-07-14T09:00:00+09:00"
- },
- {
-  "guid": "a1266195e68c621a7bf5dab310793e08",
-  "title": "【首相官邸】高市総理は第５回人工知能戦略本部を開催しました",
-  "link": "https://www.kantei.go.jp/jp/105/actions/202607/10jinkoutchinou.html",
-  "category": "首相官邸",
-  "pub_iso": "2026-07-10T17:35:00+09:00"
  }
 ]

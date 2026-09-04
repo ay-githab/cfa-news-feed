@@ -5,7 +5,21 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Fri, 04 Sep 2026 08:21:24 +0900</lastBuildDate>
+<lastBuildDate>Fri, 04 Sep 2026 10:05:35 +0900</lastBuildDate>
+<item>
+<title>【こ家庁/政策】令和9年度予算概算要求について（障害児支援関係）掲載しました</title>
+<link>https://www.cfa.go.jp/policies/shougaijishien</link>
+<guid isPermaLink="false">b681650e3cca01a283ec069d048a93fa</guid>
+<pubDate>Fri, 04 Sep 2026 09:00:00 +0900</pubDate>
+<category>政策</category>
+</item>
+<item>
+<title>【こ家庁/政策】令和9年度保育関係予算概算要求の概要について掲載しました</title>
+<link>https://www.cfa.go.jp/policies/hoiku/yosan</link>
+<guid isPermaLink="false">99c0eb44c8fbf2f1e801125736ee6c52</guid>
+<pubDate>Fri, 04 Sep 2026 09:00:00 +0900</pubDate>
+<category>政策</category>
+</item>
 <item>
 <title>【こ家庁/報道発表】第7回 こどものケアニーズに応じた支援の在り方に関する専門委員会の開催についてを掲載しました</title>
 <link>https://www.cfa.go.jp/press/cc08f710-c1c1-425e-b0b0-ddbf95576e20</link>
@@ -1041,20 +1055,6 @@
 <guid isPermaLink="false">dc669ce16367408721666c0109892dec</guid>
 <pubDate>Tue, 14 Jul 2026 09:00:00 +0900</pubDate>
 <category>会見</category>
-</item>
-<item>
-<title>【会議等】ヒト受精胚を用いる生殖補助医療研究等に関する専門委員会（第12回）の会議情報を掲載しました</title>
-<link>https://www.cfa.go.jp/councils/shingikai/kagaku_gijutsu/art/3ea88f79</link>
-<guid isPermaLink="false">0917f7394a20f4942be9b0cdf6dbcae4</guid>
-<pubDate>Tue, 14 Jul 2026 09:00:00 +0900</pubDate>
-<category>会議等</category>
-</item>
-<item>
-<title>【首相官邸】高市総理は第５回人工知能戦略本部を開催しました</title>
-<link>https://www.kantei.go.jp/jp/105/actions/202607/10jinkoutchinou.html</link>
-<guid isPermaLink="false">a1266195e68c621a7bf5dab310793e08</guid>
-<pubDate>Fri, 10 Jul 2026 17:35:00 +0900</pubDate>
-<category>首相官邸</category>
 </item>
 </channel>
 </rss>
