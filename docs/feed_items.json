@@ -1,5 +1,12 @@
 [
  {
+  "guid": "4bcdbe59dcea3de712f3ac6ec323d906",
+  "title": "【内閣府】第9回人工知能（AI）技術の利用と消費者問題に関する専門調査会【9月9日開催】",
+  "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/009/shiryou/index.html",
+  "category": "内閣府",
+  "pub_iso": "2026-09-10T15:38:00+09:00"
+ },
+ {
   "guid": "9e1c5d7799f7bdef96c39276111967b3",
   "title": "【こ家庁/会議等】第15回 子ども・子育て支援等分科会の議事録を掲載しました",
   "link": "https://www.cfa.go.jp/councils/shingikai/kodomo_kosodate/7e5f6ec9",
@@ -1041,12 +1048,5 @@
   "link": "https://www.cfa.go.jp/councils/cdr-seidonoarikata/f9bd9c14",
   "category": "会議等",
   "pub_iso": "2026-07-16T09:00:00+09:00"
- },
- {
-  "guid": "4158f763ff628ed0864335568118fca8",
-  "title": "【デジタル庁】自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）に係る「自治体・自治体システムベンダー向けの情報」、「医療機関・薬局システムベンダー向けの情報」を更新しました",
-  "link": "https://www.digital.go.jp/policies/health/public-medical-hub",
-  "category": "デジタル庁",
-  "pub_iso": "2026-07-15T15:00:00+09:00"
  }
 ]
