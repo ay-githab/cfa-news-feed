@@ -1,5 +1,19 @@
 [
  {
+  "guid": "954c21396065f886d8a3dd3012b404d8",
+  "title": "【厚労省】第17回出生動向基本調査（結婚と出産に関する全国調査）結果の概要",
+  "link": "https://www.mhlw.go.jp/toukei/list/118-1.html",
+  "category": "厚労省",
+  "pub_iso": "2026-09-11T15:00:00+09:00"
+ },
+ {
+  "guid": "6f9529f18c3cd2ae059ee1617f28c612",
+  "title": "【厚労省】「令和７年度使用者による障害者虐待の状況等」の結果を公表します",
+  "link": "https://www.mhlw.go.jp/stf/houdou/0000172598_00013.html",
+  "category": "厚労省",
+  "pub_iso": "2026-09-11T14:00:00+09:00"
+ },
+ {
   "guid": "4bcdbe59dcea3de712f3ac6ec323d906",
   "title": "【内閣府】第9回人工知能（AI）技術の利用と消費者問題に関する専門調査会【9月9日開催】",
   "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/009/shiryou/index.html",
@@ -1031,20 +1045,6 @@
  {
   "guid": "a26555ea0ccdb99c6bd9a6f48bb7f6b1",
   "title": "【こ家庁/会議等】CDR（Child Death Review ：こどもの死亡検証）の制度のあり方に関する検討会 （第4回）を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/cdr-seidonoarikata/f9bd9c14",
-  "category": "会議等",
-  "pub_iso": "2026-07-16T09:00:00+09:00"
- },
- {
-  "guid": "39ca875bb56b703687e867e846dbbb93",
-  "title": "【報道発表】第20回こども家庭審議会障害児支援部会の開催について掲載しました",
-  "link": "https://www.cfa.go.jp/press/094b5616-ae58-4d26-a265-c77f312c5000",
-  "category": "報道発表",
-  "pub_iso": "2026-07-16T09:00:00+09:00"
- },
- {
-  "guid": "48ed52fe49507c2ad5a618e643094406",
-  "title": "【会議等】CDR（Child Death Review ：こどもの死亡検証）の制度のあり方に関する検討会 （第4回）を掲載しました",
   "link": "https://www.cfa.go.jp/councils/cdr-seidonoarikata/f9bd9c14",
   "category": "会議等",
   "pub_iso": "2026-07-16T09:00:00+09:00"
