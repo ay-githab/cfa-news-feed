@@ -21,6 +21,20 @@
   "pub_iso": "2026-09-18T15:00:00+09:00"
  },
  {
+  "guid": "f5caf1185305afd5a49e2340ca9c4a38",
+  "title": "【こ家庁/会見】中司大臣記者会見（令和8年9月18日）を掲載しました",
+  "link": "https://www.cfa.go.jp/speech/cf879852",
+  "category": "会見",
+  "pub_iso": "2026-09-18T09:00:00+09:00"
+ },
+ {
+  "guid": "64c4c769865b6448f5c084af11ae9a79",
+  "title": "【こ家庁】組織情報 幹部名簿を更新しました",
+  "link": "https://www.cfa.go.jp/about",
+  "category": "こ家庁",
+  "pub_iso": "2026-09-18T09:00:00+09:00"
+ },
+ {
   "guid": "f0ed784ed3e6c58141f963c27acaee65",
   "title": "【こ家庁/報道発表】第19回人工妊娠中絶一時金認定審査部会の開催について掲載しました",
   "link": "https://www.cfa.go.jp/press/1ee54958-d448-4b76-9dc7-a3f2c843b0dc",
@@ -1034,19 +1048,5 @@
   "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/006/shiryou/index.html",
   "category": "内閣府",
   "pub_iso": "2026-07-21T15:57:00+09:00"
- },
- {
-  "guid": "883a0904539522c1c29e52acad85c077",
-  "title": "【こ家庁/会見】黄川田大臣記者会見（令和8年7月21日）を掲載しました",
-  "link": "https://www.cfa.go.jp/speech/1a220741",
-  "category": "会見",
-  "pub_iso": "2026-07-21T09:00:00+09:00"
- },
- {
-  "guid": "10c2c7fe4588b0b10fa54d36e52f5a9d",
-  "title": "【こ家庁/報道発表】第13回ヒト受精胚等を用いる生殖補助医療研究等に関する専門委員会の開催について掲載しました",
-  "link": "https://www.cfa.go.jp/press/624f3742-5075-447d-9141-d913ae036a8d",
-  "category": "報道発表",
-  "pub_iso": "2026-07-21T09:00:00+09:00"
  }
 ]
