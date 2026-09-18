@@ -1,5 +1,47 @@
 [
  {
+  "guid": "05e3b2f92be4fd32ef013a732d81d9e2",
+  "title": "【デジタル庁】【終了】「ガバメントAI 源内OSS Ver 2.0の計画に関するオンライン説明会」の開催について（ご案内）",
+  "link": "https://www.digital.go.jp/news/b6d94913-60d0-450d-ab46-8e89659f1fc6",
+  "category": "デジタル庁",
+  "pub_iso": "2026-09-18T15:00:00+09:00"
+ },
+ {
+  "guid": "66ded7b8402d66c70ee3abf0a2014702",
+  "title": "【デジタル庁】ガバメントAI 源内OSS Ver 2.0の計画に関する全国オンライン説明会を開催しました",
+  "link": "https://www.digital.go.jp/news/e525db0b-eac1-49e2-9ef4-6d2e24208498",
+  "category": "デジタル庁",
+  "pub_iso": "2026-09-18T15:00:00+09:00"
+ },
+ {
+  "guid": "942d20ea6320228d566f279c493ee2e0",
+  "title": "【デジタル庁】企画競争：令和8年度 政府情報システムの設計開発及び運用保守における内部開発に対するAI有用性の調査研究事業を掲載しました",
+  "link": "https://www.digital.go.jp/procurement",
+  "category": "デジタル庁",
+  "pub_iso": "2026-09-18T15:00:00+09:00"
+ },
+ {
+  "guid": "f0ed784ed3e6c58141f963c27acaee65",
+  "title": "【こ家庁/報道発表】第19回人工妊娠中絶一時金認定審査部会の開催について掲載しました",
+  "link": "https://www.cfa.go.jp/press/1ee54958-d448-4b76-9dc7-a3f2c843b0dc",
+  "category": "報道発表",
+  "pub_iso": "2026-09-18T09:00:00+09:00"
+ },
+ {
+  "guid": "a45de51d132e8f0cfb90a809bf2ca210",
+  "title": "【こ家庁/会議等】教育・保育施設等における重大事故防止策を考える有識者会議のページを更新しました",
+  "link": "https://www.cfa.go.jp/councils/child-safety-kyoiku-hoiku",
+  "category": "会議等",
+  "pub_iso": "2026-09-18T09:00:00+09:00"
+ },
+ {
+  "guid": "aaf88c5aec9eb644c3d69a4d2483e39f",
+  "title": "【こ家庁/政策】旧優生保護法補償金等支給法に基づく補償金等の請求・相談件数及び支給認定件数、並びにサポート弁護士登録数等の状況について更新しました",
+  "link": "https://www.cfa.go.jp/kyuyusei-hoshokin",
+  "category": "政策",
+  "pub_iso": "2026-09-18T09:00:00+09:00"
+ },
+ {
   "guid": "70f26228fb16fe411b720e997bfa51e8",
   "title": "【こ家庁/報道発表】匿名障害福祉及び障害児福祉情報等の提供に関する専門委員会（第9回）の開催について掲載しました",
   "link": "https://www.cfa.go.jp/press/75abdfb1-aae7-40f4-a979-ea7d838f1c09",
@@ -1006,47 +1048,5 @@
   "link": "https://www.cfa.go.jp/press/624f3742-5075-447d-9141-d913ae036a8d",
   "category": "報道発表",
   "pub_iso": "2026-07-21T09:00:00+09:00"
- },
- {
-  "guid": "2f75ce7f604d373acb8050fd3b8e6b0e",
-  "title": "【こ家庁/会議等】こども家庭審議会障害児支援部会（第20回）について資料掲載しました",
-  "link": "https://www.cfa.go.jp/councils/shingikai/shougaiji_shien/f5a425ea",
-  "category": "会議等",
-  "pub_iso": "2026-07-21T09:00:00+09:00"
- },
- {
-  "guid": "d4b9f500e7bc11b4d98f9d7c7e62c98d",
-  "title": "【こ家庁/政策】「児童福祉司の階層別研修等業務一式」概要版資料、報告書について掲載しました",
-  "link": "https://www.cfa.go.jp/policies/jidougyakutai/chosakenkyu-r07",
-  "category": "政策",
-  "pub_iso": "2026-07-21T09:00:00+09:00"
- },
- {
-  "guid": "69133011be5fe98cce15f8d312980ab8",
-  "title": "【政策】「児童福祉司の階層別研修等業務一式」概要版資料、報告書について掲載しました",
-  "link": "https://www.cfa.go.jp/policies/jidougyakutai/chosakenkyu-r07",
-  "category": "政策",
-  "pub_iso": "2026-07-21T09:00:00+09:00"
- },
- {
-  "guid": "b1ea269243c4fea89390cf5d16c7570d",
-  "title": "【デジタル庁】【ガバメントAI 源内活用事例】冨安デジタル審議官が語る「源内は相棒」を掲載しました",
-  "link": "https://www.digital.go.jp/policies/genai/movie_20260717",
-  "category": "デジタル庁",
-  "pub_iso": "2026-07-17T15:00:00+09:00"
- },
- {
-  "guid": "fd730a6e7ec85ae7f04acbe40630b8a3",
-  "title": "【厚労省】令和８年度 「こども霞が関見学デー」の詳細が決まりました",
-  "link": "https://www.mhlw.go.jp/stf/houdou/newpage_00238.html",
-  "category": "厚労省",
-  "pub_iso": "2026-07-17T14:00:00+09:00"
- },
- {
-  "guid": "9faddb45575bd5a9be0f7844c72ae21a",
-  "title": "【こ家庁/報道発表】こども家庭庁とシンガポール社会・家庭振興省との協力覚書の署名式について掲載しました",
-  "link": "https://www.cfa.go.jp/press/23403113-51cc-408c-9ced-c091de1a01f2",
-  "category": "報道発表",
-  "pub_iso": "2026-07-17T09:00:00+09:00"
  }
 ]
