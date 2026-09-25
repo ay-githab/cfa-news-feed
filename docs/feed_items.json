@@ -1,5 +1,19 @@
 [
  {
+  "guid": "875454d00eb7b3990e8a7eac0e3bdf2d",
+  "title": "【厚労省】妊娠・出産・産後における診療やケアの内容等に関する検討会",
+  "link": "https://www.mhlw.go.jp/stf/shingi/other-hoken_474087_00009.html",
+  "category": "厚労省",
+  "pub_iso": "2026-09-25T14:10:00+09:00"
+ },
+ {
+  "guid": "6a9838792ed6125521a5c3260c4a9a41",
+  "title": "【こ家庁/政策】「こども性暴力防止法」に関する情報処理安全確保支援士への相談支援を開始します（民間の中小規模事業者向け）",
+  "link": "https://www.cfa.go.jp/policies/child-safety/efforts/koseibouhou/security-specialist",
+  "category": "政策",
+  "pub_iso": "2026-09-25T09:00:00+09:00"
+ },
+ {
   "guid": "680557b6c864179e0f9cf7929094787a",
   "title": "【内閣府】第10回人工知能（AI）技術の利用と消費者問題に関する専門調査会【9月18日開催】",
   "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/010/shiryou/index.html",
@@ -1033,20 +1047,6 @@
   "title": "【こ家庁/政策】旧優生保護法補償金等支給法に基づく補償金等の請求・相談件数及び支給認定件数、並びにサポート弁護士登録数等の状況について更新しました。",
   "link": "https://www.cfa.go.jp/kyuyusei-hoshokin",
   "category": "政策",
-  "pub_iso": "2026-07-22T09:00:00+09:00"
- },
- {
-  "guid": "425f577c0eaad933b9c859588f46ce0a",
-  "title": "【こ家庁/報道発表】みてかんじてつながる劇体験 ～優良児童劇等公演事業～令和8年8月23日（日）宮崎県都城市にて開催",
-  "link": "https://www.cfa.go.jp/press/840aca8c-cf8b-48f4-a6bf-1a8049741986",
-  "category": "報道発表",
-  "pub_iso": "2026-07-22T09:00:00+09:00"
- },
- {
-  "guid": "990be3ed7facceca4fc33983e93348ce",
-  "title": "【こ家庁】組織情報 令和8年7月22日付人事異動情報を掲載しました",
-  "link": "https://www.cfa.go.jp/about/jinji",
-  "category": "こ家庁",
   "pub_iso": "2026-07-22T09:00:00+09:00"
  }
 ]
