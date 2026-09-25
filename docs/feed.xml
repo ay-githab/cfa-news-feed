@@ -5,13 +5,20 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Fri, 25 Sep 2026 14:38:47 +0900</lastBuildDate>
+<lastBuildDate>Fri, 25 Sep 2026 19:38:07 +0900</lastBuildDate>
 <item>
 <title>【厚労省】妊娠・出産・産後における診療やケアの内容等に関する検討会</title>
 <link>https://www.mhlw.go.jp/stf/shingi/other-hoken_474087_00009.html</link>
 <guid isPermaLink="false">875454d00eb7b3990e8a7eac0e3bdf2d</guid>
 <pubDate>Fri, 25 Sep 2026 14:10:00 +0900</pubDate>
 <category>厚労省</category>
+</item>
+<item>
+<title>【こ家庁/政策】中司大臣記者会見（令和8年9月25日）を掲載しました</title>
+<link>https://www.cfa.go.jp/speech/af0437cd</link>
+<guid isPermaLink="false">1ebd50f19befffa642fa1720c5fc8c3f</guid>
+<pubDate>Fri, 25 Sep 2026 09:00:00 +0900</pubDate>
+<category>政策</category>
 </item>
 <item>
 <title>【こ家庁/政策】「こども性暴力防止法」に関する情報処理安全確保支援士への相談支援を開始します（民間の中小規模事業者向け）</title>
@@ -1048,13 +1055,6 @@
 <guid isPermaLink="false">152e41062a1a5a6a7aa7af47a870aa24</guid>
 <pubDate>Wed, 22 Jul 2026 09:00:00 +0900</pubDate>
 <category>会議等</category>
-</item>
-<item>
-<title>【こ家庁/政策】旧優生保護法補償金等支給法に基づく補償金等の請求・相談件数及び支給認定件数、並びにサポート弁護士登録数等の状況について更新しました。</title>
-<link>https://www.cfa.go.jp/kyuyusei-hoshokin</link>
-<guid isPermaLink="false">70655319d2dff1637808972e12ee3cb9</guid>
-<pubDate>Wed, 22 Jul 2026 09:00:00 +0900</pubDate>
-<category>政策</category>
 </item>
 </channel>
 </rss>
