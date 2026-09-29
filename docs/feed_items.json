@@ -1,10 +1,38 @@
 [
  {
+  "guid": "4939f2298a3864db28a58d663ac4fbe0",
+  "title": "【デジタル庁】第6回先進的AI利活用アドバイザリーボードの会議資料等を掲載しました",
+  "link": "https://www.digital.go.jp/councils/ai-advisory-board/162953b0-3dc0-46a6-a24c-0e3a335e0495",
+  "category": "デジタル庁",
+  "pub_iso": "2026-09-29T15:00:00+09:00"
+ },
+ {
   "guid": "8c143e8ed8a9d6a923bb1ce609367879",
   "title": "【厚労省】「令和８年版 労働経済の分析」を公表します ～分析テーマは「ＡＩ等技術革新が進む中での労働市場の現状と課題」～",
   "link": "https://www.mhlw.go.jp/stf/newpage_75700.html",
   "category": "厚労省",
   "pub_iso": "2026-09-29T11:45:00+09:00"
+ },
+ {
+  "guid": "b1a7e6eef1531af11adefab036c98d01",
+  "title": "【こ家庁/会見】中司大臣記者会見（令和8年9月29日）を掲載しました",
+  "link": "https://www.cfa.go.jp/speech/6b7e57d9",
+  "category": "会見",
+  "pub_iso": "2026-09-29T09:00:00+09:00"
+ },
+ {
+  "guid": "c0a42b96f7966b3cea1956f92579f9c4",
+  "title": "【こ家庁/報道発表】青少年インターネット環境整備法の在り方等に関する検討ワーキンググループ（第9回）の開催を掲載しました",
+  "link": "https://www.cfa.go.jp/press/e3f549f5-065b-4c1c-8e24-5ba309b90424",
+  "category": "報道発表",
+  "pub_iso": "2026-09-29T09:00:00+09:00"
+ },
+ {
+  "guid": "fa01fea646f0c468fdf36f462321bc89",
+  "title": "【こ家庁/会議等】青少年インターネット環境整備法の在り方等に関する検討ワーキンググループ（第9回）の開催案内を掲載しました",
+  "link": "https://www.cfa.go.jp/councils/internet-kaigi/5468bf4a",
+  "category": "会議等",
+  "pub_iso": "2026-09-29T09:00:00+09:00"
  },
  {
   "guid": "393aeec4ff8223a6457722ed808ff6b2",
@@ -1020,33 +1048,5 @@
   "link": "https://www.cfa.go.jp/press/3630583e-f5fd-4549-b37a-59ee31fa4902",
   "category": "報道発表",
   "pub_iso": "2026-07-24T09:00:00+09:00"
- },
- {
-  "guid": "b093e7f2b66d139b2c460a538d2255e2",
-  "title": "【内閣府】第7回人工知能（AI）技術の利用と消費者問題に関する専門調査会【7月30日開催】",
-  "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/007/kaisai/index.html",
-  "category": "内閣府",
-  "pub_iso": "2026-07-23T17:17:00+09:00"
- },
- {
-  "guid": "8f7909fc84321fb78fc49c00d53c339f",
-  "title": "【こ家庁/会議等】人工妊娠中絶一時金認定審査部会（第17回）の会議資料を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/jinkoninshinchuzetsu-ichijikin/deff898c",
-  "category": "会議等",
-  "pub_iso": "2026-07-23T09:00:00+09:00"
- },
- {
-  "guid": "fc84e70229e9259c1e7974ec623e1f0f",
-  "title": "【こ家庁/政策】ヤングケアラーの支援に向けた福祉・介護・医療・就労・教育の連携プロジェクトチーム第2回を開催しました",
-  "link": "https://www.cfa.go.jp/policies/young-carer/support-project/02",
-  "category": "政策",
-  "pub_iso": "2026-07-23T09:00:00+09:00"
- },
- {
-  "guid": "cfe23257e047cfe6ac6b7ba96564a652",
-  "title": "【こ家庁/会議等】匿名障害福祉及び障害児福祉情報等の提供に関する専門委員会（第8回）の議事録を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/shingikai/shougaiji_shien/tokumei-senmon/33519f7e",
-  "category": "会議等",
-  "pub_iso": "2026-07-23T09:00:00+09:00"
  }
 ]
