@@ -1,5 +1,12 @@
 [
  {
+  "guid": "37cf6f06c9ed2046fd16154010a5bab7",
+  "title": "【デジタル庁】熊本地震の被災自治体等へ、ガバメントAI 源内を緊急提供します（終了）",
+  "link": "https://www.digital.go.jp/news/cb912b3b-49c9-4a02-aa46-4056b96c1d4f",
+  "category": "デジタル庁",
+  "pub_iso": "2026-09-30T18:18:00+09:00"
+ },
+ {
   "guid": "93048d8a29dd9127f163b93346400bd5",
   "title": "【デジタル庁】地方公共団体におけるアナログ規制の見直しの取組紹介「和歌山県における衛星データとAIの活用事例」を掲載しました",
   "link": "https://www.digital.go.jp/policies/digital-extraordinary-administrative-research-committee/local-government",
@@ -12,6 +19,20 @@
   "link": "https://www.digital.go.jp/resources/govdashboard/pmh-medical-expense-subsidies",
   "category": "デジタル庁",
   "pub_iso": "2026-09-30T15:00:00+09:00"
+ },
+ {
+  "guid": "9e7c77d0b2d1a7077e72476caa14dd08",
+  "title": "【こ家庁/会議等】旧優生保護法問題の全面解決に向けた協議（第3回）の会議資料を掲載しました",
+  "link": "https://www.cfa.go.jp/councils/kyuyusei-zemmeikaiketsu/0899e4c0",
+  "category": "会議等",
+  "pub_iso": "2026-09-30T09:00:00+09:00"
+ },
+ {
+  "guid": "17c619b5abdda3296c98e57fd10f1216",
+  "title": "【こ家庁/会議等】こども家庭審議会障害児支援部会（第21回）の議事概要を掲載しました",
+  "link": "https://www.cfa.go.jp/councils/shingikai/shougaiji_shien/c1010d3b",
+  "category": "会議等",
+  "pub_iso": "2026-09-30T09:00:00+09:00"
  },
  {
   "guid": "0b04cdcf980486bde98ab643cfb2e540",
@@ -1026,27 +1047,6 @@
   "title": "【こ家庁/会議等】青少年インターネット環境整備法の在り方等に関する検討ワーキンググループ（第7回）の開催案内を掲載しました",
   "link": "https://www.cfa.go.jp/councils/internet-kaigi/d9ee4f54",
   "category": "会議等",
-  "pub_iso": "2026-07-28T09:00:00+09:00"
- },
- {
-  "guid": "40a47d675bdef0adced8cabbbbbb066d",
-  "title": "【こ家庁/報道発表】こども・若者参画及び意見反映専門委員会（第15回）について掲載しました",
-  "link": "https://www.cfa.go.jp/press/738c3326-2af9-4174-a11f-99f0288387da",
-  "category": "報道発表",
-  "pub_iso": "2026-07-28T09:00:00+09:00"
- },
- {
-  "guid": "a1d95944413f5b2fb3d2ae0cec31f3ae",
-  "title": "【こ家庁/報道発表】「こども・若者の自殺対策集中取組期間」について掲載しました",
-  "link": "https://www.cfa.go.jp/press/d3e344d9-0418-45bd-af04-34c03ba87f22",
-  "category": "報道発表",
-  "pub_iso": "2026-07-28T09:00:00+09:00"
- },
- {
-  "guid": "d57f6d7d980b161b08421dd5927dd069",
-  "title": "【こ家庁/政策】こどもの自殺対策推進室：広報啓発について更新しました",
-  "link": "https://www.cfa.go.jp/policies/kodomonojisatsutaisaku/r8kouhoupj",
-  "category": "政策",
   "pub_iso": "2026-07-28T09:00:00+09:00"
  }
 ]
