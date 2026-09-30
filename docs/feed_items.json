@@ -1,5 +1,47 @@
 [
  {
+  "guid": "93048d8a29dd9127f163b93346400bd5",
+  "title": "【デジタル庁】地方公共団体におけるアナログ規制の見直しの取組紹介「和歌山県における衛星データとAIの活用事例」を掲載しました",
+  "link": "https://www.digital.go.jp/policies/digital-extraordinary-administrative-research-committee/local-government",
+  "category": "デジタル庁",
+  "pub_iso": "2026-09-30T15:00:00+09:00"
+ },
+ {
+  "guid": "bd76832025c3f8c2bf89fa821a02f93e",
+  "title": "【デジタル庁】自治体が実施する健康・医療・介護分野の事業のデジタル化（PMH）ー医療費助成に関するダッシュボードを公開しました",
+  "link": "https://www.digital.go.jp/resources/govdashboard/pmh-medical-expense-subsidies",
+  "category": "デジタル庁",
+  "pub_iso": "2026-09-30T15:00:00+09:00"
+ },
+ {
+  "guid": "0b04cdcf980486bde98ab643cfb2e540",
+  "title": "【こ家庁/報道発表】令和8年健やか親子21内閣府特命担当大臣表彰の受賞者発表について掲載しました",
+  "link": "https://www.cfa.go.jp/press/ad6f3159-43eb-48b2-a6c3-40dc43f521e9",
+  "category": "報道発表",
+  "pub_iso": "2026-09-30T09:00:00+09:00"
+ },
+ {
+  "guid": "95b50e2b95671994c044be235b99346f",
+  "title": "【こ家庁/報道発表】第16回ヒト受精胚等を用いる生殖補助医療研究等に関する専門委員会の開催についてを掲載しました",
+  "link": "https://www.cfa.go.jp/press/ab4c3ae4-ba86-4d5a-8ba7-c3f7ea42908c",
+  "category": "報道発表",
+  "pub_iso": "2026-09-30T09:00:00+09:00"
+ },
+ {
+  "guid": "aa6b329d36c2c07e758a30fb9e283050",
+  "title": "【こ家庁/会議等】第19回人工妊娠中絶一時金認定審査部会の議事要旨について掲載しました",
+  "link": "https://www.cfa.go.jp/councils/jinkoninshinchuzetsu-ichijikin/bf8cb456",
+  "category": "会議等",
+  "pub_iso": "2026-09-30T09:00:00+09:00"
+ },
+ {
+  "guid": "5715f2fa7ad907332aeb9322e75fa2aa",
+  "title": "【こ家庁/報道発表】第19回人工妊娠中絶一時金認定審査部会の審査結果について掲載しました",
+  "link": "https://www.cfa.go.jp/press/2020862d-cd0d-4ae3-9ba9-6d93e3ba2a2f",
+  "category": "報道発表",
+  "pub_iso": "2026-09-30T09:00:00+09:00"
+ },
+ {
   "guid": "4939f2298a3864db28a58d663ac4fbe0",
   "title": "【デジタル庁】第6回先進的AI利活用アドバイザリーボードの会議資料等を掲載しました",
   "link": "https://www.digital.go.jp/councils/ai-advisory-board/162953b0-3dc0-46a6-a24c-0e3a335e0495",
@@ -1006,47 +1048,5 @@
   "link": "https://www.cfa.go.jp/policies/kodomonojisatsutaisaku/r8kouhoupj",
   "category": "政策",
   "pub_iso": "2026-07-28T09:00:00+09:00"
- },
- {
-  "guid": "14ac76f28bdb41f22df8b768e5b765c5",
-  "title": "【こ家庁/報道発表】第17回人工妊娠中絶一時金認定審査部会の審査結果について掲載しました",
-  "link": "https://www.cfa.go.jp/press/0785c976-1cea-4288-a61c-d41fa147a983",
-  "category": "報道発表",
-  "pub_iso": "2026-07-27T09:00:00+09:00"
- },
- {
-  "guid": "3110ffbba08e6fcffe96eac313f67117",
-  "title": "【こ家庁/会議等】第17回人工妊娠中絶一時金認定審査部会の議事要旨について掲載しました",
-  "link": "https://www.cfa.go.jp/councils/jinkoninshinchuzetsu-ichijikin/deff898c",
-  "category": "会議等",
-  "pub_iso": "2026-07-27T09:00:00+09:00"
- },
- {
-  "guid": "077bbd4e018e3eaaff0a88c99b724575",
-  "title": "【こ家庁】組織情報 令和8年7月27日付人事異動情報を掲載しました",
-  "link": "https://www.cfa.go.jp/about/jinji",
-  "category": "こ家庁",
-  "pub_iso": "2026-07-27T09:00:00+09:00"
- },
- {
-  "guid": "65482981dcb84e8f41ef218aa53b69c2",
-  "title": "【デジタル庁】「ガバメントAI 源内OSS Ver 2.0の計画に関するオンライン説明会」の開催について（ご案内）",
-  "link": "https://www.digital.go.jp/news/b6d94913-60d0-450d-ab46-8e89659f1fc6",
-  "category": "デジタル庁",
-  "pub_iso": "2026-07-24T15:00:00+09:00"
- },
- {
-  "guid": "0d4afe74a7e5bd73f5e72c8c8bf8d639",
-  "title": "【こ家庁/会見】黄川田大臣記者会見（令和8年7月24日）を掲載しました",
-  "link": "https://www.cfa.go.jp/speech/24f50d74",
-  "category": "会見",
-  "pub_iso": "2026-07-24T09:00:00+09:00"
- },
- {
-  "guid": "8a1fa211dcb30f134d3e37036a5ad326",
-  "title": "【こ家庁/報道発表】こども家庭審議会児童虐待防止対策部会児童虐待等要保護事例の検証に関する専門委員会（第134回）の開催について掲載しました",
-  "link": "https://www.cfa.go.jp/press/3630583e-f5fd-4549-b37a-59ee31fa4902",
-  "category": "報道発表",
-  "pub_iso": "2026-07-24T09:00:00+09:00"
  }
 ]
