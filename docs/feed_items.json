@@ -1,5 +1,12 @@
 [
  {
+  "guid": "9d9f5e400b26e2e80c00ae5ee4ae3b4a",
+  "title": "【内閣府】第11回人工知能（AI）技術の利用と消費者問題に関する専門調査会【10月８日開催】",
+  "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/011/kaisai/index.html",
+  "category": "内閣府",
+  "pub_iso": "2026-10-01T15:56:00+09:00"
+ },
+ {
   "guid": "37cf6f06c9ed2046fd16154010a5bab7",
   "title": "【デジタル庁】熊本地震の被災自治体等へ、ガバメントAI 源内を緊急提供します（終了）",
   "link": "https://www.digital.go.jp/news/cb912b3b-49c9-4a02-aa46-4056b96c1d4f",
@@ -1040,13 +1047,6 @@
   "title": "【こ家庁/会見】黄川田大臣記者会見（令和8年7月28日）を掲載しました",
   "link": "https://www.cfa.go.jp/speech/79352682",
   "category": "会見",
-  "pub_iso": "2026-07-28T09:00:00+09:00"
- },
- {
-  "guid": "e5a5f6e3a33d8feea85bba2f1c4ab72c",
-  "title": "【こ家庁/会議等】青少年インターネット環境整備法の在り方等に関する検討ワーキンググループ（第7回）の開催案内を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/internet-kaigi/d9ee4f54",
-  "category": "会議等",
   "pub_iso": "2026-07-28T09:00:00+09:00"
  }
 ]
