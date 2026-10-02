@@ -5,7 +5,21 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Fri, 02 Oct 2026 11:42:04 +0900</lastBuildDate>
+<lastBuildDate>Fri, 02 Oct 2026 18:04:06 +0900</lastBuildDate>
+<item>
+<title>【内閣府】AIの社会実装において、障害となる又は不十分な効果をもたらす規制・制度についての情報提供のお願い</title>
+<link>https://www8.cao.go.jp/kisei-kaikaku/kisei/forms/261002_forms.html</link>
+<guid isPermaLink="false">548dfb76f7e5ba350d00d568f573f4ea</guid>
+<pubDate>Fri, 02 Oct 2026 15:22:00 +0900</pubDate>
+<category>内閣府</category>
+</item>
+<item>
+<title>【こ家庁/会見】中司大臣記者会見（令和8年10月2日）を掲載しました</title>
+<link>https://www.cfa.go.jp/speech/9a360866</link>
+<guid isPermaLink="false">c951de7d6becb1985448881d7dbb4a12</guid>
+<pubDate>Fri, 02 Oct 2026 09:00:00 +0900</pubDate>
+<category>会見</category>
+</item>
 <item>
 <title>【デジタル庁】自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）に係る「先行実施事業の実施状況」「自治体・自治体システムベンダー向けの情報」「システム利用規約（医療機関等向け）」を更新しました</title>
 <link>https://www.digital.go.jp/policies/health/public-medical-hub</link>
@@ -1041,20 +1055,6 @@
 <guid isPermaLink="false">9566c2690eb207d283ef40f073fe3ed4</guid>
 <pubDate>Wed, 29 Jul 2026 09:00:00 +0900</pubDate>
 <category>報道発表</category>
-</item>
-<item>
-<title>【こ家庁/報道発表】みてかんじてつながる劇体験～優良児童劇等公演事業～令和8年9月5日（土）宮城県気仙沼市にて開催</title>
-<link>https://www.cfa.go.jp/press/00501ed6-7a3b-4345-b3fc-cc0216ea751e</link>
-<guid isPermaLink="false">90abafab8bf724ced3737dbe8f6dc122</guid>
-<pubDate>Wed, 29 Jul 2026 09:00:00 +0900</pubDate>
-<category>報道発表</category>
-</item>
-<item>
-<title>【デジタル庁】企画競争：自治体からの照会事務の自動化などの国・地方AI共通サービスに関する実証事業を掲載しました</title>
-<link>https://www.digital.go.jp/procurement</link>
-<guid isPermaLink="false">4c20d63d60a2fcd52be9489cfc5b6715</guid>
-<pubDate>Tue, 28 Jul 2026 15:00:00 +0900</pubDate>
-<category>デジタル庁</category>
 </item>
 </channel>
 </rss>

@@ -1,5 +1,19 @@
 [
  {
+  "guid": "548dfb76f7e5ba350d00d568f573f4ea",
+  "title": "【内閣府】AIの社会実装において、障害となる又は不十分な効果をもたらす規制・制度についての情報提供のお願い",
+  "link": "https://www8.cao.go.jp/kisei-kaikaku/kisei/forms/261002_forms.html",
+  "category": "内閣府",
+  "pub_iso": "2026-10-02T15:22:00+09:00"
+ },
+ {
+  "guid": "c951de7d6becb1985448881d7dbb4a12",
+  "title": "【こ家庁/会見】中司大臣記者会見（令和8年10月2日）を掲載しました",
+  "link": "https://www.cfa.go.jp/speech/9a360866",
+  "category": "会見",
+  "pub_iso": "2026-10-02T09:00:00+09:00"
+ },
+ {
   "guid": "9c81802b2e5b35c6cad5ff5505867247",
   "title": "【デジタル庁】自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）に係る「先行実施事業の実施状況」「自治体・自治体システムベンダー向けの情報」「システム利用規約（医療機関等向け）」を更新しました",
   "link": "https://www.digital.go.jp/policies/health/public-medical-hub",
@@ -1034,19 +1048,5 @@
   "link": "https://www.cfa.go.jp/press/c690699b-b0bd-4491-8c4a-9b5de173a4b0",
   "category": "報道発表",
   "pub_iso": "2026-07-29T09:00:00+09:00"
- },
- {
-  "guid": "90abafab8bf724ced3737dbe8f6dc122",
-  "title": "【こ家庁/報道発表】みてかんじてつながる劇体験～優良児童劇等公演事業～令和8年9月5日（土）宮城県気仙沼市にて開催",
-  "link": "https://www.cfa.go.jp/press/00501ed6-7a3b-4345-b3fc-cc0216ea751e",
-  "category": "報道発表",
-  "pub_iso": "2026-07-29T09:00:00+09:00"
- },
- {
-  "guid": "4c20d63d60a2fcd52be9489cfc5b6715",
-  "title": "【デジタル庁】企画競争：自治体からの照会事務の自動化などの国・地方AI共通サービスに関する実証事業を掲載しました",
-  "link": "https://www.digital.go.jp/procurement",
-  "category": "デジタル庁",
-  "pub_iso": "2026-07-28T15:00:00+09:00"
  }
 ]
