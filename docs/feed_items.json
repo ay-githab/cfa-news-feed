@@ -1,5 +1,26 @@
 [
  {
+  "guid": "4c1cc647f88ccfab832f86264e55b681",
+  "title": "【デジタル庁】一般競争入札：グローバルサウス諸国におけるガバメントAIの実装及びニーズに係る調査を掲載しました",
+  "link": "https://www.digital.go.jp/procurement",
+  "category": "デジタル庁",
+  "pub_iso": "2026-10-06T15:00:00+09:00"
+ },
+ {
+  "guid": "a4eba744d133f4ccab2b57436dc2560c",
+  "title": "【こ家庁/会議等】ヒト受精胚を用いる生殖補助医療研究等に関する専門委員会（第16回）の会議情報を掲載しました",
+  "link": "https://www.cfa.go.jp/councils/shingikai/kagaku_gijutsu/art/1fba736a",
+  "category": "会議等",
+  "pub_iso": "2026-10-06T09:00:00+09:00"
+ },
+ {
+  "guid": "e4e7f311ea04570d97960ed9fa064e09",
+  "title": "【こ家庁/会見】中司大臣記者会見（令和8年10月6日）を掲載しました",
+  "link": "https://www.cfa.go.jp/speech/15435bb4",
+  "category": "会見",
+  "pub_iso": "2026-10-06T09:00:00+09:00"
+ },
+ {
   "guid": "548dfb76f7e5ba350d00d568f573f4ea",
   "title": "【内閣府】AIの社会実装において、障害となる又は不十分な効果をもたらす規制・制度についての情報提供のお願い",
   "link": "https://www8.cao.go.jp/kisei-kaikaku/kisei/forms/261002_forms.html",
@@ -1026,27 +1047,6 @@
   "title": "【こ家庁/政策】令和7年「教育・保育施設等における事故報告集計」を公表しました",
   "link": "https://www.cfa.go.jp/policies/child-safety/effort/shukei",
   "category": "政策",
-  "pub_iso": "2026-07-29T09:00:00+09:00"
- },
- {
-  "guid": "0cccd30cc2bc3db4686bbc70ab3a22c4",
-  "title": "【こ家庁/報道発表】「令和6年教育・保育施設等における事故報告集計」の修正及び公表について掲載しました",
-  "link": "https://www.cfa.go.jp/press/e109e058-a3e5-48a8-a598-a6357da035d3",
-  "category": "報道発表",
-  "pub_iso": "2026-07-29T09:00:00+09:00"
- },
- {
-  "guid": "c7144013996176b75e750a578db2a076",
-  "title": "【こ家庁/報道発表】「令和5年教育・保育施設等における事故報告集計」の修正及び公表について 掲載しました",
-  "link": "https://www.cfa.go.jp/press/c905954a-260b-48f6-8a96-8865461f9086",
-  "category": "報道発表",
-  "pub_iso": "2026-07-29T09:00:00+09:00"
- },
- {
-  "guid": "9566c2690eb207d283ef40f073fe3ed4",
-  "title": "【こ家庁/報道発表】「令和7年教育・保育施設等における事故報告集計」の公表について掲載しました",
-  "link": "https://www.cfa.go.jp/press/c690699b-b0bd-4491-8c4a-9b5de173a4b0",
-  "category": "報道発表",
   "pub_iso": "2026-07-29T09:00:00+09:00"
  }
 ]

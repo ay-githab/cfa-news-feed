@@ -5,7 +5,28 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Tue, 06 Oct 2026 10:47:35 +0900</lastBuildDate>
+<lastBuildDate>Tue, 06 Oct 2026 17:12:52 +0900</lastBuildDate>
+<item>
+<title>【デジタル庁】一般競争入札：グローバルサウス諸国におけるガバメントAIの実装及びニーズに係る調査を掲載しました</title>
+<link>https://www.digital.go.jp/procurement</link>
+<guid isPermaLink="false">4c1cc647f88ccfab832f86264e55b681</guid>
+<pubDate>Tue, 06 Oct 2026 15:00:00 +0900</pubDate>
+<category>デジタル庁</category>
+</item>
+<item>
+<title>【こ家庁/会議等】ヒト受精胚を用いる生殖補助医療研究等に関する専門委員会（第16回）の会議情報を掲載しました</title>
+<link>https://www.cfa.go.jp/councils/shingikai/kagaku_gijutsu/art/1fba736a</link>
+<guid isPermaLink="false">a4eba744d133f4ccab2b57436dc2560c</guid>
+<pubDate>Tue, 06 Oct 2026 09:00:00 +0900</pubDate>
+<category>会議等</category>
+</item>
+<item>
+<title>【こ家庁/会見】中司大臣記者会見（令和8年10月6日）を掲載しました</title>
+<link>https://www.cfa.go.jp/speech/15435bb4</link>
+<guid isPermaLink="false">e4e7f311ea04570d97960ed9fa064e09</guid>
+<pubDate>Tue, 06 Oct 2026 09:00:00 +0900</pubDate>
+<category>会見</category>
+</item>
 <item>
 <title>【内閣府】AIの社会実装において、障害となる又は不十分な効果をもたらす規制・制度についての情報提供のお願い</title>
 <link>https://www8.cao.go.jp/kisei-kaikaku/kisei/forms/261002_forms.html</link>
@@ -1034,27 +1055,6 @@
 <guid isPermaLink="false">1aa6ae1fa45e9f638aa85b1a0c63b1d7</guid>
 <pubDate>Wed, 29 Jul 2026 09:00:00 +0900</pubDate>
 <category>政策</category>
-</item>
-<item>
-<title>【こ家庁/報道発表】「令和6年教育・保育施設等における事故報告集計」の修正及び公表について掲載しました</title>
-<link>https://www.cfa.go.jp/press/e109e058-a3e5-48a8-a598-a6357da035d3</link>
-<guid isPermaLink="false">0cccd30cc2bc3db4686bbc70ab3a22c4</guid>
-<pubDate>Wed, 29 Jul 2026 09:00:00 +0900</pubDate>
-<category>報道発表</category>
-</item>
-<item>
-<title>【こ家庁/報道発表】「令和5年教育・保育施設等における事故報告集計」の修正及び公表について 掲載しました</title>
-<link>https://www.cfa.go.jp/press/c905954a-260b-48f6-8a96-8865461f9086</link>
-<guid isPermaLink="false">c7144013996176b75e750a578db2a076</guid>
-<pubDate>Wed, 29 Jul 2026 09:00:00 +0900</pubDate>
-<category>報道発表</category>
-</item>
-<item>
-<title>【こ家庁/報道発表】「令和7年教育・保育施設等における事故報告集計」の公表について掲載しました</title>
-<link>https://www.cfa.go.jp/press/c690699b-b0bd-4491-8c4a-9b5de173a4b0</link>
-<guid isPermaLink="false">9566c2690eb207d283ef40f073fe3ed4</guid>
-<pubDate>Wed, 29 Jul 2026 09:00:00 +0900</pubDate>
-<category>報道発表</category>
 </item>
 </channel>
 </rss>
