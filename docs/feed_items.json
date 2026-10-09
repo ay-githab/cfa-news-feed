@@ -1,5 +1,19 @@
 [
  {
+  "guid": "fb1c9db420b65925845a3032291a2be8",
+  "title": "【デジタル庁】ガバメントAI 源内に関するエージェントチャットの活用事例動画を掲載しました",
+  "link": "https://www.digital.go.jp/policies/genai",
+  "category": "デジタル庁",
+  "pub_iso": "2026-10-09T15:00:00+09:00"
+ },
+ {
+  "guid": "ebd4a4baebbee0910c5c486eee4fa84c",
+  "title": "【こ家庁/会見】中司大臣記者会見（令和8年10月9日）を掲載しました",
+  "link": "https://www.cfa.go.jp/speech/841eb9e1",
+  "category": "会見",
+  "pub_iso": "2026-10-09T09:00:00+09:00"
+ },
+ {
   "guid": "4c1cc647f88ccfab832f86264e55b681",
   "title": "【デジタル庁】一般競争入札：グローバルサウス諸国におけるガバメントAIの実装及びニーズに係る調査を掲載しました",
   "link": "https://www.digital.go.jp/procurement",
@@ -1033,20 +1047,6 @@
   "title": "【こ家庁/報道発表】第14回ヒト受精胚等を用いる生殖補助医療研究等に関する専門委員会の開催について掲載しました",
   "link": "https://www.cfa.go.jp/press/b2332a91-7ffc-47a4-b4fd-649b4170a132",
   "category": "報道発表",
-  "pub_iso": "2026-07-29T09:00:00+09:00"
- },
- {
-  "guid": "a97183b9b493aad10247f97425a4a38b",
-  "title": "【こ家庁/政策】国立きぬ川学院：西公務員宿舎改修工事の入札公告を掲載しました",
-  "link": "https://www.cfa.go.jp/kinugawa/nyuusatu-r8",
-  "category": "政策",
-  "pub_iso": "2026-07-29T09:00:00+09:00"
- },
- {
-  "guid": "1aa6ae1fa45e9f638aa85b1a0c63b1d7",
-  "title": "【こ家庁/政策】令和7年「教育・保育施設等における事故報告集計」を公表しました",
-  "link": "https://www.cfa.go.jp/policies/child-safety/effort/shukei",
-  "category": "政策",
   "pub_iso": "2026-07-29T09:00:00+09:00"
  }
 ]

@@ -5,7 +5,21 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Fri, 09 Oct 2026 09:32:28 +0900</lastBuildDate>
+<lastBuildDate>Fri, 09 Oct 2026 15:51:15 +0900</lastBuildDate>
+<item>
+<title>【デジタル庁】ガバメントAI 源内に関するエージェントチャットの活用事例動画を掲載しました</title>
+<link>https://www.digital.go.jp/policies/genai</link>
+<guid isPermaLink="false">fb1c9db420b65925845a3032291a2be8</guid>
+<pubDate>Fri, 09 Oct 2026 15:00:00 +0900</pubDate>
+<category>デジタル庁</category>
+</item>
+<item>
+<title>【こ家庁/会見】中司大臣記者会見（令和8年10月9日）を掲載しました</title>
+<link>https://www.cfa.go.jp/speech/841eb9e1</link>
+<guid isPermaLink="false">ebd4a4baebbee0910c5c486eee4fa84c</guid>
+<pubDate>Fri, 09 Oct 2026 09:00:00 +0900</pubDate>
+<category>会見</category>
+</item>
 <item>
 <title>【デジタル庁】一般競争入札：グローバルサウス諸国におけるガバメントAIの実装及びニーズに係る調査を掲載しました</title>
 <link>https://www.digital.go.jp/procurement</link>
@@ -1041,20 +1055,6 @@
 <guid isPermaLink="false">f1fbc171758d7be4436bbfb37f823bec</guid>
 <pubDate>Wed, 29 Jul 2026 09:00:00 +0900</pubDate>
 <category>報道発表</category>
-</item>
-<item>
-<title>【こ家庁/政策】国立きぬ川学院：西公務員宿舎改修工事の入札公告を掲載しました</title>
-<link>https://www.cfa.go.jp/kinugawa/nyuusatu-r8</link>
-<guid isPermaLink="false">a97183b9b493aad10247f97425a4a38b</guid>
-<pubDate>Wed, 29 Jul 2026 09:00:00 +0900</pubDate>
-<category>政策</category>
-</item>
-<item>
-<title>【こ家庁/政策】令和7年「教育・保育施設等における事故報告集計」を公表しました</title>
-<link>https://www.cfa.go.jp/policies/child-safety/effort/shukei</link>
-<guid isPermaLink="false">1aa6ae1fa45e9f638aa85b1a0c63b1d7</guid>
-<pubDate>Wed, 29 Jul 2026 09:00:00 +0900</pubDate>
-<category>政策</category>
 </item>
 </channel>
 </rss>
