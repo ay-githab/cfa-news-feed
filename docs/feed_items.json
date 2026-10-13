@@ -1,5 +1,12 @@
 [
  {
+  "guid": "03be1bb3e31903a53ee3c5b1c016f1ab",
+  "title": "【こ家庁/会見】中司大臣記者会見（令和8年10月13日）を掲載しました",
+  "link": "https://www.cfa.go.jp/speech/61fab23e",
+  "category": "会見",
+  "pub_iso": "2026-10-13T09:00:00+09:00"
+ },
+ {
   "guid": "1319055a90948cc887a9e0b079def2e8",
   "title": "【内閣府】第11回人工知能（AI）技術の利用と消費者問題に関する専門調査会【10月8日開催】",
   "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/011/shiryou/index.html",
@@ -1041,12 +1048,5 @@
   "link": "https://www.digital.go.jp/news/cb912b3b-49c9-4a02-aa46-4056b96c1d4f",
   "category": "デジタル庁",
   "pub_iso": "2026-07-29T11:23:00+09:00"
- },
- {
-  "guid": "877641857484edb5dcb690a1529ca067",
-  "title": "【こ家庁/政策】令和8年熊本地震について掲載しました",
-  "link": "https://www.cfa.go.jp/policies/others",
-  "category": "政策",
-  "pub_iso": "2026-07-29T09:00:00+09:00"
  }
 ]
