@@ -1,5 +1,26 @@
 [
  {
+  "guid": "04b743e6fa4bf113a021ac42859a0b98",
+  "title": "【内閣府】第12回人工知能（AI）技術の利用と消費者問題に関する専門調査会【10月22日開催】",
+  "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/012/kaisai/index.html",
+  "category": "内閣府",
+  "pub_iso": "2026-10-15T17:25:00+09:00"
+ },
+ {
+  "guid": "ceba0bcb6d173d13d3ca67b8268cd2f1",
+  "title": "【デジタル庁】動画【ガバメントAI 開発記録】雇用環境・均等行政の挑戦【①AIに何を任せるか】を公開しました",
+  "link": "https://www.digital.go.jp/policies/genai/employment-equality-01",
+  "category": "デジタル庁",
+  "pub_iso": "2026-10-15T15:00:00+09:00"
+ },
+ {
+  "guid": "dd913144ae1334e96c0b656fc47422d4",
+  "title": "【こ家庁/報道発表】第20回補償金・優生手術等一時金認定審査部会の開催について掲載しました",
+  "link": "https://www.cfa.go.jp/press/b1eb1779-6c55-475b-be92-2d28359feca0",
+  "category": "報道発表",
+  "pub_iso": "2026-10-15T09:00:00+09:00"
+ },
+ {
   "guid": "dcd02115e09e38f8d5fe76a77fbc975d",
   "title": "【こ家庁/報道発表】第2回乳幼児の健康診査等のあり方に関する検討会について掲載しました",
   "link": "https://www.cfa.go.jp/press/6914ca83-1b2c-42c9-9bf5-452019407b00",
@@ -1027,26 +1048,5 @@
   "link": "https://www.digital.go.jp/news/cb912b3b-49c9-4a02-aa46-4056b96c1d4f",
   "category": "デジタル庁",
   "pub_iso": "2026-07-31T15:00:00+09:00"
- },
- {
-  "guid": "683fe39b756bcaf78a3192d57d347a72",
-  "title": "【デジタル庁】2026年度（令和8年度）デジタル庁「こども霞が関見学デー」を開催しました",
-  "link": "https://www.digital.go.jp/news/e6e5abe2-c5b1-4dc4-b683-465b518e6c91",
-  "category": "デジタル庁",
-  "pub_iso": "2026-07-31T15:00:00+09:00"
- },
- {
-  "guid": "043621bbd62923f0cee52cf4322eae13",
-  "title": "【こ家庁/会見】黄川田大臣記者会見（令和8年7月31日）を掲載しました",
-  "link": "https://www.cfa.go.jp/speech/5299c309",
-  "category": "会見",
-  "pub_iso": "2026-07-31T09:00:00+09:00"
- },
- {
-  "guid": "5ea0689ce79ad3581fffb43a69e41157",
-  "title": "【こ家庁/会議等】児童虐待防止対策部会（第8回）の議事録を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/shingikai/gyakutai_boushi/0527aa85",
-  "category": "会議等",
-  "pub_iso": "2026-07-31T09:00:00+09:00"
  }
 ]
