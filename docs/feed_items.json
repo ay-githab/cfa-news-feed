@@ -1,5 +1,12 @@
 [
  {
+  "guid": "1f2b779df46df30caf87f1e8249a3aeb",
+  "title": "【デジタル庁】「自治体からの照会事務の自動化などの国・地方AI共通サービスに関する実証事業」の参加自治体（都道府県及び市区町村）を募集します",
+  "link": "https://www.digital.go.jp/policies/genai/0ef07948-2f5d-4b45-8ebe-ea974c20a3ac",
+  "category": "デジタル庁",
+  "pub_iso": "2026-10-20T19:51:00+09:00"
+ },
+ {
   "guid": "b35775160f1db878c7f94de3807b5078",
   "title": "【デジタル庁】AI・デジタル改革推進会議の開催について掲載いたしました",
   "link": "https://www.digital.go.jp/councils/ai_digital",
@@ -12,6 +19,20 @@
   "link": "https://www.digital.go.jp/policies/genai/agent-safety-standard",
   "category": "デジタル庁",
   "pub_iso": "2026-10-20T09:37:00+09:00"
+ },
+ {
+  "guid": "18ed2b2f4547662470b0f4b697093bbc",
+  "title": "【こ家庁/会議等】第1回乳幼児の健康診査等のあり方に関する検討会の議事録を掲載しました",
+  "link": "https://www.cfa.go.jp/councils/nyuyojinokenkoushinsatou-kentokai/a7bdb140",
+  "category": "会議等",
+  "pub_iso": "2026-10-20T09:00:00+09:00"
+ },
+ {
+  "guid": "b32938936ad02ecd0d02860bda83ee28",
+  "title": "【こ家庁/報道発表】第20回 人工妊娠中絶一時金認定審査部会の開催について掲載しました",
+  "link": "https://www.cfa.go.jp/press/45a80ccf-630d-493a-9143-a5258a7acc94",
+  "category": "報道発表",
+  "pub_iso": "2026-10-20T09:00:00+09:00"
  },
  {
   "guid": "8ad290b9de5186e1b20ef00a06ec644e",
@@ -1027,26 +1048,5 @@
   "link": "https://www.digital.go.jp/policies/digital_human_resources/award/20260807",
   "category": "デジタル庁",
   "pub_iso": "2026-08-10T15:00:00+09:00"
- },
- {
-  "guid": "0fd28803d86975779bb99ca72aeaea4b",
-  "title": "【こ家庁】組織情報 令和8年8月10日付人事異動情報を掲載しました",
-  "link": "https://www.cfa.go.jp/about/jinji",
-  "category": "こ家庁",
-  "pub_iso": "2026-08-10T09:00:00+09:00"
- },
- {
-  "guid": "7afa350ad9e2aa59ec207b01b5fca6be",
-  "title": "【こ家庁/報道発表】第18回補償金・優生手術等一時金認定審査部会の開催について掲載しました",
-  "link": "https://www.cfa.go.jp/press/fa11cc9a-a3e1-4749-a1f4-20cdcdfd5d84",
-  "category": "報道発表",
-  "pub_iso": "2026-08-07T09:00:00+09:00"
- },
- {
-  "guid": "bd8706d820cb90f136fbbe6a7d3f010c",
-  "title": "【こ家庁/報道発表】第15回子ども・子育て支援等分科会の開催について掲載しました",
-  "link": "https://www.cfa.go.jp/press/485d56b4-1e4a-4dcf-ab97-85b4b8efe9fa",
-  "category": "報道発表",
-  "pub_iso": "2026-08-07T09:00:00+09:00"
  }
 ]

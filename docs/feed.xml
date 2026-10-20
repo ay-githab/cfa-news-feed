@@ -5,7 +5,14 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Tue, 20 Oct 2026 16:46:26 +0900</lastBuildDate>
+<lastBuildDate>Tue, 20 Oct 2026 22:04:36 +0900</lastBuildDate>
+<item>
+<title>【デジタル庁】「自治体からの照会事務の自動化などの国・地方AI共通サービスに関する実証事業」の参加自治体（都道府県及び市区町村）を募集します</title>
+<link>https://www.digital.go.jp/policies/genai/0ef07948-2f5d-4b45-8ebe-ea974c20a3ac</link>
+<guid isPermaLink="false">1f2b779df46df30caf87f1e8249a3aeb</guid>
+<pubDate>Tue, 20 Oct 2026 19:51:00 +0900</pubDate>
+<category>デジタル庁</category>
+</item>
 <item>
 <title>【デジタル庁】AI・デジタル改革推進会議の開催について掲載いたしました</title>
 <link>https://www.digital.go.jp/councils/ai_digital</link>
@@ -19,6 +26,20 @@
 <guid isPermaLink="false">4e9560b2bda840fb3bfff8937827dfbf</guid>
 <pubDate>Tue, 20 Oct 2026 09:37:00 +0900</pubDate>
 <category>デジタル庁</category>
+</item>
+<item>
+<title>【こ家庁/会議等】第1回乳幼児の健康診査等のあり方に関する検討会の議事録を掲載しました</title>
+<link>https://www.cfa.go.jp/councils/nyuyojinokenkoushinsatou-kentokai/a7bdb140</link>
+<guid isPermaLink="false">18ed2b2f4547662470b0f4b697093bbc</guid>
+<pubDate>Tue, 20 Oct 2026 09:00:00 +0900</pubDate>
+<category>会議等</category>
+</item>
+<item>
+<title>【こ家庁/報道発表】第20回 人工妊娠中絶一時金認定審査部会の開催について掲載しました</title>
+<link>https://www.cfa.go.jp/press/45a80ccf-630d-493a-9143-a5258a7acc94</link>
+<guid isPermaLink="false">b32938936ad02ecd0d02860bda83ee28</guid>
+<pubDate>Tue, 20 Oct 2026 09:00:00 +0900</pubDate>
+<category>報道発表</category>
 </item>
 <item>
 <title>【こ家庁/会見】中司大臣記者会見（令和8年10月20日）を掲載しました</title>
@@ -1034,27 +1055,6 @@
 <guid isPermaLink="false">98c3b51b283bbfdfd30c59230a05cdd3</guid>
 <pubDate>Mon, 10 Aug 2026 15:00:00 +0900</pubDate>
 <category>デジタル庁</category>
-</item>
-<item>
-<title>【こ家庁】組織情報 令和8年8月10日付人事異動情報を掲載しました</title>
-<link>https://www.cfa.go.jp/about/jinji</link>
-<guid isPermaLink="false">0fd28803d86975779bb99ca72aeaea4b</guid>
-<pubDate>Mon, 10 Aug 2026 09:00:00 +0900</pubDate>
-<category>こ家庁</category>
-</item>
-<item>
-<title>【こ家庁/報道発表】第18回補償金・優生手術等一時金認定審査部会の開催について掲載しました</title>
-<link>https://www.cfa.go.jp/press/fa11cc9a-a3e1-4749-a1f4-20cdcdfd5d84</link>
-<guid isPermaLink="false">7afa350ad9e2aa59ec207b01b5fca6be</guid>
-<pubDate>Fri, 07 Aug 2026 09:00:00 +0900</pubDate>
-<category>報道発表</category>
-</item>
-<item>
-<title>【こ家庁/報道発表】第15回子ども・子育て支援等分科会の開催について掲載しました</title>
-<link>https://www.cfa.go.jp/press/485d56b4-1e4a-4dcf-ab97-85b4b8efe9fa</link>
-<guid isPermaLink="false">bd8706d820cb90f136fbbe6a7d3f010c</guid>
-<pubDate>Fri, 07 Aug 2026 09:00:00 +0900</pubDate>
-<category>報道発表</category>
 </item>
 </channel>
 </rss>
