@@ -1,10 +1,31 @@
 [
  {
+  "guid": "b35775160f1db878c7f94de3807b5078",
+  "title": "【デジタル庁】AI・デジタル改革推進会議の開催について掲載いたしました",
+  "link": "https://www.digital.go.jp/councils/ai_digital",
+  "category": "デジタル庁",
+  "pub_iso": "2026-10-20T11:24:00+09:00"
+ },
+ {
   "guid": "4e9560b2bda840fb3bfff8937827dfbf",
   "title": "【デジタル庁】ガバメントAI 源内におけるAI エージェント利用環境の提供開始のお知らせと「源内基準」を掲載しました",
   "link": "https://www.digital.go.jp/policies/genai/agent-safety-standard",
   "category": "デジタル庁",
   "pub_iso": "2026-10-20T09:37:00+09:00"
+ },
+ {
+  "guid": "8ad290b9de5186e1b20ef00a06ec644e",
+  "title": "【こ家庁/会見】中司大臣記者会見（令和8年10月20日）を掲載しました",
+  "link": "https://www.cfa.go.jp/speech/390f47b2",
+  "category": "会見",
+  "pub_iso": "2026-10-20T09:00:00+09:00"
+ },
+ {
+  "guid": "5a84263a4a3854a74ad0c96693e1f286",
+  "title": "【こ家庁/報道発表】第7回特別養子縁組に関する支援の在り方に関する専門委員会の開催について掲載しました",
+  "link": "https://www.cfa.go.jp/press/0d4a17b6-ace6-46b2-9828-d758b0b2db3b",
+  "category": "報道発表",
+  "pub_iso": "2026-10-20T09:00:00+09:00"
  },
  {
   "guid": "16fdda664fd2e2af29ef564bd9921898",
@@ -1026,27 +1047,6 @@
   "title": "【こ家庁/報道発表】第15回子ども・子育て支援等分科会の開催について掲載しました",
   "link": "https://www.cfa.go.jp/press/485d56b4-1e4a-4dcf-ab97-85b4b8efe9fa",
   "category": "報道発表",
-  "pub_iso": "2026-08-07T09:00:00+09:00"
- },
- {
-  "guid": "6de0eed0fd906860efc23b2c95e02020",
-  "title": "【こ家庁/報道発表】政府全体でこども・若者の自殺防止に向けた取組を強化します",
-  "link": "https://www.cfa.go.jp/press/d04222eb-2e0c-4298-8231-e27defe7191f",
-  "category": "報道発表",
-  "pub_iso": "2026-08-07T09:00:00+09:00"
- },
- {
-  "guid": "920ac4f8fe58c41b26cc969d93b35c1b",
-  "title": "【こ家庁/報道発表】第21回こども家庭審議会障害児支援部会の開催について掲載しました",
-  "link": "https://www.cfa.go.jp/press/82ead44e-0137-47ae-9c5b-8e81e2bd4aa6",
-  "category": "報道発表",
-  "pub_iso": "2026-08-07T09:00:00+09:00"
- },
- {
-  "guid": "cff7f5d94b55ec5f96210a83063456d2",
-  "title": "【こ家庁/政策】母子保健DXに関する取組を掲載しました",
-  "link": "https://www.cfa.go.jp/policies/boshihoken/dx",
-  "category": "政策",
   "pub_iso": "2026-08-07T09:00:00+09:00"
  }
 ]
