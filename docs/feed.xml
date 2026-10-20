@@ -5,7 +5,28 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Tue, 20 Oct 2026 08:49:00 +0900</lastBuildDate>
+<lastBuildDate>Tue, 20 Oct 2026 11:15:42 +0900</lastBuildDate>
+<item>
+<title>【デジタル庁】ガバメントAI 源内におけるAI エージェント利用環境の提供開始のお知らせと「源内基準」を掲載しました</title>
+<link>https://www.digital.go.jp/policies/genai/agent-safety-standard</link>
+<guid isPermaLink="false">4e9560b2bda840fb3bfff8937827dfbf</guid>
+<pubDate>Tue, 20 Oct 2026 09:37:00 +0900</pubDate>
+<category>デジタル庁</category>
+</item>
+<item>
+<title>【こ家庁/報道発表】みて かんじて つながる劇体験 ～優良児童劇等公演事業～令和8年11月28日（土）和歌山県新宮市にて開催</title>
+<link>https://www.cfa.go.jp/press/9e7f7908-8f5a-4730-befe-d61c6d61c3ec</link>
+<guid isPermaLink="false">16fdda664fd2e2af29ef564bd9921898</guid>
+<pubDate>Tue, 20 Oct 2026 09:00:00 +0900</pubDate>
+<category>報道発表</category>
+</item>
+<item>
+<title>【こ家庁/会議等】第7回特別養子縁組に関する支援の在り方に関する専門委員会について掲載しました</title>
+<link>https://www.cfa.go.jp/councils/shingikai/shakai_katei/tokubetsu-yoshi/2664f41f</link>
+<guid isPermaLink="false">840fd179ac50b7545722238b86460f0e</guid>
+<pubDate>Tue, 20 Oct 2026 09:00:00 +0900</pubDate>
+<category>会議等</category>
+</item>
 <item>
 <title>【こ家庁/報道発表】こども家庭審議会 幼児期までのこどもの育ち部会（第16回）について掲載しました</title>
 <link>https://www.cfa.go.jp/press/f19217c3-341d-4451-812e-16127aac5216</link>
@@ -1034,27 +1055,6 @@
 <guid isPermaLink="false">cff7f5d94b55ec5f96210a83063456d2</guid>
 <pubDate>Fri, 07 Aug 2026 09:00:00 +0900</pubDate>
 <category>政策</category>
-</item>
-<item>
-<title>【こ家庁】組織情報 令和8年8月7日付人事異動情報を掲載しました</title>
-<link>https://www.cfa.go.jp/about/jinji</link>
-<guid isPermaLink="false">20c424179b85282d2a593f705f07d817</guid>
-<pubDate>Fri, 07 Aug 2026 09:00:00 +0900</pubDate>
-<category>こ家庁</category>
-</item>
-<item>
-<title>【こ家庁/会見】黄川田大臣記者会見（令和8年8月4日）を掲載しました</title>
-<link>https://www.cfa.go.jp/speech/bb7435e0</link>
-<guid isPermaLink="false">016869f6c86a149dcd6360af7cdef751</guid>
-<pubDate>Tue, 04 Aug 2026 09:00:00 +0900</pubDate>
-<category>会見</category>
-</item>
-<item>
-<title>【こ家庁/会議等】ヒト受精胚を用いる生殖補助医療研究等に関する専門委員会（第14回）の会議情報を掲載しました</title>
-<link>https://www.cfa.go.jp/councils/shingikai/kagaku_gijutsu/art/ef2284c0</link>
-<guid isPermaLink="false">cec45cca0ffb029719f5ef81159e7730</guid>
-<pubDate>Tue, 04 Aug 2026 09:00:00 +0900</pubDate>
-<category>会議等</category>
 </item>
 </channel>
 </rss>
