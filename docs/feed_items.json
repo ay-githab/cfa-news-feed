@@ -1,5 +1,54 @@
 [
  {
+  "guid": "52f281f3156af4bc644234d25e9b35e7",
+  "title": "【内閣府】第12回人工知能（AI）技術の利用と消費者問題に関する専門調査会【10月22日開催】",
+  "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/012/shiryou/index.html",
+  "category": "内閣府",
+  "pub_iso": "2026-10-23T15:29:00+09:00"
+ },
+ {
+  "guid": "51e5a812213a2a6efb4e4de4fe141efd",
+  "title": "【デジタル庁】一般競争入札：令和8年度AIエージェントの活用における課題の調査研究に係る業務を掲載しました",
+  "link": "https://www.digital.go.jp/procurement",
+  "category": "デジタル庁",
+  "pub_iso": "2026-10-23T15:00:00+09:00"
+ },
+ {
+  "guid": "63096b53e3cbb21da56f45a8b2098120",
+  "title": "【こ家庁/会見】中司大臣記者会見（令和8年10月23日）を掲載しました",
+  "link": "https://www.cfa.go.jp/speech/f40f49cc",
+  "category": "会見",
+  "pub_iso": "2026-10-23T09:00:00+09:00"
+ },
+ {
+  "guid": "94db4f118c7cb4fba59427d109b8e4c2",
+  "title": "【こ家庁/会議等】補償金・優生手術等一時金認定審査部会（第20回）の議事要旨を掲載しました",
+  "link": "https://www.cfa.go.jp/councils/hoshokin-yuseishujutsu/fadbc2c9",
+  "category": "会議等",
+  "pub_iso": "2026-10-23T09:00:00+09:00"
+ },
+ {
+  "guid": "0df1a31239f4479d0a731a7692715dda",
+  "title": "【こ家庁/政策】医療的ケア児等及び重症心身障害者並びにそれらの家族に対する支援に関する法律第十四条第一項の政令で定める市を定める政令の公布について掲載いたしました",
+  "link": "https://www.cfa.go.jp/policies/shougaijishien/care-ji-shien",
+  "category": "政策",
+  "pub_iso": "2026-10-23T09:00:00+09:00"
+ },
+ {
+  "guid": "821a8683bcc31464589ce478006ab1cb",
+  "title": "【こ家庁/報道発表】第16回 子ども・子育て支援等分科会の開催について掲載しました",
+  "link": "https://www.cfa.go.jp/press/57551703-bf00-4a79-94df-628dc8f2ae25",
+  "category": "報道発表",
+  "pub_iso": "2026-10-23T09:00:00+09:00"
+ },
+ {
+  "guid": "b5fcd96d9dcf792208abfd1199aa462a",
+  "title": "【こ家庁/報道発表】第20回補償金・優生手術等一時金認定審査部会の審査結果について掲載しました",
+  "link": "https://www.cfa.go.jp/press/e7dfb273-df70-4294-ae60-d4cb7acbe922",
+  "category": "報道発表",
+  "pub_iso": "2026-10-23T09:00:00+09:00"
+ },
+ {
   "guid": "fe20eced69f77e71b24f63f4c6e02afc",
   "title": "【こ家庁/報道発表】はじめの100か月の育ちビジョン全国大会・国際シンポジウムの開催について掲載しました",
   "link": "https://www.cfa.go.jp/press/764bd6b4-ffdc-4727-b16f-aaeb48087882",
@@ -999,54 +1048,5 @@
   "link": "https://www.cfa.go.jp/councils/hoshokin-yuseishujutsu/e7e440a2",
   "category": "会議等",
   "pub_iso": "2026-08-21T09:00:00+09:00"
- },
- {
-  "guid": "91e37b711e268055f41b134f01c7eb50",
-  "title": "【こ家庁/会議等】こども性暴力防止法施行準備検討会（第13回）を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/koseibo-jumbi/4cef2a90",
-  "category": "会議等",
-  "pub_iso": "2026-08-21T09:00:00+09:00"
- },
- {
-  "guid": "db826e5e0ac4a10375deb3c79fc47889",
-  "title": "【こ家庁/報道発表】第18回補償金優生手術等一時金認定審査部会の審査結果について掲載しました",
-  "link": "https://www.cfa.go.jp/press/4755f7b5-8daf-457a-9ac4-2aabd03e4588",
-  "category": "報道発表",
-  "pub_iso": "2026-08-21T09:00:00+09:00"
- },
- {
-  "guid": "d200f9e984db5a34515200cde042bbd9",
-  "title": "【こ家庁/報道発表】第13回こども性暴力防止法施行準備検討会の開催について掲載しました",
-  "link": "https://www.cfa.go.jp/press/61666085-2c2a-48c1-a21f-562b3f2d6e8f",
-  "category": "報道発表",
-  "pub_iso": "2026-08-21T09:00:00+09:00"
- },
- {
-  "guid": "dcad425740531f840477657bd39df738",
-  "title": "【こ家庁/政策】令和8年度 第1回 こどもの未来応援基金事業審査委員会を開催しました",
-  "link": "https://www.cfa.go.jp/policies/kodomonohinkon/iinkai/r8_01",
-  "category": "政策",
-  "pub_iso": "2026-08-21T09:00:00+09:00"
- },
- {
-  "guid": "91f622a2108c3c1b7cf5f4e2c9ec8085",
-  "title": "【こ家庁/報道発表】第16回 こども家庭審議会科学技術部会の開催について掲載しました",
-  "link": "https://www.cfa.go.jp/press/99fd7b98-1c92-40d8-92f5-47692a9d6097",
-  "category": "報道発表",
-  "pub_iso": "2026-08-20T09:00:00+09:00"
- },
- {
-  "guid": "ec3c423acca9b77e0734931801fed2e8",
-  "title": "【こ家庁/会議等】補償金・優生手術等一時金認定審査部会（第18回）の会議資料を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/hoshokin-yuseishujutsu/e7e440a2",
-  "category": "会議等",
-  "pub_iso": "2026-08-19T09:00:00+09:00"
- },
- {
-  "guid": "7498f0ea6a1adc136d595277cce364c5",
-  "title": "【こ家庁/会議等】15回 子ども・子育て支援等分科会の会議資料を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/shingikai/kodomo_kosodate/7e5f6ec9",
-  "category": "会議等",
-  "pub_iso": "2026-08-19T09:00:00+09:00"
  }
 ]
