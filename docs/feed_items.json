@@ -203,6 +203,13 @@
   "pub_iso": "2026-10-16T15:00:00+09:00"
  },
  {
+  "guid": "c81374a1200a2429cb68c369c7a4e433",
+  "title": "【こ家庁/調達情報】一般競争入札：支援を要するこどもの抽出ロジックの仮説モデルの策定についての調査研究（令和8年度）を掲載しました",
+  "link": "https://www.cfa.go.jp/procurement/portal",
+  "category": "調達情報",
+  "pub_iso": "2026-10-16T09:00:00+09:00"
+ },
+ {
   "guid": "e62ec8b1b01eaff1d46cdc889cdf1524",
   "title": "【こ家庁/政策】『はじめの100か月の育ちビジョン』全国大会・国際シンポジウムについて掲載しました",
   "link": "https://www.cfa.go.jp/policies/kodomo_sodachi/nationaltournament-symposium",
@@ -278,6 +285,20 @@
   "link": "https://www.digital.go.jp/procurement",
   "category": "デジタル庁",
   "pub_iso": "2026-10-14T15:00:00+09:00"
+ },
+ {
+  "guid": "cfc7936b20aecda796b271615ed0b44c",
+  "title": "【こ家庁/調達情報】一般競争入札：保育業務施設管理プラットフォームの軽微改修業務等（令和8年度）一式を掲載しました",
+  "link": "https://www.cfa.go.jp/procurement/service",
+  "category": "調達情報",
+  "pub_iso": "2026-10-13T09:00:00+09:00"
+ },
+ {
+  "guid": "613a8010c5a571a16f948607420815c7",
+  "title": "【こ家庁/調達情報】意見招請：こども性暴力防止法に関する情報システムの改修及び運用・保守等業務一式を掲載しました",
+  "link": "https://www.cfa.go.jp/procurement/portal",
+  "category": "調達情報",
+  "pub_iso": "2026-10-13T09:00:00+09:00"
  },
  {
   "guid": "03be1bb3e31903a53ee3c5b1c016f1ab",
@@ -1027,26 +1048,5 @@
   "link": "https://www.cfa.go.jp/press/c02b0de8-0a8f-4cbd-993b-7a877861de7b",
   "category": "報道発表",
   "pub_iso": "2026-08-24T09:00:00+09:00"
- },
- {
-  "guid": "8b80603d0bb0b6677975e44fb8207331",
-  "title": "【内閣府】第8回人工知能（AI）技術の利用と消費者問題に関する専門調査会【8月20日開催】",
-  "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/008/shiryou/index.html",
-  "category": "内閣府",
-  "pub_iso": "2026-08-21T15:13:00+09:00"
- },
- {
-  "guid": "c96f0456030b2a30da0966ab96880891",
-  "title": "【こ家庁/報道発表】第18回人工妊娠中絶一時金認定審査部会の開催について掲載しました",
-  "link": "https://www.cfa.go.jp/press/67ba8d1f-cc09-4f70-abce-41e7200c31ea",
-  "category": "報道発表",
-  "pub_iso": "2026-08-21T09:00:00+09:00"
- },
- {
-  "guid": "cf3359023c9b45e74541a951ecb92cc3",
-  "title": "【こ家庁/会議等】補償金・優生手術等一時金認定審査部会（第18回）の議事要旨を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/hoshokin-yuseishujutsu/e7e440a2",
-  "category": "会議等",
-  "pub_iso": "2026-08-21T09:00:00+09:00"
  }
 ]
