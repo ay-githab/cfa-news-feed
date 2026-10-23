@@ -1,0 +1,103 @@
+name: test-run (本番に触れないテスト)
+
+# v2-reliability ブランチに push があるたびに自動実行(mainには存在しないので本番では動かない)。
+# 権限: 読み取りのみ。Secrets は使わない(Environment を宣言しないので production の Secrets は読めない)。
+# FEED_MODE=test のため出力は data/test/ だけ。docs/feed.xml は変更しない(最後に検算)。
+# 結果は実行画面の「Summary」と、成果物(Artifacts)の test-report に出る。リポジトリへの書き込みはしない。
+on:
+  push:
+    branches: [v2-reliability]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30          # 全体の上限。これを超えたら打ち切り
+    env:
+      FEED_MODE: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: 依存ライブラリの脆弱性監査(pip-audit)
+        run: pip install -q pip-audit && pip-audit -r requirements.txt --progress-spinner off
+      - name: 本番ファイルの指紋を保存(最後に不変を検算)
+        run: sha256sum docs/feed.xml docs/feed_items.json > /tmp/before.txt
+      - name: 0. ローカル検証(48項目)
+        run: mkdir -p data/test && FEED_INTERVAL=0 python tests/test_local.py | tee data/test/local_tests.txt
+      - name: 1. URL到達性チェック
+        timeout-minutes: 5
+        run: python watch_pages.py --probe --report data/test/probe.md
+      - name: 2. 新着取得(テスト出力)
+        id: fetch
+        timeout-minutes: 8
+        continue-on-error: true
+        run: /usr/bin/time -v python scraper.py 2> data/test/time_scraper.txt || (cat data/test/time_scraper.txt; exit 1)
+      - name: 3. ページ監視 初回(基準記録・通常モード・上限10分)
+        id: watch1
+        timeout-minutes: 12
+        continue-on-error: true
+        run: python watch_pages.py --time-budget 600 --save-snapshot --report data/test/watch_1.md
+      - name: 4. ページ監視 2回目(変化検知のシミュレーション・オフライン=実サイトに再アクセスしない)
+        id: watch2
+        timeout-minutes: 3
+        continue-on-error: true
+        run: |
+          python watch_pages.py --offline --simulate-change shisetu_pf --report data/test/watch_2a.md | tee -a data/test/sim.txt
+          python watch_pages.py --offline --simulate-change kokodesearch_wam --report data/test/watch_2b.md | tee -a data/test/sim.txt
+          python watch_pages.py --offline --simulate-change digital_spec --report data/test/watch_2c.md | tee -a data/test/sim.txt
+      - name: 4b. 通常監視の所要時間(2回目=基準あり・実サイト・上限5分)
+        id: watch3
+        timeout-minutes: 7
+        continue-on-error: true
+        run: python watch_pages.py --time-budget 300 --report data/test/watch_3_timing.md
+      - name: 4c. 取得失敗時のエラー判定(存在しないページを重要対象として巡回→失敗終了コード2になるか)
+        id: failtest
+        continue-on-error: true
+        run: |
+          python - <<'PY'
+          import json
+          cfg = json.load(open("watch_targets.json", encoding="utf-8"))
+          cfg["targets"] = [{"id": "t_fail", "name": "失敗試験(存在しないページ)", "url": "https://www.cfa.go.jp/policies/hoiku/__not_exist_test__", "tier": 1, "critical": True, "attachments": "none"}]
+          json.dump(cfg, open("data/test/targets_fail.json", "w", encoding="utf-8"), ensure_ascii=False)
+          PY
+          set +e
+          WATCH_TARGETS=data/test/targets_fail.json python watch_pages.py --report data/test/watch_fail.md
+          echo "exit=$?" > data/test/failtest.txt
+          cat data/test/failtest.txt
+      - name: 5. 結果判定レポート
+        if: always()
+        env:
+          S_FETCH: ${{ steps.fetch.outcome }}
+          S_W1: ${{ steps.watch1.outcome }}
+          S_W2: ${{ steps.watch2.outcome }}
+          S_W3: ${{ steps.watch3.outcome }}
+        run: |
+          echo "fetch=$S_FETCH watch1=$S_W1 watch2=$S_W2 watch3=$S_W3" > data/test/steps.txt
+          echo "slack=未実施(テスト用ワークフローはSecretsを使わない設計)" > data/test/notify.txt
+          python tests/check_results.py | tee data/test/REPORT.md >> $GITHUB_STEP_SUMMARY
+      - name: 本番ファイルが不変であることを検算
+        if: always()
+        run: sha256sum -c /tmp/before.txt
+      - name: 秘密情報が出力に混入していないか検算
+        if: always()
+        run: |
+          if grep -rEl "hooks.slack.com|ghp_[A-Za-z0-9]{20,}|xox[baprs]-" data/test/ 2>/dev/null; then echo "::error::秘密情報らしき文字列を検出"; exit 1; fi
+          echo "clean"
+      - name: レポートを成果物として保存(リポジトリには書かない)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: |
+            data/test/*.md
+            data/test/*.txt
+            data/test/last_run.json
+            data/test/hosts_accessed.txt
+            data/test/pages_state.json
+          retention-days: 14

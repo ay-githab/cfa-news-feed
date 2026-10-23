@@ -1,10 +1,12 @@
 name: build-feed
 
+# 本体。60分おき。段階: 取得 → 履歴保存 → RSS生成 → push。
+# 取得・保存・生成のどれかが失敗すると python が失敗終了し、push されない(=last_run.json も更新されない)。
+# push 後の最終確認で、リポジトリ上の last_run.json と feed.xml が今回のものかを照合する。
 on:
   schedule:
-    # 24時間・30分おきに実行
-    - cron: "*/30 * * * *"
-  workflow_dispatch: {}   # 手動実行ボタンも有効化
+    - cron: "5 * * * *"
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -12,6 +14,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 50          # 1時間おきの実行なので、次回開始までに必ず終わらせる
+    environment: production     # Secrets(SLACK_WEBHOOK_URL)は Environment "production" に置く。他のワークフローからは読めない
     steps:
       - uses: actions/checkout@v4
 
@@ -20,19 +24,93 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4 feedparser
+        run: pip install -r requirements.txt
 
-      - name: Build feed
+      - name: Decide run flags (JST)  # 判定は run_flags.py(テスト済み)。日曜03時は deep=1 かつ watch=1
+        id: flags
+        env:
+          FLAGS_EVENT: ${{ github.event_name }}
+        run: python run_flags.py | tee -a $GITHUB_OUTPUT
+
+      - name: 1. 新着取得・履歴保存・RSS生成
+        timeout-minutes: 10
+        env:
+          FEED_DEEP: ${{ steps.flags.outputs.deep }}
         run: python scraper.py
 
-      - name: Commit and push if changed
+      - name: 2. Tier1ページ監視 (07:00 / 17:00 JST、日曜03:00は --deep)
+        id: watch
+        if: steps.flags.outputs.watch == '1'
+        continue-on-error: true   # 重要対象の失敗でも先に push まで進め、最後に失敗扱いにする
+        timeout-minutes: 42       # 内部の時間上限(通常15分/深掘り40分)に達すると未処理分は次回に回る
+        run: |
+          if [ "${{ steps.flags.outputs.deep }}" = "1" ]; then python watch_pages.py --deep; else python watch_pages.py; fi
+
+      - name: 3. Commit and push
+        id: push
         run: |
           git config user.name "feed-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/feed.xml docs/feed_items.json
+          git add docs/feed.xml docs/feed_items.json data/
+          git reset -q data/run_warnings.txt data/hosts_accessed.txt 2>/dev/null || true
           if git diff --cached --quiet; then
-            echo "No changes"
+            echo "No changes"; echo "pushed=nochange" >> $GITHUB_OUTPUT
           else
             git commit -m "Update feed $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git pull --rebase -q || true
             git push
+            echo "pushed=yes" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 4. push後の照合（リポジトリ上のファイルが今回のものか）
+        if: steps.push.outputs.pushed == 'yes'
+        env:
+          REPO: ${{ github.repository }}
+          REF: ${{ github.ref_name }}
+        run: |
+          sleep 5
+          python - <<'PY'
+          import json, urllib.request, sys, os
+          repo = os.environ["REPO"]; ref = os.environ["REF"]
+          local = json.load(open("data/last_run.json"))["scraper"]["at"]
+          remote = json.load(urllib.request.urlopen(f"https://raw.githubusercontent.com/{repo}/{ref}/data/last_run.json?nocache=1", timeout=30))["scraper"]["at"]
+          print("local:", local, "remote:", remote)
+          if local != remote:
+              print("::error::push後のリポジトリ内容が今回の実行と一致しません"); sys.exit(1)
+          PY
+
+      - name: 5. 警告をSlackへ（任意・Webhook設定時のみ）
+        if: success()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -s data/run_warnings.txt ] && [ -n "$SLACK_WEBHOOK_URL" ]; then
+            MSG=$(head -c 1500 data/run_warnings.txt)
+            python - "$MSG" <<'PY'
+          import json,os,sys,urllib.request
+          body={"text":":warning: 政府サイト新着通知 警告\n"+sys.argv[1]+"\n"+os.environ.get("GITHUB_SERVER_URL","")+"/"+os.environ.get("GITHUB_REPOSITORY","")+"/actions/runs/"+os.environ.get("GITHUB_RUN_ID","")}
+          req=urllib.request.Request(os.environ["SLACK_WEBHOOK_URL"],data=json.dumps(body).encode(),headers={"Content-Type":"application/json"})
+          urllib.request.urlopen(req,timeout=20)
+          PY
+          fi
+
+      - name: 6. 重要対象(Tier1)の取得失敗があれば実行を失敗にする
+        if: steps.watch.outcome == 'failure'
+        run: |
+          echo "::error::Tier1ページの取得に失敗しました（配信とpushは完了済み）"
+          cat data/run_warnings.txt || true
+          exit 1
+
+      - name: 7. 失敗をSlackへ（任意。GitHubからのメールは設定不要で届く）
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -n "$SLACK_WEBHOOK_URL" ]; then
+            python - <<'PY'
+          import json,os,urllib.request
+          body={"text":":rotating_light: 政府サイト新着通知: 実行が失敗しました\n"+os.environ.get("GITHUB_SERVER_URL","")+"/"+os.environ.get("GITHUB_REPOSITORY","")+"/actions/runs/"+os.environ.get("GITHUB_RUN_ID","")}
+          req=urllib.request.Request(os.environ["SLACK_WEBHOOK_URL"],data=json.dumps(body).encode(),headers={"Content-Type":"application/json"})
+          urllib.request.urlopen(req,timeout=20)
+          PY
           fi
