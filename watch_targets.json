@@ -1,5 +1,5 @@
 {
-  "_説明": "watch_pages.py が巡回するページ。attachments: none=リンク一覧のみ / headers=更新日時・サイズ比較 / hash=ダウンロードして中身まで比較。attachment_filter は対象を絞る正規表現。 critical=true の対象は取得失敗を重要警告として扱い、実行を失敗で終える(通知が飛ぶ)。 allowed_hosts 以外のホストへは一切アクセスしない(ページ内リンク・リダイレクト先も含む)。",
+  "_説明": "watch_pages.py が巡回するページ。attachments: none=リンク一覧のみ / headers=更新日時・サイズ比較 / hash=ダウンロードして中身まで比較。attachment_filter は対象を絞る正規表現。 critical=true の対象は取得失敗を重要警告として扱い、実行を失敗で終える(通知が飛ぶ)。 allowed_hosts 以外のホストへは一切アクセスしない(ページ内リンク・リダイレクト先も含む)。 通常実行は headers 対象を一覧比較のみ(HEADしない)、hash 対象だけHEAD＋必要時ダウンロード。週次深掘りで全添付を確認。時間上限: 通常900秒/深掘り2400秒、対象ごと90/300秒。超過分は次回に再開。",
   "targets": [
     {
       "id": "hokatsu",
@@ -8,7 +8,8 @@
       "tier": 1,
       "attachments": "hash",
       "size_cap_mb": 20,
-      "critical": true
+      "critical": true,
+      "max_attachments": 40
     },
     {
       "id": "hokatsu_archive",
@@ -25,8 +26,9 @@
       "tier": 1,
       "attachments": "hash",
       "size_cap_mb": 10,
-      "max_attachments": 120,
-      "critical": true
+      "max_attachments": 40,
+      "critical": true,
+      "attachment_filter": "\\.(csv|xlsx|xlsm|zip)(\\?|$)|マニュアル|FAQ|よくある|仕様|様式"
     },
     {
       "id": "kokodesearch_cfa",
@@ -139,7 +141,7 @@
       "url": "https://www.cfa.go.jp/policies/hoiku",
       "tier": 2,
       "attachments": "headers",
-      "max_attachments": 200,
+      "max_attachments": 60,
       "critical": false
     },
     {

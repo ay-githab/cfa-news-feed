@@ -51,7 +51,8 @@ import feedcore as fc
 TARGETS_PATH = Path("watch_targets.json")
 ATTACH_TEXT_DIR = fc.DATA_DIR / "attachment_text"
 ATTACH_RE = re.compile(r"\.(pdf|xlsx|xlsm|xls|docx|doc|csv|zip|pptx)(\?.*)?$", re.I)
-REQUEST_INTERVAL_SEC = float(__import__("os").environ.get("FEED_INTERVAL", "1.0"))
+REQUEST_INTERVAL_SEC = float(__import__("os").environ.get("FEED_INTERVAL", "1.0"))   # ページ取得・ダウンロードの間隔
+HEAD_INTERVAL_SEC = min(REQUEST_INTERVAL_SEC, 0.5)                                    # HEAD(軽い確認)の間隔
 DEFAULT_SIZE_CAP_MB = 30
 REHASH_DAYS = 7          # ETag/更新日時/サイズが不変でも、この日数を過ぎたら中身を再確認する
 JST = fc.JST
@@ -94,13 +95,13 @@ def _log_host(url):
         pass
 
 
-def http(method, url, **kw):
-    """許可ホスト・https限定。リダイレクトは1段ずつ検査しながら最大3回まで追う。"""
+def http(method, url, interval=None, **kw):
+    """許可ホスト・https限定。リダイレクトは1段ずつ検査しながら最大3回まで追う。timeoutは30秒。"""
     check_allowed(url)
     for _ in range(MAX_REDIRECTS + 1):
         _log_host(url)
-        time.sleep(REQUEST_INTERVAL_SEC)
-        r = requests.request(method, url, headers=fc.HEADERS, timeout=60, allow_redirects=False, **kw)
+        time.sleep(REQUEST_INTERVAL_SEC if interval is None else interval)
+        r = requests.request(method, url, headers=fc.HEADERS, timeout=30, allow_redirects=False, **kw)
         if r.status_code in (301, 302, 303, 307, 308) and r.headers.get("Location"):
             url = check_allowed(urljoin(url, r.headers["Location"]))
             continue
@@ -314,23 +315,48 @@ def load_text(key):
 
 
 # ---- 添付1件の確認 -------------------------------------------------------------
-def check_attachment(att, prev, mode, deep, cap_bytes):
+def check_attachment(att, prev, mode, deep, cap_bytes, metrics, offline_cur=None):
     """
     戻り値: (新しい状態dict, 変化の説明 or None)
-    mode: "none"(一覧のみ) / "headers"(HEAD比較) / "hash"(ダウンロードしてハッシュ+内容)
+    mode:
+      "none"    … 一覧のみ
+      "headers" … 通常実行では一覧だけ。週次深掘り(--deep)のときだけ HEAD で更新日時/サイズを比較
+      "hash"    … 通常実行で HEAD、変化・情報欠落・7日経過なら中身をダウンロードしてハッシュ。深掘りは全件ダウンロード
+    offline_cur: テスト(オフライン)用。実サイトに行かず、保存済みの状態を「今回取得した値」として使う
     """
     url = att["url"]
     state = {"name": att["name"], "etag": "", "last_modified": "", "size": "", "sha256": "",
-             "summary_key": "", "checked_at": NOW.isoformat(timespec="seconds")}
-    if mode == "none":
+             "summary_key": "", "hashed_at": "", "checked_at": NOW.isoformat(timespec="seconds")}
+    if mode == "none" or (mode == "headers" and not deep):
+        if prev:
+            for k in ("etag", "last_modified", "size", "sha256", "summary_key", "hashed_at"):
+                state[k] = prev.get(k, "")
         return state, None
     try:
         check_allowed(url)
-    except BlockedURL as e:
+    except BlockedURL:
         state["sha256"] = "skipped:blocked_host"
-        return state, None   # 許可外ホストの資料はリンクの有無だけ追跡し、中身は取りに行かない
+        return state, None
+
+    if offline_cur is not None:   # ---- オフライン: 保存済み状態を「現在値」とみなす
+        cur = offline_cur.get(url, {})
+        for k in ("etag", "last_modified", "size", "sha256", "summary_key", "hashed_at"):
+            state[k] = cur.get(k, "")
+        if prev and prev.get("sha256") and cur.get("sha256") and prev["sha256"] != cur["sha256"]:
+            old, new = load_text(prev.get("summary_key", "")), load_text(cur.get("summary_key", ""))
+            lines, total = text_diff(old, new) if (old and new) else ([], 0)
+            d = f"内容が差し替わりました(同じURLのまま中身が変化): {att['name']}"
+            if total:
+                d += f"\n   差分 {total} 行(抜粋):\n   " + "\n   ".join(lines[:15])
+            return state, d
+        if prev and ((cur.get("size") and cur.get("size") != prev.get("size")) or
+                     (cur.get("last_modified") and cur.get("last_modified") != prev.get("last_modified"))):
+            return state, f"差し替えの疑い(更新日時/サイズ変化): {att['name']}"
+        return state, None
+
     try:
-        h = http("HEAD", url)
+        h = http("HEAD", url, interval=HEAD_INTERVAL_SEC)
+        metrics["head"] += 1
         state["etag"] = h.headers.get("ETag", "")
         state["last_modified"] = h.headers.get("Last-Modified", "")
         state["size"] = h.headers.get("Content-Length", "")
@@ -340,6 +366,10 @@ def check_attachment(att, prev, mode, deep, cap_bytes):
         return state, f"添付のHEAD失敗: {att['name']}: {e}"
 
     headers_known = bool(state["etag"] or state["last_modified"] or state["size"])
+    headers_changed = prev and (
+        (state["etag"] and state["etag"] != prev.get("etag")) or
+        (state["last_modified"] and state["last_modified"] != prev.get("last_modified")) or
+        (state["size"] and state["size"] != prev.get("size")))
     stale = False
     if prev and prev.get("hashed_at"):
         try:
@@ -348,21 +378,18 @@ def check_attachment(att, prev, mode, deep, cap_bytes):
             stale = True
     elif prev and mode == "hash":
         stale = True
-    headers_changed = prev and (
-        (state["etag"] and state["etag"] != prev.get("etag")) or
-        (state["last_modified"] and state["last_modified"] != prev.get("last_modified")) or
-        (state["size"] and state["size"] != prev.get("size")))
-    need_download = (mode == "hash" and (prev is None or deep or headers_changed or not headers_known or stale))
-    if mode == "headers":
+    if mode == "headers":   # (deep のときだけここに来る)
+        if prev:
+            for k in ("sha256", "summary_key", "hashed_at"):
+                state[k] = prev.get(k, "")
         if prev and headers_changed:
             return state, f"差し替えの疑い(更新日時/サイズ変化): {att['name']}"
-        if prev:
-            state["sha256"], state["summary_key"] = prev.get("sha256", ""), prev.get("summary_key", "")
         return state, None
 
+    need_download = prev is None or deep or headers_changed or not headers_known or stale
     if not need_download:
-        state["sha256"], state["summary_key"] = prev.get("sha256", ""), prev.get("summary_key", "")
-        state["hashed_at"] = prev.get("hashed_at", "")
+        for k in ("sha256", "summary_key", "hashed_at"):
+            state[k] = prev.get(k, "")
         return state, None
     try:
         size = int(state["size"] or 0)
@@ -370,9 +397,11 @@ def check_attachment(att, prev, mode, deep, cap_bytes):
             state["sha256"] = "skipped:too_large"
             return state, (f"差し替えの疑い(サイズ上限超のため内容未確認): {att['name']}" if headers_changed else None)
         data, reason = download_capped(url, cap_bytes)
+        metrics["downloads"] += 1
         if data is None:
             state["sha256"] = "skipped:too_large"
             return state, (f"差し替えの疑い({reason}): {att['name']}" if headers_changed else None)
+        metrics["bytes"] += len(data)
     except Exception as e:
         return state, f"添付のダウンロード失敗: {att['name']}: {e}"
     state["sha256"] = sha256(data)
@@ -396,32 +425,53 @@ def check_attachment(att, prev, mode, deep, cap_bytes):
 
 
 # ---- ページ1件の確認 -----------------------------------------------------------
-def check_target(t, prev, deep):
+def check_target(t, prev, deep, deadline, offline=None):
+    """
+    戻り値: (new_state or None, changes[list], failed[bool], metrics[dict])
+    deadline: この対象に使える時刻の上限(過ぎたら添付確認を打ち切り partial にする)
+    offline : {"html": str, "state": dict} を渡すと実サイトに行かない(テスト用)
+    """
     url = t["url"]
+    t0 = time.time()
+    metrics = {"seconds": 0, "attachments": 0, "head": 0, "downloads": 0, "bytes": 0, "partial": False}
     try:
-        r = http("GET", url)
-        r.raise_for_status()
+        if offline is not None:
+            html = offline["html"]
+        else:
+            r = http("GET", url)
+            r.raise_for_status()
+            html = r.text
     except Exception as e:
-        return None, [f"ページ取得失敗: {e}"], True
-    main, text, last_updated = extract_main_text(r.text)
+        metrics["seconds"] = round(time.time() - t0, 1)
+        return None, [f"ページ取得失敗: {e}"], True, metrics
+    main, text, last_updated = extract_main_text(html)
     text = mask_pii(text)
     if len(text) < 200:
-        return None, ["本文が極端に短く取得されました(ブロック/構造変更の疑い)"], True
+        metrics["seconds"] = round(time.time() - t0, 1)
+        return None, ["本文が極端に短く取得されました(ブロック/構造変更の疑い)"], True, metrics
     mode = t.get("attachments", "headers")
     atts = extract_attachments(main, url, t.get("attachment_filter"), t.get("max_attachments", 80))
+    metrics["attachments"] = len(atts)
     cap = int(t.get("size_cap_mb", DEFAULT_SIZE_CAP_MB)) * 1024 * 1024
     thash = sha256(text.encode("utf-8"))
     sections = section_fingerprints(main)
     new_state = {"name": t["name"], "text_hash": thash, "last_updated": last_updated,
                  "sections": sections, "attachments": {}, "checked_at": NOW.isoformat(timespec="seconds")}
     changes = []
+    prev_atts = prev.get("attachments", {}) if prev else {}
+    offline_cur = offline["state"].get("attachments", {}) if offline is not None else None
+
     if prev is None:
         for a in atts:
-            st, _ = check_attachment(a, None, mode, deep, cap)
+            if time.time() > deadline:
+                metrics["partial"] = True
+                break
+            st, _ = check_attachment(a, None, mode, deep, cap, metrics, offline_cur)
             new_state["attachments"][a["url"]] = st
-        return new_state, ["初回: 現在の状態を基準として記録しました"], False
+        metrics["seconds"] = round(time.time() - t0, 1)
+        msg = "初回: 現在の状態を基準として記録しました" + ("(時間上限のため添付は一部のみ。次回に続きを確認)" if metrics["partial"] else "")
+        return new_state, [msg], False, metrics
 
-    # 本文(保存するのは見出し単位の指紋だけ。本文も差分行も保存しない)
     if thash != prev.get("text_hash"):
         msgs = section_diff(prev.get("sections", []), sections)
         d = f"本文が変わりました({len(msgs)}か所)"
@@ -431,8 +481,6 @@ def check_target(t, prev, deep):
             d += "\n   " + "\n   ".join(msgs[:15])
         changes.append(d)
 
-    # 添付の追加・削除
-    prev_atts = prev.get("attachments", {})
     cur_urls = [a["url"] for a in atts]
     for a in atts:
         if a["url"] not in prev_atts:
@@ -440,13 +488,24 @@ def check_target(t, prev, deep):
     for u, st in prev_atts.items():
         if u not in cur_urls:
             changes.append(f"資料削除(リンクが消えました): {st.get('name', u)}")
-    # 添付の内容
-    for a in atts:
-        st, ch = check_attachment(a, prev_atts.get(a["url"]), mode, deep, cap)
+    # 添付の内容確認: 前回未確認(partial)のものを先に
+    order = sorted(atts, key=lambda a: (a["url"] in prev_atts and bool(prev_atts[a["url"]].get("checked_at")), a["url"]))
+    for a in order:
+        if time.time() > deadline:
+            metrics["partial"] = True
+            # 残りは前回の状態を引き継ぐ(未確認のまま)
+            for b in order:
+                if b["url"] not in new_state["attachments"]:
+                    new_state["attachments"][b["url"]] = prev_atts.get(b["url"], {"name": b["name"], "checked_at": ""})
+            break
+        st, ch = check_attachment(a, prev_atts.get(a["url"]), mode, deep, cap, metrics, offline_cur)
         new_state["attachments"][a["url"]] = st
         if ch and a["url"] in prev_atts:
             changes.append(ch)
-    return new_state, changes, False
+    if metrics["partial"]:
+        changes.append("(時間上限のため添付の一部は未確認。次回に続きを確認します)")
+    metrics["seconds"] = round(time.time() - t0, 1)
+    return new_state, changes, False, metrics
 
 
 def load_targets():
@@ -468,28 +527,36 @@ def load_page_state():
 def probe(targets_cfg):
     rows = []
     for p in targets_cfg.get("probes", []) + [{"id": t["id"], "name": t["name"], "url": t["url"]} for t in targets_cfg["targets"]]:
+        t0 = time.time()
         try:
             r = http("GET", p["url"])
             ok = r.status_code < 400
             _, text, lu = extract_main_text(r.text) if ok and "html" in r.headers.get("Content-Type", "") else (None, "", "")
-            rows.append((p["name"], p["url"], f"HTTP {r.status_code}", f"本文{len(text)}字", lu))
+            rows.append((p["name"], p["url"], f"HTTP {r.status_code}", f"本文{len(text)}字 {time.time()-t0:.1f}秒", lu))
         except Exception as e:
-            rows.append((p["name"], p["url"], f"失敗: {e}", "", ""))
+            rows.append((p["name"], p["url"], f"失敗: {e}", f"{time.time()-t0:.1f}秒", ""))
     return rows
+
+
+SNAP_DIR = fc.DATA_DIR / "snapshots"   # テスト(オフライン再現)用。本番では使わない
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--deep", action="store_true")
+    ap.add_argument("--deep", action="store_true", help="週次深掘り: headers対象もHEAD、hash対象は全件再ダウンロード")
     ap.add_argument("--probe", action="store_true")
-    ap.add_argument("--simulate-change", default="")
+    ap.add_argument("--simulate-change", default="", help="テスト用: 指定idの前回状態をずらして検知を確認(--offline と併用)")
+    ap.add_argument("--offline", action="store_true", help="テスト用: 実サイトに行かず、前回保存したページ(snapshots)で比較する")
+    ap.add_argument("--save-snapshot", action="store_true", help="テスト用: 取得したページHTMLを snapshots に保存(次の --offline 用)")
+    ap.add_argument("--time-budget", type=int, default=0, help="全体の秒数上限(0=既定: 通常900秒/深掘り2400秒)")
+    ap.add_argument("--target-budget", type=int, default=0, help="対象1件あたりの秒数上限(0=既定: 通常90秒/深掘り300秒)")
     ap.add_argument("--report", default="")
     args = ap.parse_args()
 
     cfg = load_targets()
     if args.probe:
         rows = probe(cfg)
-        md = ["| 対象 | URL | 結果 | 本文 | 最終更新日 |", "|---|---|---|---|---|"]
+        md = ["| 対象 | URL | 結果 | 本文・所要 | 最終更新日 |", "|---|---|---|---|---|"]
         for r in rows:
             md.append("| " + " | ".join(r) + " |")
         out = "\n".join(md)
@@ -498,7 +565,19 @@ def main():
             Path(args.report).write_text(out, encoding="utf-8")
         return
 
+    total_budget = args.time_budget or (2400 if args.deep else 900)
+    target_budget = args.target_budget or (300 if args.deep else 90)
+    run_deadline = time.time() + total_budget
+
     state = load_page_state()
+    pending_prev = state.get("_pending", [])
+    snap_state = {}
+    if args.offline:
+        try:
+            snap_state = json.loads((SNAP_DIR / "state_baseline.json").read_text(encoding="utf-8"))
+        except Exception:
+            print("ERROR: --offline には先に --save-snapshot 付きの実行が必要です", file=sys.stderr)
+            sys.exit(1)
     if args.simulate_change:
         for t in cfg["targets"]:
             if t["id"] == args.simulate_change and t["url"] in state:
@@ -511,26 +590,51 @@ def main():
                     s["attachments"][u]["size"] = "0"
                 print(f"simulate-change: {t['id']} の前回状態をずらしました")
 
-    events, feed_items, report = [], [], []
-    failures, critical_failures = 0, []
-    for t in cfg["targets"]:
-        new_state, changes, failed = check_target(t, state.get(t["url"]), args.deep)
+    # 優先順: 前回未処理 → Tier → 前回確認が古い順
+    def order_key(t):
+        st = state.get(t["url"], {})
+        return (0 if t["id"] in pending_prev else 1, t.get("tier", 9), st.get("checked_at", ""))
+    targets = sorted(cfg["targets"], key=order_key)
+
+    events, feed_items, report, metrics_all = [], [], [], {}
+    failures, critical_failures, pending = 0, [], []
+    for t in targets:
+        if time.time() > run_deadline:
+            pending.append(t["id"])
+            continue
+        deadline = min(run_deadline, time.time() + target_budget)
+        offline = None
+        if args.offline:
+            p = SNAP_DIR / f"{t['id']}.html"
+            if not p.exists():
+                pending.append(t["id"])
+                continue
+            offline = {"html": p.read_text(encoding="utf-8"), "state": snap_state.get(t["url"], {})}
+        new_state, changes, failed, m = check_target(t, state.get(t["url"]), args.deep, deadline, offline)
+        metrics_all[t["id"]] = m
         if failed:
             failures += 1
             tag = "【重要】" if t.get("critical") else ""
             warn(f"{tag}{t['name']}: " + "; ".join(changes))
             if t.get("critical"):
                 critical_failures.append(t["name"])
-            report.append((t["name"], "取得失敗" + ("（重要対象）" if t.get("critical") else ""), changes))
+            report.append((t["name"], "取得失敗" + ("（重要対象）" if t.get("critical") else ""), changes, m))
             continue
+        if args.save_snapshot and not args.offline:
+            SNAP_DIR.mkdir(parents=True, exist_ok=True)
+            try:
+                (SNAP_DIR / f"{t['id']}.html").write_text(http("GET", t["url"], interval=0).text, encoding="utf-8")
+            except Exception:
+                pass
         state[t["url"]] = new_state
-        real = [c for c in changes if not c.startswith("初回")]
-        report.append((t["name"], f"{len(real)}件の変化" if real else ("初回記録" if changes else "変化なし"), changes))
+        if m["partial"]:
+            pending.append(t["id"])
+        real = [c for c in changes if not c.startswith("初回") and not c.startswith("(時間上限")]
+        report.append((t["name"], f"{len(real)}件の変化" if real else ("初回記録" if changes else "変化なし"), changes, m))
         for c in changes:
             events.append({"item_id": hashlib.md5((t["url"] + c + NOW.isoformat()).encode()).hexdigest(),
-                           "event": "baseline" if c.startswith("初回") else "page_change",
-                           "target": t["id"], "name": t["name"], "url": t["url"], "detail": c,
-                           "tier": t.get("tier", 2)})
+                           "event": "baseline" if c.startswith("初回") else ("note" if c.startswith("(時間上限") else "page_change"),
+                           "target": t["id"], "name": t["name"], "url": t["url"], "detail": c, "tier": t.get("tier", 2)})
         if real:
             n_add = sum(1 for c in real if c.startswith("資料追加"))
             n_rep = sum(1 for c in real if "差し替" in c)
@@ -542,8 +646,14 @@ def main():
             title = f"{t['name']}：" + "・".join(parts or ["更新"]) + f"（{NOW.strftime('%m/%d %H:%M')}）"
             feed_items.append(fc.make_item(t.get("source", "こ家庁"), "ページ更新", title, t["url"], NOW))
 
+    state["_pending"] = pending
+    state["_metrics"] = {"at": NOW.isoformat(timespec="seconds"), "deep": args.deep, "targets": metrics_all,
+                         "total_seconds": round(sum(m["seconds"] for m in metrics_all.values()), 1)}
     fc.ensure_dirs()
     fc.PAGE_STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
+    if args.save_snapshot and not args.offline:
+        SNAP_DIR.mkdir(parents=True, exist_ok=True)
+        (SNAP_DIR / "state_baseline.json").write_text(json.dumps(state, ensure_ascii=False), encoding="utf-8")
     if events:
         with fc.PAGE_EVENTS_PATH.open("a", encoding="utf-8") as f:
             for e in events:
@@ -554,8 +664,15 @@ def main():
         fc.write_feed(merged)
         print(f"feed: {added} item(s) added for page changes")
 
-    md = [f"# ページ監視 結果 {NOW.strftime('%Y-%m-%d %H:%M')} (mode={fc.MODE})", ""]
-    for name, status, changes in report:
+    total = state["_metrics"]["total_seconds"]
+    md = [f"# ページ監視 結果 {NOW.strftime('%Y-%m-%d %H:%M')} (mode={fc.MODE}, deep={args.deep}, offline={args.offline}) 合計 {total} 秒", ""]
+    md += ["| 対象 | 結果 | 秒 | 添付 | HEAD | DL | MB |", "|---|---|---|---|---|---|---|"]
+    for name, status, changes, m in report:
+        md.append(f"| {name} | {status}{'(一部未確認)' if m['partial'] else ''} | {m['seconds']} | {m['attachments']} | {m['head']} | {m['downloads']} | {m['bytes']/1048576:.1f} |")
+    if pending:
+        md.append(f"| (未処理→次回) | {', '.join(pending)} | | | | | |")
+    md.append("")
+    for name, status, changes, m in report:
         md.append(f"## {name} — {status}")
         for c in changes:
             md.append(f"- {c}")
@@ -569,14 +686,16 @@ def main():
         Path(args.report).write_text(out, encoding="utf-8")
     status = "ok" if failures == 0 else ("critical_failure" if critical_failures else "partial")
     fc.write_last_run("watch_pages", status,
-                      {"targets": len(cfg["targets"]), "failures": failures, "critical_failures": critical_failures,
-                       "changes": len(feed_items), "warnings": WARNINGS,
+                      {"targets": len(cfg["targets"]), "processed": len(metrics_all), "failures": failures,
+                       "critical_failures": critical_failures, "pending": pending, "changes": len(feed_items),
+                       "total_seconds": total, "deep": args.deep, "warnings": WARNINGS,
                        "stages": {"fetch": status, "state_saved": "ok", "feed": "ok"}})
     if WARNINGS:
         p = fc.DATA_DIR / "run_warnings.txt"
         prev = p.read_text(encoding="utf-8") if p.exists() else ""
         p.write_text((prev + "\n" if prev else "") + "\n".join(WARNINGS), encoding="utf-8")
-    # Tier1(critical)の取得失敗は失敗終了(終了コード2) → ワークフローが通知を送る
+    if pending and not args.offline:
+        print(f"NOTE: 時間上限により未処理 {len(pending)} 件は次回に回します: {pending}")
     if critical_failures:
         print("ERROR: 重要対象の取得に失敗: " + ", ".join(critical_failures), file=sys.stderr)
         sys.exit(2)
