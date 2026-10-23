@@ -15,6 +15,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 30          # 全体の上限。これを超えたら打ち切り
     env:
       FEED_MODE: test
     steps:
@@ -27,33 +28,43 @@ jobs:
         run: pip install -q pip-audit && pip-audit -r requirements.txt --progress-spinner off
       - name: 本番ファイルの指紋を保存(最後に不変を検算)
         run: sha256sum docs/feed.xml docs/feed_items.json > /tmp/before.txt
-      - name: 0. ローカル検証(42項目)
+      - name: 0. ローカル検証(48項目)
         run: mkdir -p data/test && FEED_INTERVAL=0 python tests/test_local.py | tee data/test/local_tests.txt
       - name: 1. URL到達性チェック
+        timeout-minutes: 5
         run: python watch_pages.py --probe --report data/test/probe.md
       - name: 2. 新着取得(テスト出力)
         id: fetch
+        timeout-minutes: 8
         continue-on-error: true
-        run: python scraper.py
-      - name: 3. ページ監視 初回(基準記録)
+        run: /usr/bin/time -v python scraper.py 2> data/test/time_scraper.txt || (cat data/test/time_scraper.txt; exit 1)
+      - name: 3. ページ監視 初回(基準記録・通常モード・上限10分)
         id: watch1
+        timeout-minutes: 12
         continue-on-error: true
-        run: python watch_pages.py --report data/test/watch_1.md
-      - name: 4. ページ監視 2回目(変化検知のシミュレーション)
+        run: python watch_pages.py --time-budget 600 --save-snapshot --report data/test/watch_1.md
+      - name: 4. ページ監視 2回目(変化検知のシミュレーション・オフライン=実サイトに再アクセスしない)
         id: watch2
+        timeout-minutes: 3
         continue-on-error: true
         run: |
-          python watch_pages.py --simulate-change shisetu_pf --report data/test/watch_2a.md
-          python watch_pages.py --simulate-change kokodesearch_wam --report data/test/watch_2b.md
-          python watch_pages.py --simulate-change digital_spec --report data/test/watch_2c.md
+          python watch_pages.py --offline --simulate-change shisetu_pf --report data/test/watch_2a.md
+          python watch_pages.py --offline --simulate-change kokodesearch_wam --report data/test/watch_2b.md
+          python watch_pages.py --offline --simulate-change digital_spec --report data/test/watch_2c.md
+      - name: 4b. 通常監視の所要時間(2回目=基準あり・実サイト・上限5分)
+        id: watch3
+        timeout-minutes: 7
+        continue-on-error: true
+        run: python watch_pages.py --time-budget 300 --report data/test/watch_3_timing.md
       - name: 5. 結果判定レポート
         if: always()
         env:
           S_FETCH: ${{ steps.fetch.outcome }}
           S_W1: ${{ steps.watch1.outcome }}
           S_W2: ${{ steps.watch2.outcome }}
+          S_W3: ${{ steps.watch3.outcome }}
         run: |
-          echo "fetch=$S_FETCH watch1=$S_W1 watch2=$S_W2" > data/test/steps.txt
+          echo "fetch=$S_FETCH watch1=$S_W1 watch2=$S_W2 watch3=$S_W3" > data/test/steps.txt
           echo "slack=未実施(テスト用ワークフローはSecretsを使わない設計)" > data/test/notify.txt
           python tests/check_results.py | tee data/test/REPORT.md >> $GITHUB_STEP_SUMMARY
       - name: 本番ファイルが不変であることを検算
@@ -74,4 +85,5 @@ jobs:
             data/test/*.txt
             data/test/last_run.json
             data/test/hosts_accessed.txt
+            data/test/pages_state.json
           retention-days: 14
