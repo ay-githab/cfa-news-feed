@@ -313,6 +313,12 @@ def main():
     origin = "deep" if DEEP else "scheduled"
     existing = fc.load_state()
     known_ids = {it["guid"] for it in existing} | fc._history_ids()
+    if fc.TEST and not existing:
+        # テストでは本番のRSS用150件(docs/feed_items.json)を読み取り専用で既知扱いにし、本番初回と同じ条件にする
+        try:
+            known_ids |= {it["guid"] for it in json.loads(Path("docs/feed_items.json").read_text(encoding="utf-8"))}
+        except Exception:
+            pass
 
     # 1) こ家庁 新着(全カテゴリ)
     news_items, news_info = crawl_cfa_list(
