@@ -97,23 +97,27 @@ real_http = wp.http
 wp.ALLOWED_HOSTS.update(['x.test'])
 wp.http = fake_http
 t = {"id": "t", "name": "施設管理PF", "url": "https://x.test/page", "attachments": "hash"}
-st1, ch1, failed = wp.check_target(t, None, False)
+import time as _time
+FAR = lambda: _time.time() + 60
+_ct = wp.check_target
+wp_check = lambda tt, prev, deep, offline=None: _ct(tt, prev, deep, FAR(), offline)[:3]
+st1, ch1, failed = wp_check(t, None, False)
 check("5a 初回は基準記録のみ", not failed and ch1[0].startswith("初回") and len(st1["attachments"]) == 1)
-st2, ch2, failed = wp.check_target(t, st1, False)
+st2, ch2, failed = wp_check(t, st1, False)
 check("5b 変化なしなら無報告", not failed and ch2 == [], str(ch2))
 files["https://x.test/f.xlsx"] = xlsx(["施設名", "所在地", "LGWANアドレス"])  # 同じURLで中身だけ差し替え
-st3, ch3, failed = wp.check_target(t, st2, False)
+st3, ch3, failed = wp_check(t, st2, False)
 check("5c 同じURLの差し替えを検知(サイズ変化→再DL→ハッシュ差)", any("差し替わりました" in c for c in ch3) and "LGWANアドレス" in "\n".join(ch3), "\n".join(ch3))
 files["https://x.test/f.xlsx"] = xlsx(["施設名", "所在地", "LGWANアドレス"])  # 変化なし、サイズ同じ
-st4, ch4, failed = wp.check_target(t, st3, True)     # deep: サイズ同じでも再DLして確認
+st4, ch4, failed = wp_check(t, st3, True)     # deep: サイズ同じでも再DLして確認
 check("5d 深掘り(deep)は再DLしても誤検知しない", ch4 == [], str(ch4))
 pages_html["https://x.test/page"] = pages_html["https://x.test/page"].replace("2026年9月30日", "2026年10月22日").replace("</main>", '<a href="/faq.pdf">FAQ</a></main>')
 files["https://x.test/faq.pdf"] = b.getvalue()
-st5, ch5, failed = wp.check_target(t, st4, False)
+st5, ch5, failed = wp_check(t, st4, False)
 check("5e 本文変更+最終更新日+資料追加を検知(本文は保存しない)", any("本文が変わりました" in c and "2026年10月22日" in c and "の内容が変化" in c for c in ch5) and any(c.startswith("資料追加: FAQ") for c in ch5) and "sections" in st5 and not any(k=="text_key" for k in st5), "\n".join(ch5))
 check("5g 保存状態に本文テキストが含まれない", "本文 本文" not in json.dumps(st5, ensure_ascii=False) and all(len(sec["h"])<=60 for sec in st5["sections"]), json.dumps(st5["sections"], ensure_ascii=False)[:200])
 pages_html["https://x.test/page"] = "<html>503</html>"
-st6, ch6, failed = wp.check_target(t, st5, False)
+st6, ch6, failed = wp_check(t, st5, False)
 check("5f 本文が取れない時は失敗として報告(変化扱いしない)", failed)
 
 # 6) RSS形式が第1期と同一
@@ -200,13 +204,14 @@ old_state = {"name":"f","etag":"E","last_modified":"L","size":"10","sha256":"abc
 dl=[]
 wp.http = lambda m,u,**k: (dl.append(m), SResp(10) if m=="GET" else type("H",(),{"status_code":200,"headers":{"ETag":"E","Last-Modified":"L","Content-Length":"10"}})())[1]
 _dc = wp.download_capped; wp.download_capped = lambda u,c: (dl.append("DL") or (b"x", ""))
-wp.check_attachment({"url":"https://x.test/f.csv","name":"f"}, old_state, "hash", False, 10**7)
+M = lambda: {"head":0,"downloads":0,"bytes":0}
+wp.check_attachment({"url":"https://x.test/f.csv","name":"f"}, old_state, "hash", False, 10**7, M())
 check("10b メタデータ不変でも7日経過なら再ダウンロードして再ハッシュ", "DL" in dl, str(dl))
 dl.clear(); old_state["hashed_at"] = wp.NOW.isoformat(timespec="seconds")
-wp.check_attachment({"url":"https://x.test/f.csv","name":"f"}, old_state, "hash", False, 10**7)
+wp.check_attachment({"url":"https://x.test/f.csv","name":"f"}, old_state, "hash", False, 10**7, M())
 check("10c 7日以内でメタデータ不変なら再ダウンロードしない(軽量)", "DL" not in dl, str(dl))
 dl.clear()
-wp.check_attachment({"url":"https://x.test/f.csv","name":"f"}, old_state, "hash", True, 10**7)
+wp.check_attachment({"url":"https://x.test/f.csv","name":"f"}, old_state, "hash", True, 10**7, M())
 check("10d 深掘り(--deep)は必ず再ダウンロード", "DL" in dl)
 wp.download_capped = _dc; wp.http = real_http
 import run_flags as rf
@@ -216,6 +221,38 @@ f_mon12 = rf.flags(_dt(2026,10,26,12,5,tzinfo=rf.JST))
 f_disp = rf.flags(_dt(2026,10,26,12,5,tzinfo=rf.JST), "workflow_dispatch")
 check("10e 日曜03時: deep=1 かつ watch=1(週次深掘りが実行される)", f_sun3 == {"hour":"03","deep":"1","watch":"1"}, str(f_sun3))
 check("10f 平日07時: watch=1 deep=0 / 12時: 両方0 / 手動: watch=1", f_mon7["watch"]=="1" and f_mon7["deep"]=="0" and f_mon12["watch"]=="0" and f_disp["watch"]=="1")
+
+# 11) 実行時間の制御
+wp.ALLOWED_HOSTS.update(["x.test"])
+calls = []
+many = "<main><h1>多数添付</h1>" + "本文 " * 100 + "".join(f'<a href="/d{i}.pdf">資料{i}</a>' for i in range(30)) + "</main>"
+def slow_http(method, url, **kw):
+    calls.append((method, url))
+    if url.endswith("/many"): return Resp(200, text=many, headers={"Content-Type":"text/html"})
+    return Resp(200, content=b"%PDF-1.4 x", headers={"Content-Length":"10"})
+wp.http = slow_http
+tm = {"id":"many","name":"多数添付","url":"https://x.test/many","attachments":"headers"}
+st, ch, failed, m = wp.check_target(tm, None, False, _time.time()+60)
+check("11a headers対象は通常実行でHEADしない(1ページ=1リクエスト)", m["head"]==0 and len(calls)==1 and m["attachments"]==30, f"head={m['head']} calls={len(calls)}")
+calls.clear()
+st2, ch2, failed, m2 = wp.check_target(tm, st, True, _time.time()+60)
+check("11b 深掘り(--deep)ではheaders対象もHEADで確認", m2["head"]==30, f"head={m2['head']}")
+calls.clear()
+th = dict(tm, attachments="hash")
+_real_sleep = wp.time.sleep
+st3, ch3, failed, m3 = wp.check_target(th, None, False, _time.time()-1)   # 既に期限切れ
+check("11c 対象ごとの時間上限を超えたら添付確認を打ち切り『一部未確認』にする", m3["partial"] and len(st3["attachments"]) < 30 and "一部のみ" in ch3[0], f"attachments_checked={len(st3['attachments'])}")
+st4, ch4, failed, m4 = wp.check_target(th, st3, False, _time.time()+60)
+check("11d 次回は未確認分から再開し全件そろう", len(st4["attachments"])==30 and not m4["partial"], f"{len(st4['attachments'])}")
+check("11e 対象ごとに秒数・添付数・HEAD数・DL数・容量を記録", all(k in m4 for k in ("seconds","attachments","head","downloads","bytes")), str(m4))
+# オフライン再現: 実サイトに行かずに検知できる
+calls.clear()
+off = {"html": many, "state": st4}
+prev_sim = json.loads(json.dumps(st4)); prev_sim["text_hash"]="simulated"; prev_sim["sections"][0]["hash"]="simulated"
+u0 = list(prev_sim["attachments"])[0]; prev_sim["attachments"][u0]["sha256"]="simulated"; prev_sim["attachments"][u0]["size"]="0"
+st5, ch5, failed, m5 = wp.check_target(th, prev_sim, False, _time.time()+60, offline=off)
+check("11f シミュレーションはオフラインで実行(HTTPアクセス0回)かつ本文・添付の変化を検知", len(calls)==0 and any("本文が変わりました" in c for c in ch5) and any("差し替" in c for c in ch5), f"calls={len(calls)} {ch5[:2]}")
+wp.http = real_http
 
 import platform
 print("\n合格 %d / %d  (Python %s)" % (sum(1 for r in R if r[1]), len(R), platform.python_version()))

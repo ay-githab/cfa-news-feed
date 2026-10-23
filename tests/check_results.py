@@ -31,6 +31,7 @@ def table(title, rows):
 steps = dict(kv.split("=") for kv in read("steps.txt").split() if "=" in kv)
 hist, items, w1 = read("history.jsonl"), read("feed_items.json"), read("watch_1.md")
 w2a, w2b, w2c = read("watch_2a.md"), read("watch_2b.md"), read("watch_2c.md")
+w3 = read("watch_3_timing.md")
 probe = read("probe.md")
 local = read("local_tests.txt")
 try:
@@ -41,7 +42,7 @@ s = lr.get("scraper", {}); sd = s.get("details", {})
 
 # ---- 取得 ----
 rows = []
-rows.append(("ローカル検証42項目", ("合格 42 / 42" in local) if local else None, local.strip().splitlines()[-1] if local else "未実行"))
+rows.append(("ローカル検証48項目", ("合格 48 / 48" in local) if local else None, local.strip().splitlines()[-1] if local else "未実行"))
 rows.append(("新着取得(scraper.py)の完走", steps.get("fetch") == "success" and s.get("status") == "ok",
              f"status={s.get('status')} 段階={sd.get('stages')} 新着{sd.get('news_new')}件/調達{sd.get('proc_new')}件 停止理由={sd.get('news_stop')}/{sd.get('proc_stop')}"))
 target = "保育業務施設管理プラットフォームの軽微改修業務等"
@@ -69,6 +70,23 @@ n_rel = sum(1 for l in hist.splitlines() if '"category": "調達情報"' in l an
 rows.append(("履歴への保存(調達は全件、配信は関連のみ)", n_lines > 0 and n_proc > 0, f"履歴{n_lines}件 / 調達{n_proc}件 / うち関連{n_rel}件"))
 table("B. 検知・保存", rows)
 
+# ---- 実行時間 ----
+import re as _re
+def total_sec(md):
+    m = _re.search(r"合計 ([\d.]+) 秒", md)
+    return float(m.group(1)) if m else None
+rows = []
+t1, t3 = total_sec(w1), total_sec(w3)
+rows.append(("初回(基準記録・添付ダウンロードあり)の所要", (t1 is not None and t1 <= 600) if t1 is not None else None, f"{t1} 秒(上限600)" if t1 is not None else "記録なし"))
+rows.append(("通常監視(2回目・軽量)の所要", (t3 is not None and t3 <= 300) if t3 is not None else None, f"{t3} 秒(目標300以内)" if t3 is not None else "記録なし"))
+rows.append(("シミュレーション(オフライン)の所要", all(total_sec(x) is not None and total_sec(x) < 60 for x in (w2a, w2b, w2c)) if w2a else None, ", ".join(str(total_sec(x)) for x in (w2a, w2b, w2c)) + " 秒"))
+try:
+    pend = json.loads(read("pages_state.json")).get("_pending", [])
+    rows.append(("時間上限で未処理になった対象", None if pend else True, ("次回に回す: " + ", ".join(pend)) if pend else "なし"))
+except Exception:
+    pass
+table("B2. 実行時間", rows)
+
 # ---- 通知・安全 ----
 rows = []
 nt = read("notify.txt").strip()
@@ -90,5 +108,5 @@ rows.append(("出力への秘密情報混入なし", None, "ワークフロー�
 table("C. 通知・安全", rows)
 
 out += ["## 詳細", "", "### URL到達性", probe, "", "### 新着取得の実行記録", "```", json.dumps(s, ensure_ascii=False, indent=1)[:3000], "```", "",
-        "### ページ監視(初回)", w1[:6000], "", "### ページ監視(疑似変更)", (w2a + "\n" + w2b + "\n" + w2c)[:12000], "", "### ローカル検証ログ", "```", local[:4000], "```"]
+        "### ページ監視(初回)", w1[:6000], "", "### ページ監視(疑似変更・オフライン)", (w2a + "\n" + w2b + "\n" + w2c)[:12000], "", "### ページ監視(通常・2回目)", w3[:4000], "", "### ローカル検証ログ", "```", local[:4000], "```"]
 print("\n".join(out))

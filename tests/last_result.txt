@@ -50,5 +50,11 @@ OK  10c 7日以内でメタデータ不変なら再ダウンロードしない(�
 OK  10d 深掘り(--deep)は必ず再ダウンロード
 OK  10e 日曜03時: deep=1 かつ watch=1(週次深掘りが実行される)  {'hour': '03', 'deep': '1', 'watch': '1'}
 OK  10f 平日07時: watch=1 deep=0 / 12時: 両方0 / 手動: watch=1
+OK  11a headers対象は通常実行でHEADしない(1ページ=1リクエスト)  head=0 calls=1
+OK  11b 深掘り(--deep)ではheaders対象もHEADで確認  head=30
+OK  11c 対象ごとの時間上限を超えたら添付確認を打ち切り『一部未確認』にする  attachments_checked=0
+OK  11d 次回は未確認分から再開し全件そろう  30
+OK  11e 対象ごとに秒数・添付数・HEAD数・DL数・容量を記録  {'seconds': 0.0, 'attachments': 30, 'head': 30, 'downloads': 30, 'bytes': 300, 'partial': False}
+OK  11f シミュレーションはオフラインで実行(HTTPアクセス0回)かつ本文・添付の変化を検知  calls=0 ['本文が変わりました(1か所)\n   「(冒頭)」の内容が変化(0行→0行)', '内容が差し替わりました(同じURLのまま中身が変化): 資料0']
 
-合格 42 / 42  (Python 3.12.3)
+合格 48 / 48  (Python 3.12.3)
