@@ -48,14 +48,28 @@ jobs:
         timeout-minutes: 3
         continue-on-error: true
         run: |
-          python watch_pages.py --offline --simulate-change shisetu_pf --report data/test/watch_2a.md
-          python watch_pages.py --offline --simulate-change kokodesearch_wam --report data/test/watch_2b.md
-          python watch_pages.py --offline --simulate-change digital_spec --report data/test/watch_2c.md
+          python watch_pages.py --offline --simulate-change shisetu_pf --report data/test/watch_2a.md | tee -a data/test/sim.txt
+          python watch_pages.py --offline --simulate-change kokodesearch_wam --report data/test/watch_2b.md | tee -a data/test/sim.txt
+          python watch_pages.py --offline --simulate-change digital_spec --report data/test/watch_2c.md | tee -a data/test/sim.txt
       - name: 4b. 通常監視の所要時間(2回目=基準あり・実サイト・上限5分)
         id: watch3
         timeout-minutes: 7
         continue-on-error: true
         run: python watch_pages.py --time-budget 300 --report data/test/watch_3_timing.md
+      - name: 4c. 取得失敗時のエラー判定(存在しないページを重要対象として巡回→失敗終了コード2になるか)
+        id: failtest
+        continue-on-error: true
+        run: |
+          python - <<'PY'
+          import json
+          cfg = json.load(open("watch_targets.json", encoding="utf-8"))
+          cfg["targets"] = [{"id": "t_fail", "name": "失敗試験(存在しないページ)", "url": "https://www.cfa.go.jp/policies/hoiku/__not_exist_test__", "tier": 1, "critical": True, "attachments": "none"}]
+          json.dump(cfg, open("data/test/targets_fail.json", "w", encoding="utf-8"), ensure_ascii=False)
+          PY
+          set +e
+          WATCH_TARGETS=data/test/targets_fail.json python watch_pages.py --report data/test/watch_fail.md
+          echo "exit=$?" > data/test/failtest.txt
+          cat data/test/failtest.txt
       - name: 5. 結果判定レポート
         if: always()
         env:
