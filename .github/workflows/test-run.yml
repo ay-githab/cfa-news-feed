@@ -1,0 +1,77 @@
+name: test-run (本番に触れないテスト)
+
+# v2-reliability ブランチに push があるたびに自動実行(mainには存在しないので本番では動かない)。
+# 権限: 読み取りのみ。Secrets は使わない(Environment を宣言しないので production の Secrets は読めない)。
+# FEED_MODE=test のため出力は data/test/ だけ。docs/feed.xml は変更しない(最後に検算)。
+# 結果は実行画面の「Summary」と、成果物(Artifacts)の test-report に出る。リポジトリへの書き込みはしない。
+on:
+  push:
+    branches: [v2-reliability]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      FEED_MODE: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: 依存ライブラリの脆弱性監査(pip-audit)
+        run: pip install -q pip-audit && pip-audit -r requirements.txt --progress-spinner off
+      - name: 本番ファイルの指紋を保存(最後に不変を検算)
+        run: sha256sum docs/feed.xml docs/feed_items.json > /tmp/before.txt
+      - name: 0. ローカル検証(42項目)
+        run: mkdir -p data/test && FEED_INTERVAL=0 python tests/test_local.py | tee data/test/local_tests.txt
+      - name: 1. URL到達性チェック
+        run: python watch_pages.py --probe --report data/test/probe.md
+      - name: 2. 新着取得(テスト出力)
+        id: fetch
+        continue-on-error: true
+        run: python scraper.py
+      - name: 3. ページ監視 初回(基準記録)
+        id: watch1
+        continue-on-error: true
+        run: python watch_pages.py --report data/test/watch_1.md
+      - name: 4. ページ監視 2回目(変化検知のシミュレーション)
+        id: watch2
+        continue-on-error: true
+        run: |
+          python watch_pages.py --simulate-change shisetu_pf --report data/test/watch_2a.md
+          python watch_pages.py --simulate-change kokodesearch_wam --report data/test/watch_2b.md
+          python watch_pages.py --simulate-change digital_spec --report data/test/watch_2c.md
+      - name: 5. 結果判定レポート
+        if: always()
+        env:
+          S_FETCH: ${{ steps.fetch.outcome }}
+          S_W1: ${{ steps.watch1.outcome }}
+          S_W2: ${{ steps.watch2.outcome }}
+        run: |
+          echo "fetch=$S_FETCH watch1=$S_W1 watch2=$S_W2" > data/test/steps.txt
+          echo "slack=未実施(テスト用ワークフローはSecretsを使わない設計)" > data/test/notify.txt
+          python tests/check_results.py | tee data/test/REPORT.md >> $GITHUB_STEP_SUMMARY
+      - name: 本番ファイルが不変であることを検算
+        if: always()
+        run: sha256sum -c /tmp/before.txt
+      - name: 秘密情報が出力に混入していないか検算
+        if: always()
+        run: |
+          if grep -rEl "hooks.slack.com|ghp_[A-Za-z0-9]{20,}|xox[baprs]-" data/test/ 2>/dev/null; then echo "::error::秘密情報らしき文字列を検出"; exit 1; fi
+          echo "clean"
+      - name: レポートを成果物として保存(リポジトリには書かない)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: |
+            data/test/*.md
+            data/test/*.txt
+            data/test/last_run.json
+            data/test/hosts_accessed.txt
+          retention-days: 14
