@@ -1,0 +1,201 @@
+{
+  "_説明": "watch_pages.py が巡回するページ。attachments: none=リンク一覧のみ / headers=更新日時・サイズ比較 / hash=ダウンロードして中身まで比較。attachment_filter は対象を絞る正規表現。 critical=true の対象は取得失敗を重要警告として扱い、実行を失敗で終える(通知が飛ぶ)。 allowed_hosts 以外のホストへは一切アクセスしない(ページ内リンク・リダイレクト先も含む)。",
+  "targets": [
+    {
+      "id": "hokatsu",
+      "name": "保活情報連携基盤",
+      "url": "https://www.cfa.go.jp/policies/hoiku/hokatsujoho-jichitaimuke",
+      "tier": 1,
+      "attachments": "hash",
+      "size_cap_mb": 20,
+      "critical": true
+    },
+    {
+      "id": "hokatsu_archive",
+      "name": "保活情報連携基盤・過去説明会資料",
+      "url": "https://www.cfa.go.jp/policies/hoiku/hokatsujoho-jichitaimuke/archive",
+      "tier": 1,
+      "attachments": "headers",
+      "critical": true
+    },
+    {
+      "id": "shisetu_pf",
+      "name": "保育業務施設管理PF",
+      "url": "https://www.cfa.go.jp/policies/hoiku/shisetu-pf",
+      "tier": 1,
+      "attachments": "hash",
+      "size_cap_mb": 10,
+      "max_attachments": 120,
+      "critical": true
+    },
+    {
+      "id": "kokodesearch_cfa",
+      "name": "ここdeサーチ（こ家庁ページ）",
+      "url": "https://www.cfa.go.jp/policies/kokoseido/kokodesearch",
+      "tier": 1,
+      "attachments": "headers",
+      "critical": true
+    },
+    {
+      "id": "kokodesearch_wam",
+      "name": "ここdeサーチ WAM連絡板（施設向け）",
+      "url": "https://www.wam.go.jp/content/wamnet/pcpub/top/kdmsys/jigyo/",
+      "tier": 1,
+      "source": "WAM",
+      "attachments": "headers",
+      "critical": true
+    },
+    {
+      "id": "kokodesearch_wam_jichitai",
+      "name": "ここdeサーチ WAM連絡板（自治体向け・要確認）",
+      "url": "https://www.wam.go.jp/content/wamnet/pcpub/top/kdmsys/",
+      "tier": 1,
+      "source": "WAM",
+      "attachments": "headers",
+      "critical": true
+    },
+    {
+      "id": "hoiku_dx",
+      "name": "保育DX調査研究（協議会・WG）",
+      "url": "https://www.cfa.go.jp/policies/hoiku/hoiku-dx",
+      "tier": 1,
+      "attachments": "headers",
+      "critical": true
+    },
+    {
+      "id": "ikenshokai",
+      "name": "保育DX 全国意見照会（事務フロー・データセット・マスタ）",
+      "url": "https://www.cfa.go.jp/policies/hoiku/hoiku-dx/ikenshokai",
+      "tier": 1,
+      "attachments": "headers",
+      "critical": true
+    },
+    {
+      "id": "ictlabo",
+      "name": "保育ICTラボ",
+      "url": "https://www.cfa.go.jp/policies/hoiku/hoiku-ictlabo",
+      "tier": 1,
+      "attachments": "headers",
+      "critical": true
+    },
+    {
+      "id": "kansa",
+      "name": "監査に関する情報",
+      "url": "https://www.cfa.go.jp/policies/hoiku/kansa",
+      "tier": 1,
+      "attachments": "headers",
+      "critical": true
+    },
+    {
+      "id": "proc_portal",
+      "name": "こ家庁 調達ポータル案内（入札公告・意見招請）",
+      "url": "https://www.cfa.go.jp/procurement/portal",
+      "tier": 1,
+      "attachments": "headers",
+      "critical": true
+    },
+    {
+      "id": "proc_service",
+      "name": "こ家庁 調達（役務）",
+      "url": "https://www.cfa.go.jp/procurement/service",
+      "tier": 1,
+      "attachments": "headers",
+      "critical": true
+    },
+    {
+      "id": "digital_spec",
+      "name": "デジタル庁 データ要件・連携要件の標準仕様",
+      "url": "https://www.digital.go.jp/policies/local_governments/specification",
+      "tier": 1,
+      "source": "デジタル庁",
+      "attachments": "hash",
+      "attachment_filter": "FAQ|outline_0[1-4]|specification_(1|2|30)\\.|子ども|table_01",
+      "max_attachments": 20,
+      "size_cap_mb": 10,
+      "critical": true
+    },
+    {
+      "id": "digital_common",
+      "name": "デジタル庁 共通機能の標準仕様",
+      "url": "https://www.digital.go.jp/policies/local_governments/common-feature-specification",
+      "tier": 1,
+      "source": "デジタル庁",
+      "attachments": "headers",
+      "max_attachments": 30,
+      "critical": true
+    },
+    {
+      "id": "digital_lg",
+      "name": "デジタル庁 基幹業務システムの統一・標準化（親ページ）",
+      "url": "https://www.digital.go.jp/policies/local_governments",
+      "tier": 2,
+      "source": "デジタル庁",
+      "attachments": "none",
+      "critical": false
+    },
+    {
+      "id": "hoiku_top",
+      "name": "こ家庁 保育トップ（指針・要録様式・ガイドライン）",
+      "url": "https://www.cfa.go.jp/policies/hoiku",
+      "tier": 2,
+      "attachments": "headers",
+      "max_attachments": 200,
+      "critical": false
+    },
+    {
+      "id": "daredemo",
+      "name": "こども誰でも通園制度",
+      "url": "https://www.cfa.go.jp/policies/hoiku/daredemo-tsuen",
+      "tier": 2,
+      "attachments": "headers",
+      "critical": false
+    },
+    {
+      "id": "koseibouhou",
+      "name": "こども性暴力防止法（日本版DBS）ガイドライン",
+      "url": "https://www.cfa.go.jp/policies/child-safety/efforts/koseibouhou",
+      "tier": 2,
+      "attachments": "headers",
+      "critical": false
+    }
+  ],
+  "probes": [
+    {
+      "id": "hoikupf_app",
+      "name": "施設管理PF 本体トップ（公開領域・要確認）",
+      "url": "https://hoiku-pf.cfa.go.jp/"
+    },
+    {
+      "id": "hoikupf_apply",
+      "name": "施設管理PF 利用申請ページ（要確認）",
+      "url": "https://hoiku-pf.cfa.go.jp/common/top/apply-municipality"
+    },
+    {
+      "id": "pportal_case",
+      "name": "政府調達ポータル 案件ページ例（要確認）",
+      "url": "https://www.p-portal.go.jp/pps-web-biz/UAA01/OAA0122?anken=0000000000000627033&cla=2&chankbn=0&chancnt=0&lan=1"
+    },
+    {
+      "id": "shingikai_kk",
+      "name": "子ども・子育て支援等分科会（URL推測）",
+      "url": "https://www.cfa.go.jp/councils/shingikai/kodomo_kosodate"
+    },
+    {
+      "id": "soumu_rss",
+      "name": "総務省RSS",
+      "url": "https://www.soumu.go.jp/news.rdf"
+    }
+  ],
+  "allowed_hosts": [
+    "www.cfa.go.jp",
+    "cfa.go.jp",
+    "www.wam.go.jp",
+    "www.int.wam.go.jp",
+    "www.digital.go.jp",
+    "digital.go.jp",
+    "www.p-portal.go.jp",
+    "hoiku-pf.cfa.go.jp",
+    "www.soumu.go.jp",
+    "www.mext.go.jp"
+  ]
+}
