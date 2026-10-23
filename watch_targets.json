@@ -1,5 +1,5 @@
 {
-  "_説明": "watch_pages.py が巡回するページ。attachments: none=リンク一覧のみ / headers=更新日時・サイズ比較 / hash=ダウンロードして中身まで比較。attachment_filter は対象を絞る正規表現。 critical=true の対象は取得失敗を重要警告として扱い、実行を失敗で終える(通知が飛ぶ)。 allowed_hosts 以外のホストへは一切アクセスしない(ページ内リンク・リダイレクト先も含む)。 通常実行は headers 対象を一覧比較のみ(HEADしない)、hash 対象だけHEAD＋必要時ダウンロード。週次深掘りで全添付を確認。時間上限: 通常900秒/深掘り2400秒、対象ごと90/300秒。超過分は次回に再開。",
+  "_説明": "watch_pages.py が巡回するページ。attachments: none=リンク一覧のみ / headers=更新日時・サイズ比較 / hash=ダウンロードして中身まで比較。attachment_filter は対象を絞る正規表現。 critical=true の対象は取得失敗を重要警告として扱い、実行を失敗で終える(通知が飛ぶ)。 allowed_hosts 以外のホストへは一切アクセスしない(ページ内リンク・リダイレクト先も含む)。 通常実行は headers 対象を一覧比較のみ(HEADしない)、hash 対象だけHEAD＋必要時ダウンロード。週次深掘りで全添付を確認。時間上限: 通常900秒/深掘り2400秒、対象ごと90/300秒。超過分は次回に再開。 施設管理PF本体(hoiku-pf.cfa.go.jp)は利用者限定(HTTP 403)のため対象外。公式公開ページ shisetu_pf で代替。",
   "targets": [
     {
       "id": "hokatsu",
@@ -162,16 +162,6 @@
     }
   ],
   "probes": [
-    {
-      "id": "hoikupf_app",
-      "name": "施設管理PF 本体トップ（公開領域・要確認）",
-      "url": "https://hoiku-pf.cfa.go.jp/"
-    },
-    {
-      "id": "hoikupf_apply",
-      "name": "施設管理PF 利用申請ページ（要確認）",
-      "url": "https://hoiku-pf.cfa.go.jp/common/top/apply-municipality"
-    },
     {
       "id": "pportal_case",
       "name": "政府調達ポータル 案件ページ例（要確認）",

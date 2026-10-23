@@ -48,7 +48,7 @@ from bs4 import BeautifulSoup
 
 import feedcore as fc
 
-TARGETS_PATH = Path("watch_targets.json")
+TARGETS_PATH = Path(__import__("os").environ.get("WATCH_TARGETS", "watch_targets.json"))  # テストで差し替え可
 ATTACH_TEXT_DIR = fc.DATA_DIR / "attachment_text"
 ATTACH_RE = re.compile(r"\.(pdf|xlsx|xlsm|xls|docx|doc|csv|zip|pptx)(\?.*)?$", re.I)
 REQUEST_INTERVAL_SEC = float(__import__("os").environ.get("FEED_INTERVAL", "1.0"))   # ページ取得・ダウンロードの間隔
@@ -439,6 +439,10 @@ def check_target(t, prev, deep, deadline, offline=None):
             html = offline["html"]
         else:
             r = http("GET", url)
+            if r.status_code in (401, 403):
+                metrics["seconds"] = round(time.time() - t0, 1)
+                metrics["restricted"] = True
+                return None, [f"アクセス制限(HTTP {r.status_code})。ログインや利用者限定のページのため監視対象から外す候補です"], True, metrics
             r.raise_for_status()
             html = r.text
     except Exception as e:
@@ -614,6 +618,10 @@ def main():
         metrics_all[t["id"]] = m
         if failed:
             failures += 1
+            if m.get("restricted"):
+                warn(f"{t['name']}: " + "; ".join(changes))        # 重要障害にはしない(警告のみ)
+                report.append((t["name"], "アクセス制限", changes, m))
+                continue
             tag = "【重要】" if t.get("critical") else ""
             warn(f"{tag}{t['name']}: " + "; ".join(changes))
             if t.get("critical"):
@@ -630,6 +638,9 @@ def main():
         if m["partial"]:
             pending.append(t["id"])
         real = [c for c in changes if not c.startswith("初回") and not c.startswith("(時間上限")]
+        if args.simulate_change == t["id"]:
+            kinds = [k for k, key in (("本文", "本文が変わりました"), ("添付", "差し替")) if any(key in c for c in real)]
+            print(f"SIMULATION_RESULT id={t['id']} detected={'+'.join(kinds) or 'none'}")
         report.append((t["name"], f"{len(real)}件の変化" if real else ("初回記録" if changes else "変化なし"), changes, m))
         for c in changes:
             events.append({"item_id": hashlib.md5((t["url"] + c + NOW.isoformat()).encode()).hexdigest(),

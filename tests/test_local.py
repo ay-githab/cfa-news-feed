@@ -52,7 +52,8 @@ check("2d 取得失敗は失敗扱い(fatal)", info["fatal"] and info["stopped"]
 
 # 3) 履歴は追記のみ・重複なし
 import shutil
-if fc.DATA_DIR.exists(): shutil.rmtree(fc.DATA_DIR)
+if fc.HISTORY_PATH.exists(): fc.HISTORY_PATH.unlink()
+shutil.rmtree(fc.DATA_DIR / 'attachment_text', ignore_errors=True)
 recs = [{"item_id": "a", "event": "new", "title": "x"}, {"item_id": "a", "event": "new", "title": "x"}, {"item_id": "a", "event": "title_changed", "title": "y"}]
 w1 = fc.append_history(recs); w2 = fc.append_history(recs[:1])
 check("3a 新規は1回だけ、更新イベントは追記", w1 == 2 and w2 == 0, f"{w1},{w2}")
