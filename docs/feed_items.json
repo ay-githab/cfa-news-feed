@@ -1,5 +1,96 @@
 [
  {
+  "guid": "72b18d5fefe14e3e40f572b5b47f97d5",
+  "title": "【こ家庁/ページ更新】保活情報連携基盤・過去説明会資料：差し替え11（10/25 03:02）",
+  "link": "https://www.cfa.go.jp/policies/hoiku/hokatsujoho-jichitaimuke/archive",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-25T03:02:07.875363+09:00"
+ },
+ {
+  "guid": "7e339efda2fdb778567cad2755bd41fb",
+  "title": "【こ家庁/ページ更新】ここdeサーチ（こ家庁ページ）：差し替え1（10/25 03:02）",
+  "link": "https://www.cfa.go.jp/policies/kokoseido/kokodesearch",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-25T03:02:07.875363+09:00"
+ },
+ {
+  "guid": "483ecb75821e5304e00422745b491be0",
+  "title": "【WAM/ページ更新】ここdeサーチ WAM連絡板（施設向け）：差し替え13（10/25 03:02）",
+  "link": "https://www.wam.go.jp/content/wamnet/pcpub/top/kdmsys/jigyo/",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-25T03:02:07.875363+09:00"
+ },
+ {
+  "guid": "529a22a0d6d6f4024a22a6cfef78806f",
+  "title": "【WAM/ページ更新】ここdeサーチ WAM連絡板（自治体向け・要確認）：差し替え27（10/25 03:02）",
+  "link": "https://www.wam.go.jp/content/wamnet/pcpub/top/kdmsys/",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-25T03:02:07.875363+09:00"
+ },
+ {
+  "guid": "fc2bd468571d5a71b0781dd79e839d34",
+  "title": "【こ家庁/ページ更新】保育DX調査研究（協議会・WG）：差し替え10（10/25 03:02）",
+  "link": "https://www.cfa.go.jp/policies/hoiku/hoiku-dx",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-25T03:02:07.875363+09:00"
+ },
+ {
+  "guid": "3a1cc2d66f66925cbf407e8f56f367c3",
+  "title": "【こ家庁/ページ更新】保育DX 全国意見照会（事務フロー・データセット・マスタ）：差し替え5（10/25 03:02）",
+  "link": "https://www.cfa.go.jp/policies/hoiku/hoiku-dx/ikenshokai",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-25T03:02:07.875363+09:00"
+ },
+ {
+  "guid": "5cfad56db1ecc7472e61bc92c4cac0a3",
+  "title": "【こ家庁/ページ更新】保育ICTラボ：差し替え1（10/25 03:02）",
+  "link": "https://www.cfa.go.jp/policies/hoiku/hoiku-ictlabo",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-25T03:02:07.875363+09:00"
+ },
+ {
+  "guid": "10fd89f12f930bc279886f934e2fd39f",
+  "title": "【こ家庁/ページ更新】監査に関する情報：差し替え36（10/25 03:02）",
+  "link": "https://www.cfa.go.jp/policies/hoiku/kansa",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-25T03:02:07.875363+09:00"
+ },
+ {
+  "guid": "2c9889178f3e133e4e90803d6e67e01d",
+  "title": "【こ家庁/ページ更新】こ家庁 調達（役務）：差し替え76（10/25 03:02）",
+  "link": "https://www.cfa.go.jp/procurement/service",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-25T03:02:07.875363+09:00"
+ },
+ {
+  "guid": "baf598cd67c0658149bc9bcc2d411a92",
+  "title": "【デジタル庁/ページ更新】デジタル庁 共通機能の標準仕様：差し替え30（10/25 03:02）",
+  "link": "https://www.digital.go.jp/policies/local_governments/common-feature-specification",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-25T03:02:07.875363+09:00"
+ },
+ {
+  "guid": "21c4ac814cb6c9f4568d7c1028b20254",
+  "title": "【こ家庁/ページ更新】こ家庁 保育トップ（指針・要録様式・ガイドライン）：差し替え60（10/25 03:02）",
+  "link": "https://www.cfa.go.jp/policies/hoiku",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-25T03:02:07.875363+09:00"
+ },
+ {
+  "guid": "89aa17b08d9f1417888e201d1989dd85",
+  "title": "【こ家庁/ページ更新】こども誰でも通園制度：差し替え54（10/25 03:02）",
+  "link": "https://www.cfa.go.jp/policies/hoiku/daredemo-tsuen",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-25T03:02:07.875363+09:00"
+ },
+ {
+  "guid": "7fe065c5d9609ed5470444048696fe5f",
+  "title": "【こ家庁/ページ更新】こども性暴力防止法（日本版DBS）ガイドライン：差し替え72（10/25 03:02）",
+  "link": "https://www.cfa.go.jp/policies/child-safety/efforts/koseibouhou",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-25T03:02:07.875363+09:00"
+ },
+ {
   "guid": "52f281f3156af4bc644234d25e9b35e7",
   "title": "【内閣府】第12回人工知能（AI）技術の利用と消費者問題に関する専門調査会【10月22日開催】",
   "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/012/shiryou/index.html",
@@ -957,96 +1048,5 @@
   "link": "https://www.cfa.go.jp/policies/hoiku/ninkagai/tsuuchi/genkyou",
   "category": "政策",
   "pub_iso": "2026-08-28T09:00:00+09:00"
- },
- {
-  "guid": "405b8214a365db1a6d526c8257873c58",
-  "title": "【こ家庁/会議等】人工妊娠中絶一時金認定審査部会（第18回）を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/jinkoninshinchuzetsu-ichijikin/ff799db2",
-  "category": "会議等",
-  "pub_iso": "2026-08-27T09:00:00+09:00"
- },
- {
-  "guid": "69b0c1a5e865400032ac799622fe723b",
-  "title": "【こ家庁/会議等】科学技術部会（第16回）の会議資料を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/shingikai/kagaku_gijutsu/2ed1ccd3",
-  "category": "会議等",
-  "pub_iso": "2026-08-27T09:00:00+09:00"
- },
- {
-  "guid": "e5363417a934392943fc148198e747cd",
-  "title": "【こ家庁/会議等】第7回こどもの貧困対策・ひとり親家庭支援部会議事録を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/shingikai/hinkon_hitorioya/5a246038",
-  "category": "会議等",
-  "pub_iso": "2026-08-27T09:00:00+09:00"
- },
- {
-  "guid": "f42e9ec5b43178e26c7be6c77ca478f2",
-  "title": "【こ家庁/会議等】青少年インターネット環境整備法の在り方等に関する検討ワーキンググループ（第8回）の開催案内を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/internet-kaigi/21c8e582",
-  "category": "会議等",
-  "pub_iso": "2026-08-27T09:00:00+09:00"
- },
- {
-  "guid": "1446c038f35bdf4dc58275e937fe8d37",
-  "title": "【こ家庁/政策】採用情報【武蔵野学院】：国立児童自立支援施設職員（児童自立支援専門員）の募集情報を掲載しました",
-  "link": "https://www.cfa.go.jp/musashino/others",
-  "category": "政策",
-  "pub_iso": "2026-08-27T09:00:00+09:00"
- },
- {
-  "guid": "89c5a64bee79c87e7b0a88b5fb47a78b",
-  "title": "【こ家庁/政策】採用情報【きぬ川学院】：国立児童自立支援施設職員（児童自立支援専門員）の募集情報を掲載しました",
-  "link": "https://www.cfa.go.jp/kinugawa",
-  "category": "政策",
-  "pub_iso": "2026-08-27T09:00:00+09:00"
- },
- {
-  "guid": "90b1683ef17a512a83531df240c2e04d",
-  "title": "【こ家庁/報道発表】『はじめの100か月の育ちビジョン』 PR動画コンテストを開催します",
-  "link": "https://www.cfa.go.jp/press/19d6e1ba-6903-4a60-8bc3-cfaf9cc6681a",
-  "category": "報道発表",
-  "pub_iso": "2026-08-27T09:00:00+09:00"
- },
- {
-  "guid": "154ca6dcbdbe274dbfb5ab1b630080d1",
-  "title": "【こ家庁/報道発表】こども家庭審議会幼児期までのこどもの育ち部会（第15回）の開催について掲載しました",
-  "link": "https://www.cfa.go.jp/press/d3ef2915-0f1d-4045-ba12-61fa3b36c03a",
-  "category": "報道発表",
-  "pub_iso": "2026-08-26T09:00:00+09:00"
- },
- {
-  "guid": "ad6a1efdd89938326b4055514eaf6346",
-  "title": "【こ家庁/報道発表】第15回ヒト受精胚等を用いる生殖補助医療研究等に関する専門委員会の開催について掲載しました",
-  "link": "https://www.cfa.go.jp/press/3f3ad55a-7e9b-45f4-b8b7-d679df5c9b60",
-  "category": "報道発表",
-  "pub_iso": "2026-08-26T09:00:00+09:00"
- },
- {
-  "guid": "5c81d0f270657b8ccacd9f1d0f26d500",
-  "title": "【デジタル庁】第5回先進的AI利活用アドバイザリーボードの議事要旨を掲載しました",
-  "link": "https://www.digital.go.jp/councils/ai-advisory-board/770d4c48-7f40-49a6-a49d-56a763800a42",
-  "category": "デジタル庁",
-  "pub_iso": "2026-08-25T15:00:00+09:00"
- },
- {
-  "guid": "feaf7562be67cb0ad914fbfe5a3b3a67",
-  "title": "【こ家庁/会見】黄川田大臣記者会見（令和8年8月25日）を掲載しました",
-  "link": "https://www.cfa.go.jp/speech/5fb74b86",
-  "category": "会見",
-  "pub_iso": "2026-08-25T09:00:00+09:00"
- },
- {
-  "guid": "f114153a2b741b0ec2be75220459d829",
-  "title": "【こ家庁/政策】保育ICTラボ事業では、このたび保育ICT事務局において特設ウェブサイトを公開しました。",
-  "link": "https://www.cfa.go.jp/policies/hoiku/hoiku-ictlabo",
-  "category": "政策",
-  "pub_iso": "2026-08-25T09:00:00+09:00"
- },
- {
-  "guid": "c5452465f157218b563de143a93597e2",
-  "title": "【こ家庁/報道発表】みて かんじて つながる劇体験～優良児童劇等公演事業～秋田県横手市にて開催",
-  "link": "https://www.cfa.go.jp/press/c02b0de8-0a8f-4cbd-993b-7a877861de7b",
-  "category": "報道発表",
-  "pub_iso": "2026-08-24T09:00:00+09:00"
  }
 ]
