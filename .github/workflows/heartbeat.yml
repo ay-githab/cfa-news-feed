@@ -1,0 +1,71 @@
+name: heartbeat-check
+
+# 本体(build-feed)が「予定どおり動き、保存・生成・push・配信まで済んでいるか」を別系統で確認する。
+# 確認すること:
+#   a) リポジトリ上の data/last_run.json の時刻が6時間以内(= 取得〜pushまで成功した証拠。GitHubの定期実行は数時間遅れることがあるため6時間)
+#   b) 取得・履歴・RSSの各段階が ok
+#   c) docs/feed.xml の lastBuildDate が同じ実行のもの
+#   d) GitHub Pages で配信中の feed.xml(Slackが読む実物)が最新に追いついている
+# 限界: GitHub Actions 全体が停止した場合はこの監視も動かない。
+on:
+  schedule:
+    - cron: "20 1,13 * * *"   # 10:20 / 22:20 JST
+  workflow_dispatch:
+    inputs:
+      force_fail:
+        description: "true にすると必ず失敗させる（メール/Slack通知の試験用）"
+        default: "false"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check
+        env:
+          FORCE_FAIL: ${{ inputs.force_fail }}
+        run: |
+          python - <<'PY'
+          import json, sys, re, os, urllib.request
+          from datetime import datetime, timezone, timedelta
+          from email.utils import parsedate_to_datetime
+          if os.environ.get("FORCE_FAIL") == "true":
+              print("::error::通知試験のため意図的に失敗させます"); sys.exit(1)
+          ok = True
+          d = json.load(open("data/last_run.json"))["scraper"]
+          at = datetime.fromisoformat(d["at"]); now = datetime.now(timezone(timedelta(hours=9)))
+          print("a) 最終実行:", d["at"], "status:", d["status"], "経過:", now-at)
+          if d["status"] != "ok" or now-at > timedelta(hours=6): print("::error::本体が止まっているか失敗しています"); ok = False
+          st = d.get("details", {}).get("stages", {})
+          print("b) 段階:", st)
+          if any(v != "ok" for v in st.values()): print("::error::取得/履歴/RSSのいずれかが失敗"); ok = False
+          xml = open("docs/feed.xml", encoding="utf-8").read()
+          lb = parsedate_to_datetime(re.search(r"<lastBuildDate>(.*?)</lastBuildDate>", xml).group(1))
+          print("c) feed.xml lastBuildDate:", lb)
+          if abs((lb - at).total_seconds()) > 600: print("::error::feed.xml が最新の実行で生成されていません"); ok = False
+          try:
+              pub = urllib.request.urlopen("https://ay-githab.github.io/cfa-news-feed/feed.xml", timeout=30).read().decode("utf-8")
+              plb = parsedate_to_datetime(re.search(r"<lastBuildDate>(.*?)</lastBuildDate>", pub).group(1))
+              print("d) 配信中 feed.xml:", plb)
+              if (lb - plb) > timedelta(hours=2): print("::error::GitHub Pagesの配信が2時間以上遅れています"); ok = False
+          except Exception as e:
+              print("::error::配信中のfeed.xmlを取得できません:", e); ok = False
+          sys.exit(0 if ok else 1)
+          PY
+      - name: Notify (Slack, optional; GitHub also e-mails)
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -n "$SLACK_WEBHOOK_URL" ]; then
+            python - <<'PY'
+          import json,os,urllib.request
+          body={"text":":rotating_light: 政府サイト新着通知: 定期実行または配信に異常があります\n"+os.environ.get("GITHUB_SERVER_URL","")+"/"+os.environ.get("GITHUB_REPOSITORY","")+"/actions"}
+          req=urllib.request.Request(os.environ["SLACK_WEBHOOK_URL"],data=json.dumps(body).encode(),headers={"Content-Type":"application/json"})
+          urllib.request.urlopen(req,timeout=20)
+          PY
+          fi
