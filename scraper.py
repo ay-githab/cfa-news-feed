@@ -14,6 +14,7 @@ GitHub Actions から定期実行される。 (第2期: 2026-10 改修版)
   5. 起動時に過去データを削除する処理を撤去
   6. 実行結果を data/last_run.json に記録(未起動検知に使う)
   7. 14日より古い記事は RSS に流さない(初回・復元時の大量配信防止)
+  8. 公表日から1日以上遅れて見つけた記事は RSS の日時を検知時刻にする(Slackが古い日付を飛ばすため)
 
 環境変数:
   FEED_MODE=test  … 出力を data/test/ に切り替える(本番に触れない)
@@ -357,7 +358,13 @@ def main():
         if cat == "調達情報" and kws:
             relevant_proc.append((cat, title, link, dt))
         if eligible and dt >= cutoff:
-            feed_candidates.append(fc.make_item("こ家庁", cat, title, link, dt))
+            # 公表日から1日以上遅れて見つけた記事は、RSS上の日時を「見つけた時刻」にする。
+            # SlackのRSSアプリは日時の古い記事を新着扱いしないため(2026/10/23 の調達12件が未配信になった)。
+            # 元の公表日はタイトル末尾に残し、履歴(pub_date)にも元の日付を保存する。
+            if now - dt > timedelta(days=1):
+                feed_candidates.append(fc.make_item("こ家庁", cat, f"{title}（公表{dt.month}/{dt.day}）", link, now))
+            else:
+                feed_candidates.append(fc.make_item("こ家庁", cat, title, link, dt))
     for source, title, link, pub in rss_items:
         records.append({
             "item_id": fc.history_item_id(source, link, title), "event": "new",

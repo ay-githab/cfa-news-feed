@@ -268,6 +268,13 @@ st3, ch3 = wp.check_attachment({"url":"https://x.test/f.pdf","name":"f"}, st2, "
 check("12c ヘッダが本当に変わったら差し替えの疑いを報告", ch3 and "差し替え" in ch3, str(ch3))
 wp.http = real_http
 
+# 13) 遅れて見つけた記事はRSS日時を検知時刻にする(Slack未配信対策)
+import re as _re
+src = open("scraper.py", encoding="utf-8").read()
+check("13a 1日以上遅れの記事は検知時刻＋タイトルに公表日を付与するコードがある", "（公表{dt.month}/{dt.day}）" in src and "now - dt > timedelta(days=1)" in src)
+it_old = fc.make_item("こ家庁", "調達情報", "テスト（公表10/13）", "https://www.cfa.go.jp/x", datetime.now(fc.JST))
+check("13b 検知時刻のRSS日時が現在時刻になる", abs((datetime.fromisoformat(it_old["pub_iso"]) - datetime.now(fc.JST)).total_seconds()) < 5)
+
 import platform
 print("\n合格 %d / %d  (Python %s)" % (sum(1 for r in R if r[1]), len(R), platform.python_version()))
 sys.exit(0 if all(r[1] for r in R) else 1)

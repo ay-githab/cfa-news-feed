@@ -54,7 +54,7 @@ S1 = sections(w1)
 # ---- A. 取得 ----
 rows = []
 last = local.strip().splitlines()[-1] if local.strip() else ""
-rows.append(("ローカル検証51項目", ("合格 51 / 51" in local) if local else None, last or "記録なし(ファイル未出力)"))
+rows.append(("ローカル検証53項目", ("合格 53 / 53" in local) if local else None, last or "記録なし(ファイル未出力)"))
 rows.append(("新着取得(scraper.py)の完走", steps.get("fetch") == "success" and s.get("status") == "ok",
              f"status={s.get('status')} 段階={sd.get('stages')} 新着{sd.get('news_new')}件/調達{sd.get('proc_new')}件"))
 target = "保育業務施設管理プラットフォームの軽微改修業務等"
