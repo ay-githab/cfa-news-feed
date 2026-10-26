@@ -4,7 +4,7 @@
 - Python 3.12（3.10以上で動作見込み）
 - `pip install -r requirements.txt`（requests / beautifulsoup4 / feedparser / openpyxl / pypdf）
 - リポジトリ直下で `python tests/test_local.py`
-- 最終行に `合格 42 / 42` と出れば成功。出力先は `data/test/` のみ
+- 最終行に `合格 51 / 51` と出れば成功。出力先は `data/test/` のみ
 - 同じ内容は GitHub Actions の `test-run` でも自動実行され、`data/test/local_tests.txt` に残る
 
 ## 本番相当テスト（GitHub Actions `test-run`）

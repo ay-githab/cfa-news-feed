@@ -366,7 +366,9 @@ def check_attachment(att, prev, mode, deep, cap_bytes, metrics, offline_cur=None
         return state, f"添付のHEAD失敗: {att['name']}: {e}"
 
     headers_known = bool(state["etag"] or state["last_modified"] or state["size"])
-    headers_changed = prev and (
+    prev_headers_known = bool(prev and (prev.get("etag") or prev.get("last_modified") or prev.get("size")))
+    # 前回に比較材料(ETag/更新日時/サイズ)が無い = 初めてHEADした添付。今回の値は「基準」として記録し、変化とはみなさない
+    headers_changed = prev and prev_headers_known and (
         (state["etag"] and state["etag"] != prev.get("etag")) or
         (state["last_modified"] and state["last_modified"] != prev.get("last_modified")) or
         (state["size"] and state["size"] != prev.get("size")))

@@ -255,6 +255,19 @@ st5, ch5, failed, m5 = wp.check_target(th, prev_sim, False, _time.time()+60, off
 check("11f シミュレーションはオフラインで実行(HTTPアクセス0回)かつ本文・添付の変化を検知", len(calls)==0 and any("本文が変わりました" in c for c in ch5) and any("差し替" in c for c in ch5), f"calls={len(calls)} {ch5[:2]}")
 wp.http = real_http
 
+# 12) 週次深掘りの初回に「差し替え」を誤報しない(2026/10/25 本番で発生した事象)
+wp.ALLOWED_HOSTS.update(["x.test"])
+wp.http = lambda m,u,**k: type("H",(),{"status_code":200,"headers":{"ETag":"E1","Last-Modified":"L1","Content-Length":"100"},"text":"","content":b""})()
+prev_no_headers = {"name":"f","etag":"","last_modified":"","size":"","sha256":"","summary_key":"","hashed_at":"","checked_at":"2026-10-23T22:00:00+09:00"}
+st, ch = wp.check_attachment({"url":"https://x.test/f.pdf","name":"f"}, prev_no_headers, "headers", True, 10**7, M())
+check("12a 前回ヘッダ情報なし→深掘り初回は基準記録のみ(誤報なし)", ch is None and st["etag"]=="E1", str(ch))
+st2, ch2 = wp.check_attachment({"url":"https://x.test/f.pdf","name":"f"}, st, "headers", True, 10**7, M())
+check("12b 同じヘッダなら変化なし", ch2 is None, str(ch2))
+wp.http = lambda m,u,**k: type("H",(),{"status_code":200,"headers":{"ETag":"E2","Last-Modified":"L2","Content-Length":"120"},"text":"","content":b""})()
+st3, ch3 = wp.check_attachment({"url":"https://x.test/f.pdf","name":"f"}, st2, "headers", True, 10**7, M())
+check("12c ヘッダが本当に変わったら差し替えの疑いを報告", ch3 and "差し替え" in ch3, str(ch3))
+wp.http = real_http
+
 import platform
 print("\n合格 %d / %d  (Python %s)" % (sum(1 for r in R if r[1]), len(R), platform.python_version()))
 sys.exit(0 if all(r[1] for r in R) else 1)
