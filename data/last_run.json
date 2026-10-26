@@ -1,7 +1,7 @@
 {
  "scraper": {
   "status": "ok",
-  "at": "2026-10-27T04:09:17+09:00",
+  "at": "2026-10-27T08:44:38+09:00",
   "details": {
    "news_pages": 2,
    "news_stop": "known_pages",
@@ -12,7 +12,7 @@
    "proc_relevant": 0,
    "rss": {
     "内閣府": "10 entries / 3 matched",
-    "厚労省": "103 entries / 0 matched",
+    "厚労省": "104 entries / 0 matched",
     "デジタル庁": "27 entries / 5 matched",
     "首相官邸": "25 entries / 1 matched"
    },
