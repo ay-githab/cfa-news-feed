@@ -5,13 +5,27 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Tue, 27 Oct 2026 13:49:10 +0900</lastBuildDate>
+<lastBuildDate>Tue, 27 Oct 2026 19:22:19 +0900</lastBuildDate>
 <item>
 <title>【デジタル庁】「マイナポータル自治体手続申請サービス」の本格運用開始について掲載しました</title>
 <link>https://www.digital.go.jp/policies/administrative_procedures_online</link>
 <guid isPermaLink="false">29ab24f6e515fd2fc63b75047f0f11f3</guid>
 <pubDate>Tue, 27 Oct 2026 10:01:00 +0900</pubDate>
 <category>デジタル庁</category>
+</item>
+<item>
+<title>【こ家庁/会議等】こども家庭審議会障害児支援部会（第22回）の資料を掲載しました</title>
+<link>https://www.cfa.go.jp/councils/shingikai/shougaiji_shien/779b0299</link>
+<guid isPermaLink="false">2d8c216f6526c419559585b52208cabe</guid>
+<pubDate>Tue, 27 Oct 2026 09:00:00 +0900</pubDate>
+<category>会議等</category>
+</item>
+<item>
+<title>【こ家庁/会見】中司大臣記者会見（令和8年10月27日）を掲載しました</title>
+<link>https://www.cfa.go.jp/speech/6cf28e85</link>
+<guid isPermaLink="false">d146cb5b26f6c787d3e7b630904455db</guid>
+<pubDate>Tue, 27 Oct 2026 09:00:00 +0900</pubDate>
+<category>会見</category>
 </item>
 <item>
 <title>【こ家庁/会議等】第16回 子ども・子育て支援等分科会の会議資料を掲載しました</title>
@@ -1041,20 +1055,6 @@
 <guid isPermaLink="false">c114a1718e79050549b9ae662c9465be</guid>
 <pubDate>Mon, 31 Aug 2026 09:00:00 +0900</pubDate>
 <category>政策</category>
-</item>
-<item>
-<title>【こ家庁/報道発表】第18回人工妊娠中絶一時金認定審査部会の審査結果について掲載しました</title>
-<link>https://www.cfa.go.jp/press/6af31e65-f6ec-41ab-aab0-02710e6cbc24</link>
-<guid isPermaLink="false">6a703e04576c623d706d1691a6d00bfe</guid>
-<pubDate>Mon, 31 Aug 2026 09:00:00 +0900</pubDate>
-<category>報道発表</category>
-</item>
-<item>
-<title>【こ家庁/会議等】第18回人工妊娠中絶一時金認定審査部会の議事要旨について掲載しました</title>
-<link>https://www.cfa.go.jp/councils/jinkoninshinchuzetsu-ichijikin/ff799db2</link>
-<guid isPermaLink="false">1f6a865064d2fca357d9a5a0270f9359</guid>
-<pubDate>Mon, 31 Aug 2026 09:00:00 +0900</pubDate>
-<category>会議等</category>
 </item>
 </channel>
 </rss>
