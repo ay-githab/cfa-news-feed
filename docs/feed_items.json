@@ -1,5 +1,12 @@
 [
  {
+  "guid": "29ab24f6e515fd2fc63b75047f0f11f3",
+  "title": "【デジタル庁】「マイナポータル自治体手続申請サービス」の本格運用開始について掲載しました",
+  "link": "https://www.digital.go.jp/policies/administrative_procedures_online",
+  "category": "デジタル庁",
+  "pub_iso": "2026-10-27T10:01:00+09:00"
+ },
+ {
   "guid": "a3350606c417ea825b44ae27b84da2cb",
   "title": "【こ家庁/会議等】第16回 子ども・子育て支援等分科会の会議資料を掲載しました",
   "link": "https://www.cfa.go.jp/councils/shingikai/kodomo_kosodate/e6188e50",
@@ -1041,12 +1048,5 @@
   "link": "https://www.cfa.go.jp/councils/jinkoninshinchuzetsu-ichijikin/ff799db2",
   "category": "会議等",
   "pub_iso": "2026-08-31T09:00:00+09:00"
- },
- {
-  "guid": "8fde72b211e7c8e881ca6a67420690e4",
-  "title": "【デジタル庁】デジタル推進委員向けのデジタル情報をまとめて案内するページ「教える人のためのデジタル情報ひろば」において「マイナポータルを知る」を更新しました",
-  "link": "https://www.digital.go.jp/policies/digital_promotion_staff/curation",
-  "category": "デジタル庁",
-  "pub_iso": "2026-08-28T18:46:00+09:00"
  }
 ]
