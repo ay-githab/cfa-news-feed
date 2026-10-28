@@ -1,5 +1,33 @@
 [
  {
+  "guid": "2187538e048fc2ea038ec10ea987ecd9",
+  "title": "【こ家庁/会議等】第20回人工妊娠中絶一時金認定審査部会の議事要旨について掲載しました",
+  "link": "https://www.cfa.go.jp/councils/jinkoninshinchuzetsu-ichijikin/103de8b3",
+  "category": "会議等",
+  "pub_iso": "2026-10-28T09:00:00+09:00"
+ },
+ {
+  "guid": "b0ead7a9eacfe925f8bb00902e669076",
+  "title": "【こ家庁/報道発表】第20回 人工妊娠中絶一時金認定審査部会の審査結果について掲載しました",
+  "link": "https://www.cfa.go.jp/press/4359160a-5c32-4321-83a2-0b33852287a6",
+  "category": "報道発表",
+  "pub_iso": "2026-10-28T09:00:00+09:00"
+ },
+ {
+  "guid": "bd6ba42cfd1ba8c97a3a51a0868e5932",
+  "title": "【こ家庁/調達情報】意見招請：保育業務施設管理プラットフォームの運用・保守等業務（令和9年度～令和13年度）一式を掲載しました",
+  "link": "https://www.cfa.go.jp/procurement",
+  "category": "調達情報",
+  "pub_iso": "2026-10-28T09:00:00+09:00"
+ },
+ {
+  "guid": "b1aa6cfde9a28d83f48ae04e684a431b",
+  "title": "【こ家庁/政策】「第44回青少年インターネット利用環境づくりフォーラムin熊本」の開催について掲載しました",
+  "link": "https://www.cfa.go.jp/policies/youth-kankyou/internet_use_gyouji/r08-forum",
+  "category": "政策",
+  "pub_iso": "2026-10-28T09:00:00+09:00"
+ },
+ {
   "guid": "29ab24f6e515fd2fc63b75047f0f11f3",
   "title": "【デジタル庁】「マイナポータル自治体手続申請サービス」の本格運用開始について掲載しました",
   "link": "https://www.digital.go.jp/policies/administrative_procedures_online",
@@ -1020,33 +1048,5 @@
   "link": "https://www.cfa.go.jp/policies/kodomonojisatsutaisaku/jisatsuyoboushukan",
   "category": "政策",
   "pub_iso": "2026-09-01T09:00:00+09:00"
- },
- {
-  "guid": "e999cb8fe4c66f4ffd866a3dc3c19d7c",
-  "title": "【こ家庁】組織情報 令和8年9月1日付人事異動情報を掲載しました",
-  "link": "https://www.cfa.go.jp/about/jinji",
-  "category": "こ家庁",
-  "pub_iso": "2026-09-01T09:00:00+09:00"
- },
- {
-  "guid": "f6ab230e048f732e7fbafc3acb3284b4",
-  "title": "【デジタル庁】ガバメントAI「源内」に関する動画を更新しました",
-  "link": "https://www.digital.go.jp/policies/genai",
-  "category": "デジタル庁",
-  "pub_iso": "2026-08-31T15:00:00+09:00"
- },
- {
-  "guid": "950997ff03231df594804ae4a852e097",
-  "title": "【こ家庁/会見】黄川田大臣臨時記者会見（令和8年8月31日）を掲載しました",
-  "link": "https://www.cfa.go.jp/speech/442409fd",
-  "category": "会見",
-  "pub_iso": "2026-08-31T09:00:00+09:00"
- },
- {
-  "guid": "c114a1718e79050549b9ae662c9465be",
-  "title": "【こ家庁/政策】「若年世代に関する総合的な調査（若者10万人の総合調査）」の途中経過（暫定速報）を公表しました",
-  "link": "https://www.cfa.go.jp/policies/kodomo-research/wakamono-jyumannin",
-  "category": "政策",
-  "pub_iso": "2026-08-31T09:00:00+09:00"
  }
 ]
