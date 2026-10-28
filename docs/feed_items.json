@@ -1,5 +1,47 @@
 [
  {
+  "guid": "c66e9904921d9434126c6a076d950e7a",
+  "title": "【こ家庁/ページ更新】監査に関する情報：資料追加10・本文変更（10/28 17:16）",
+  "link": "https://www.cfa.go.jp/policies/hoiku/kansa",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-28T17:16:49.738012+09:00"
+ },
+ {
+  "guid": "a9f9d58a19434777c65c63cd5c7ebb1f",
+  "title": "【デジタル庁/ページ更新】デジタル庁 データ要件・連携要件の標準仕様：本文変更（10/28 17:16）",
+  "link": "https://www.digital.go.jp/policies/local_governments/specification",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-28T17:16:49.738012+09:00"
+ },
+ {
+  "guid": "0616bf9669f1f91346de6c23b0e941fd",
+  "title": "【こ家庁/ページ更新】こ家庁 保育トップ（指針・要録様式・ガイドライン）：本文変更（10/28 17:16）",
+  "link": "https://www.cfa.go.jp/policies/hoiku",
+  "category": "ページ更新",
+  "pub_iso": "2026-10-28T17:16:49.738012+09:00"
+ },
+ {
+  "guid": "271d9f9d98754536ea27038015c65294",
+  "title": "【デジタル庁】第6回先進的AI利活用アドバイザリーボードの議事要旨を掲載しました",
+  "link": "https://www.digital.go.jp/councils/ai-advisory-board/162953b0-3dc0-46a6-a24c-0e3a335e0495",
+  "category": "デジタル庁",
+  "pub_iso": "2026-10-28T15:00:00+09:00"
+ },
+ {
+  "guid": "c873fd6904ed1ab483aa968b3accdbb1",
+  "title": "【こ家庁/会議等】児童厚生施設及び放課後児童クラブに関する専門委員会（第8回）を掲載しました",
+  "link": "https://www.cfa.go.jp/councils/shingikai/kodomo_ibasho/jidoukan/5d5ae75e",
+  "category": "会議等",
+  "pub_iso": "2026-10-28T09:00:00+09:00"
+ },
+ {
+  "guid": "ab689ef8cbacdb3ed1048ac9f9bc0da3",
+  "title": "【こ家庁/報道発表】児童厚生施設及び放課後児童クラブに関する専門委員会（第8回）について掲載しました",
+  "link": "https://www.cfa.go.jp/press/1a661ea3-dac7-4c0e-b3b6-d3ef735cfc45",
+  "category": "報道発表",
+  "pub_iso": "2026-10-28T09:00:00+09:00"
+ },
+ {
   "guid": "2187538e048fc2ea038ec10ea987ecd9",
   "title": "【こ家庁/会議等】第20回人工妊娠中絶一時金認定審査部会の議事要旨について掲載しました",
   "link": "https://www.cfa.go.jp/councils/jinkoninshinchuzetsu-ichijikin/103de8b3",
@@ -1005,48 +1047,6 @@
   "title": "【こ家庁/会議等】ヒト受精胚を用いる生殖補助医療研究等に関する専門委員会（第15回）の会議情報を掲載しました",
   "link": "https://www.cfa.go.jp/councils/shingikai/kagaku_gijutsu/art/eafb9e4e",
   "category": "会議等",
-  "pub_iso": "2026-09-01T09:00:00+09:00"
- },
- {
-  "guid": "72604a2d32c40cf5a1ea723591790750",
-  "title": "【こ家庁/報道発表】令和8年度就学前教育・保育施設整備交付金の内示について （第3次）を掲載しました",
-  "link": "https://www.cfa.go.jp/press/16e97a96-4c9d-4098-bbb8-2d2790681c12",
-  "category": "報道発表",
-  "pub_iso": "2026-09-01T09:00:00+09:00"
- },
- {
-  "guid": "83813c01fb06cd477ca346035ed45e6c",
-  "title": "【こ家庁/報道発表】令和8年度次世代育成対策施設整備交付金の内示について （第3次）を掲載しました",
-  "link": "https://www.cfa.go.jp/press/e6e7b195-a73a-4162-a043-a9770764edc5",
-  "category": "報道発表",
-  "pub_iso": "2026-09-01T09:00:00+09:00"
- },
- {
-  "guid": "325841892b881bb5e991fcc0c47882a8",
-  "title": "【こ家庁/報道発表】令和8年度子ども・子育て支援施設整備交付金の内示について （第3次）を掲載しました",
-  "link": "https://www.cfa.go.jp/press/36776672-8177-48fe-98bd-4990e9c507fd",
-  "category": "報道発表",
-  "pub_iso": "2026-09-01T09:00:00+09:00"
- },
- {
-  "guid": "ec95cad4093be59e312d32a126d47803",
-  "title": "【こ家庁/会議等】インクルージョン推進に向けた関係者懇談会の議事概要を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/meetings/inclusion/01",
-  "category": "会議等",
-  "pub_iso": "2026-09-01T09:00:00+09:00"
- },
- {
-  "guid": "e3639c00f0d0d86edf9e383f78495851",
-  "title": "【こ家庁/政策】「令和8年熊本地震への対応について（被災したこどもの居場所づくり支援）」を掲載しました",
-  "link": "https://www.cfa.go.jp/policies/ibasho/saigaiji",
-  "category": "政策",
-  "pub_iso": "2026-09-01T09:00:00+09:00"
- },
- {
-  "guid": "bab7faf37971470fed95032809f3856f",
-  "title": "【こ家庁/政策】自殺予防週間に向けた厚生労働大臣、文部科学大臣、こども政策担当大臣、孤独・孤立対策担当大臣による連名メッセージを掲載しました",
-  "link": "https://www.cfa.go.jp/policies/kodomonojisatsutaisaku/jisatsuyoboushukan",
-  "category": "政策",
   "pub_iso": "2026-09-01T09:00:00+09:00"
  }
 ]
