@@ -1,5 +1,19 @@
 [
  {
+  "guid": "b103df88fbccbdda58b13e611fd24275",
+  "title": "【デジタル庁】ガバメントAI 源内 利用状況アンケート調査（第1回）の結果を公表しました",
+  "link": "https://www.digital.go.jp/policies/genai/f9ed1b1c-b22f-4466-8e50-c1c9adf9f8eb",
+  "category": "デジタル庁",
+  "pub_iso": "2026-10-30T08:51:00+09:00"
+ },
+ {
+  "guid": "35ef5af7e664787f1d6216950b64e582",
+  "title": "【デジタル庁】ガバメントAI 源内で「国会答弁作成支援AIアプリ」のプロトタイプ版を提供開始します",
+  "link": "https://www.digital.go.jp/policies/genai/b736d2d7-b03b-43f0-9932-eba7da7f8142",
+  "category": "デジタル庁",
+  "pub_iso": "2026-10-30T08:48:00+09:00"
+ },
+ {
   "guid": "8d6b80329aee7c86126372651f244e6f",
   "title": "【こ家庁/報道発表】保育士養成課程等検討会（第6回）について掲載しました",
   "link": "https://www.cfa.go.jp/press/995f00fa-de6e-4d25-bf16-2449e3c6c6c3",
@@ -1034,19 +1048,5 @@
   "link": "https://www.cfa.go.jp/press/26e767e1-4869-47d9-ac65-a66932552e86",
   "category": "報道発表",
   "pub_iso": "2026-09-03T09:00:00+09:00"
- },
- {
-  "guid": "4e5d14edd6e467a0a85ef0fa63ee8b2a",
-  "title": "【内閣府】第9回人工知能（AI）技術の利用と消費者問題に関する専門調査会【9月9日開催】",
-  "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/009/kaisai/index.html",
-  "category": "内閣府",
-  "pub_iso": "2026-09-02T15:46:00+09:00"
- },
- {
-  "guid": "759cb0ce0a63fd522f7a5b3a0a1184da",
-  "title": "【こ家庁/会見】黄川田大臣記者会見（令和8年9月1日）を掲載しました",
-  "link": "https://www.cfa.go.jp/speech/b00217c0",
-  "category": "会見",
-  "pub_iso": "2026-09-01T09:00:00+09:00"
  }
 ]
