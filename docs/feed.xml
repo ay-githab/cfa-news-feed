@@ -5,7 +5,42 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Fri, 30 Oct 2026 09:47:04 +0900</lastBuildDate>
+<lastBuildDate>Fri, 30 Oct 2026 15:59:01 +0900</lastBuildDate>
+<item>
+<title>【内閣府】第13回人工知能（AI）技術の利用と消費者問題に関する専門調査会【10月29日開催】</title>
+<link>https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/013/shiryou/index.html</link>
+<guid isPermaLink="false">ed26fd17c14f6a8cc6269342a59aa783</guid>
+<pubDate>Fri, 30 Oct 2026 15:22:00 +0900</pubDate>
+<category>内閣府</category>
+</item>
+<item>
+<title>【内閣府】第14回人工知能（AI）技術の利用と消費者問題に関する専門調査会【11月５日開催】</title>
+<link>https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/014/kaisai/index.html</link>
+<guid isPermaLink="false">cc405e8907ecf520242ad08fdb79ab64</guid>
+<pubDate>Fri, 30 Oct 2026 15:22:00 +0900</pubDate>
+<category>内閣府</category>
+</item>
+<item>
+<title>【デジタル庁】自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）に係る「先行実施事業の実施状況」「自治体・自治体システムベンダー向けの情報」「医療機関・薬局システムベンダー向けの情報」の資料を更新しました</title>
+<link>https://www.digital.go.jp/policies/health/public-medical-hub</link>
+<guid isPermaLink="false">472db3d065f52bfff0807a5c47e04de9</guid>
+<pubDate>Fri, 30 Oct 2026 15:00:00 +0900</pubDate>
+<category>デジタル庁</category>
+</item>
+<item>
+<title>【こ家庁/会見】中司大臣記者会見（令和8年10月30日）を掲載しました</title>
+<link>https://www.cfa.go.jp/speech/68cfc922</link>
+<guid isPermaLink="false">29c6aa9c1d2383aecf341028d5434e58</guid>
+<pubDate>Fri, 30 Oct 2026 09:00:00 +0900</pubDate>
+<category>会見</category>
+</item>
+<item>
+<title>【こ家庁/報道発表】第9回 社会的養育・家庭支援部会の開催について掲載しました</title>
+<link>https://www.cfa.go.jp/press/9531350c-b313-4403-98d1-bac77d7677ca</link>
+<guid isPermaLink="false">fed1f1e7b0e85d74922160e621275234</guid>
+<pubDate>Fri, 30 Oct 2026 09:00:00 +0900</pubDate>
+<category>報道発表</category>
+</item>
 <item>
 <title>【デジタル庁】ガバメントAI 源内 利用状況アンケート調査（第1回）の結果を公表しました</title>
 <link>https://www.digital.go.jp/policies/genai/f9ed1b1c-b22f-4466-8e50-c1c9adf9f8eb</link>
@@ -1020,41 +1055,6 @@
 <guid isPermaLink="false">cd8827201c37ea4b46860b682f3c3b6f</guid>
 <pubDate>Fri, 04 Sep 2026 09:00:00 +0900</pubDate>
 <category>政策</category>
-</item>
-<item>
-<title>【こ家庁/報道発表】悩みを抱えるこども・若者への「声かけ」～その一言が誰かの支えになる～「声かけキャンペーン」特設サイトを公開しました</title>
-<link>https://www.cfa.go.jp/press/20fe1404-5c10-4f02-bd5a-2f7d3c9339ad</link>
-<guid isPermaLink="false">e5e022f3b861cb8be3ce6a3b9b98897d</guid>
-<pubDate>Fri, 04 Sep 2026 09:00:00 +0900</pubDate>
-<category>報道発表</category>
-</item>
-<item>
-<title>【こ家庁/政策】令和9年度予算概算要求について（障害児支援関係）掲載しました</title>
-<link>https://www.cfa.go.jp/policies/shougaijishien</link>
-<guid isPermaLink="false">b681650e3cca01a283ec069d048a93fa</guid>
-<pubDate>Fri, 04 Sep 2026 09:00:00 +0900</pubDate>
-<category>政策</category>
-</item>
-<item>
-<title>【こ家庁/政策】令和9年度保育関係予算概算要求の概要について掲載しました</title>
-<link>https://www.cfa.go.jp/policies/hoiku/yosan</link>
-<guid isPermaLink="false">99c0eb44c8fbf2f1e801125736ee6c52</guid>
-<pubDate>Fri, 04 Sep 2026 09:00:00 +0900</pubDate>
-<category>政策</category>
-</item>
-<item>
-<title>【こ家庁/報道発表】第7回 こどものケアニーズに応じた支援の在り方に関する専門委員会の開催についてを掲載しました</title>
-<link>https://www.cfa.go.jp/press/cc08f710-c1c1-425e-b0b0-ddbf95576e20</link>
-<guid isPermaLink="false">85d5621136ff59a4dc738ab5b04f09d6</guid>
-<pubDate>Thu, 03 Sep 2026 09:00:00 +0900</pubDate>
-<category>報道発表</category>
-</item>
-<item>
-<title>【こ家庁/報道発表】こども・若者参画及び意見反映専門委員会（第16回）についてを掲載しました</title>
-<link>https://www.cfa.go.jp/press/26e767e1-4869-47d9-ac65-a66932552e86</link>
-<guid isPermaLink="false">4ab6fad6287c4352ac1c3edfe4dad90f</guid>
-<pubDate>Thu, 03 Sep 2026 09:00:00 +0900</pubDate>
-<category>報道発表</category>
 </item>
 </channel>
 </rss>
