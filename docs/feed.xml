@@ -5,7 +5,14 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Sat, 31 Oct 2026 21:10:14 +0900</lastBuildDate>
+<lastBuildDate>Sun, 01 Nov 2026 02:37:48 +0900</lastBuildDate>
+<item>
+<title>【首相官邸】「オレンジリボン・児童虐待防止推進キャンペーン」に関する高市総理メッセージ</title>
+<link>https://www.kantei.go.jp/jp/105/discourse/20261101message.html</link>
+<guid isPermaLink="false">108b309fd49eb533f6b62a8f9b00fcac</guid>
+<pubDate>Sun, 01 Nov 2026 09:00:00 +0900</pubDate>
+<category>首相官邸</category>
+</item>
 <item>
 <title>【内閣府】第13回人工知能（AI）技術の利用と消費者問題に関する専門調査会【10月29日開催】</title>
 <link>https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/013/shiryou/index.html</link>
@@ -1048,13 +1055,6 @@
 <guid isPermaLink="false">af5b98a252c642875f406d63c91187b4</guid>
 <pubDate>Fri, 04 Sep 2026 09:00:00 +0900</pubDate>
 <category>報道発表</category>
-</item>
-<item>
-<title>【こ家庁/政策】令和9年度放課後児童対策・こども・子育て支援関連予算概算要求の概要について掲載しました</title>
-<link>https://www.cfa.go.jp/policies/kosodateshien/budget</link>
-<guid isPermaLink="false">cd8827201c37ea4b46860b682f3c3b6f</guid>
-<pubDate>Fri, 04 Sep 2026 09:00:00 +0900</pubDate>
-<category>政策</category>
 </item>
 </channel>
 </rss>
