@@ -1,5 +1,33 @@
 [
  {
+  "guid": "17c0c8d94fb9873cb156fc65b20d85cd",
+  "title": "【デジタル庁】AI・デジタル改革推進会議（第1回）の議事録を掲載しました",
+  "link": "https://www.digital.go.jp/councils/ai_digital/1f3aa34a-786d-4b56-99a4-469f8f933f1c",
+  "category": "デジタル庁",
+  "pub_iso": "2026-11-02T17:16:00+09:00"
+ },
+ {
+  "guid": "a7dfb077327ec0f2999a902c78b02aea",
+  "title": "【こ家庁/会議等】児童厚生施設及び放課後児童クラブに関する専門委員会（第8回）資料を掲載しました",
+  "link": "https://www.cfa.go.jp/councils/shingikai/kodomo_ibasho/jidoukan/5d5ae75e",
+  "category": "会議等",
+  "pub_iso": "2026-11-02T09:00:00+09:00"
+ },
+ {
+  "guid": "e551e1967cc4de5beefa3879ae10efa6",
+  "title": "【こ家庁/会見】中司大臣記者会見（令和8年11月2日）を掲載しました",
+  "link": "https://www.cfa.go.jp/speech/ecb00d3b",
+  "category": "会見",
+  "pub_iso": "2026-11-02T09:00:00+09:00"
+ },
+ {
+  "guid": "c7b66ab9c63dfca3a8ae58b93b30fb87",
+  "title": "【こ家庁/会議等】第16回 子ども・子育て支援等分科会の議事概要を掲載しました",
+  "link": "https://www.cfa.go.jp/councils/shingikai/kodomo_kosodate/e6188e50",
+  "category": "会議等",
+  "pub_iso": "2026-11-02T09:00:00+09:00"
+ },
+ {
   "guid": "13437fc834a1a486eb8e66b7df245c4b",
   "title": "【こ家庁/報道発表】令和8年秋の褒章受章者一覧について掲載しました",
   "link": "https://www.cfa.go.jp/press/8b5ac1c0-7d11-4b5b-ae36-2919c1a88ab5",
@@ -1020,33 +1048,5 @@
   "link": "https://www.cfa.go.jp/press/505a3c49-572f-4fa5-a879-6a8fc9abf122",
   "category": "報道発表",
   "pub_iso": "2026-09-08T09:00:00+09:00"
- },
- {
-  "guid": "acd329401da1bdfa65bf7e564485d80f",
-  "title": "【こ家庁/会見】黄川田大臣記者会見（令和8年9月8日）を掲載しました",
-  "link": "https://www.cfa.go.jp/speech/b771b817",
-  "category": "会見",
-  "pub_iso": "2026-09-08T09:00:00+09:00"
- },
- {
-  "guid": "e2bc3f6c2764b814dc799b3d182cb22d",
-  "title": "【デジタル庁】自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）に係る医療費助成オンライン資格確認の導入済み医療機関・薬局リストを更新しました",
-  "link": "https://www.digital.go.jp/policies/health/public-medical-hub",
-  "category": "デジタル庁",
-  "pub_iso": "2026-09-07T15:00:00+09:00"
- },
- {
-  "guid": "bd1ae2397bfd7164cac03144d4a6be91",
-  "title": "【こ家庁/会議等】第7回こどものケアニーズ応じた支援の在り方に関する専門委員会について掲載しました。",
-  "link": "https://www.cfa.go.jp/councils/shingikai/shakai_katei/care-needs/1a4c1dc3",
-  "category": "会議等",
-  "pub_iso": "2026-09-04T09:00:00+09:00"
- },
- {
-  "guid": "d86bcdc5f4053bd3207cf90380cc0e68",
-  "title": "【こ家庁/会見】黄川田大臣記者会見（令和8年9月4日）を掲載しました",
-  "link": "https://www.cfa.go.jp/speech/b9ee0e7a",
-  "category": "会見",
-  "pub_iso": "2026-09-04T09:00:00+09:00"
  }
 ]
