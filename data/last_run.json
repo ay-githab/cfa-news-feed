@@ -1,7 +1,7 @@
 {
  "scraper": {
   "status": "ok",
-  "at": "2026-11-05T02:02:57+09:00",
+  "at": "2026-11-05T07:32:13+09:00",
   "details": {
    "news_pages": 2,
    "news_stop": "known_pages",
@@ -32,15 +32,15 @@
  },
  "watch_pages": {
   "status": "ok",
-  "at": "2026-11-04T18:00:00+09:00",
+  "at": "2026-11-05T07:33:09+09:00",
   "details": {
    "targets": 18,
    "processed": 18,
    "failures": 0,
    "critical_failures": [],
    "pending": [],
-   "changes": 6,
-   "total_seconds": 162.6,
+   "changes": 0,
+   "total_seconds": 56.1,
    "deep": false,
    "warnings": [],
    "stages": {
