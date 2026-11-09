@@ -1,5 +1,33 @@
 [
  {
+  "guid": "63257c9d317e291ac3e2cfa2315bcfb7",
+  "title": "【デジタル庁】「自治体からの照会事務の自動化などの国・地方AI共通サービスに関する実証事業」に関する自治体版バイバインシステム導通確認手順書を掲載しました",
+  "link": "https://www.digital.go.jp/policies/genai/0ef07948-2f5d-4b45-8ebe-ea974c20a3ac",
+  "category": "デジタル庁",
+  "pub_iso": "2026-11-09T15:00:00+09:00"
+ },
+ {
+  "guid": "749b7dcd2ef0c8dabf690d0a5af6a1ba",
+  "title": "【こ家庁/会議等】第8回こどものケアニーズ応じた支援の在り方に関する専門委員会について掲載しました",
+  "link": "https://www.cfa.go.jp/councils/shingikai/shakai_katei/care-needs/d66b8a15",
+  "category": "会議等",
+  "pub_iso": "2026-11-09T09:00:00+09:00"
+ },
+ {
+  "guid": "d509efa27e99efb59b7eef7ae1fee59e",
+  "title": "【こ家庁/報道発表】第2回旧優生保護法補償金等認定審査会の開催について掲載しました",
+  "link": "https://www.cfa.go.jp/press/0b36bf75-1067-4563-b2ff-aef24cd872a3",
+  "category": "報道発表",
+  "pub_iso": "2026-11-09T09:00:00+09:00"
+ },
+ {
+  "guid": "3b2a622091644c00f9744996669f2b6d",
+  "title": "【こ家庁/報道発表】第21回 人工妊娠中絶一時金認定審査部会の開催について掲載しました",
+  "link": "https://www.cfa.go.jp/press/d6e7bdab-eeb2-42e3-9aaa-661de2587e6e",
+  "category": "報道発表",
+  "pub_iso": "2026-11-09T09:00:00+09:00"
+ },
+ {
   "guid": "529e7959809f5715d82b617f4fc27bba",
   "title": "【こ家庁/報道発表】第22回基本政策部会の開催について掲載しました",
   "link": "https://www.cfa.go.jp/press/fb3236f0-59d9-4932-85e3-9ec0b2b8995b",
@@ -1020,33 +1048,5 @@
   "link": "https://www.cfa.go.jp/policies/child-safety/efforts/koseibouhou/security-specialist",
   "category": "政策",
   "pub_iso": "2026-09-25T09:00:00+09:00"
- },
- {
-  "guid": "680557b6c864179e0f9cf7929094787a",
-  "title": "【内閣府】第10回人工知能（AI）技術の利用と消費者問題に関する専門調査会【9月18日開催】",
-  "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/010/shiryou/index.html",
-  "category": "内閣府",
-  "pub_iso": "2026-09-24T15:18:00+09:00"
- },
- {
-  "guid": "05e3b2f92be4fd32ef013a732d81d9e2",
-  "title": "【デジタル庁】【終了】「ガバメントAI 源内OSS Ver 2.0の計画に関するオンライン説明会」の開催について（ご案内）",
-  "link": "https://www.digital.go.jp/news/b6d94913-60d0-450d-ab46-8e89659f1fc6",
-  "category": "デジタル庁",
-  "pub_iso": "2026-09-18T15:00:00+09:00"
- },
- {
-  "guid": "66ded7b8402d66c70ee3abf0a2014702",
-  "title": "【デジタル庁】ガバメントAI 源内OSS Ver 2.0の計画に関する全国オンライン説明会を開催しました",
-  "link": "https://www.digital.go.jp/news/e525db0b-eac1-49e2-9ef4-6d2e24208498",
-  "category": "デジタル庁",
-  "pub_iso": "2026-09-18T15:00:00+09:00"
- },
- {
-  "guid": "942d20ea6320228d566f279c493ee2e0",
-  "title": "【デジタル庁】企画競争：令和8年度 政府情報システムの設計開発及び運用保守における内部開発に対するAI有用性の調査研究事業を掲載しました",
-  "link": "https://www.digital.go.jp/procurement",
-  "category": "デジタル庁",
-  "pub_iso": "2026-09-18T15:00:00+09:00"
  }
 ]
