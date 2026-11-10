@@ -5,13 +5,20 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Tue, 10 Nov 2026 17:16:20 +0900</lastBuildDate>
+<lastBuildDate>Wed, 11 Nov 2026 01:57:37 +0900</lastBuildDate>
 <item>
 <title>【こ家庁/ページ更新】こども誰でも通園制度：資料追加1・本文変更（11/10 17:15）</title>
 <link>https://www.cfa.go.jp/policies/hoiku/daredemo-tsuen</link>
 <guid isPermaLink="false">8be1a5c91fbe8e42598aa8a8a993ffc5</guid>
 <pubDate>Tue, 10 Nov 2026 17:15:25 +0900</pubDate>
 <category>ページ更新</category>
+</item>
+<item>
+<title>【こ家庁/報道発表】こどもとともに成長する企業構想 フラッグシップ企業を発表しました</title>
+<link>https://www.cfa.go.jp/press/9b95e378-b813-45ae-9716-dbee3e54db8f</link>
+<guid isPermaLink="false">36f0cbed2acf08c2f494c75c23ae1806</guid>
+<pubDate>Tue, 10 Nov 2026 09:00:00 +0900</pubDate>
+<category>報道発表</category>
 </item>
 <item>
 <title>【こ家庁/会見】中司大臣記者会見（令和8年11月10日）を掲載しました</title>
@@ -1048,13 +1055,6 @@
 <guid isPermaLink="false">8c143e8ed8a9d6a923bb1ce609367879</guid>
 <pubDate>Tue, 29 Sep 2026 11:45:00 +0900</pubDate>
 <category>厚労省</category>
-</item>
-<item>
-<title>【こ家庁/会見】中司大臣記者会見（令和8年9月29日）を掲載しました</title>
-<link>https://www.cfa.go.jp/speech/6b7e57d9</link>
-<guid isPermaLink="false">b1a7e6eef1531af11adefab036c98d01</guid>
-<pubDate>Tue, 29 Sep 2026 09:00:00 +0900</pubDate>
-<category>会見</category>
 </item>
 </channel>
 </rss>
