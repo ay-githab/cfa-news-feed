@@ -1,5 +1,19 @@
 [
  {
+  "guid": "21ca96aa5f38eebd67d9ac45c5343581",
+  "title": "【WAM/ページ更新】ここdeサーチ WAM連絡板（施設向け）：本文変更（11/11 07:15）",
+  "link": "https://www.wam.go.jp/content/wamnet/pcpub/top/kdmsys/jigyo/",
+  "category": "ページ更新",
+  "pub_iso": "2026-11-11T07:15:53.070206+09:00"
+ },
+ {
+  "guid": "6b8f8ff5234fb8a2c0dfae6215ff30e4",
+  "title": "【WAM/ページ更新】ここdeサーチ WAM連絡板（自治体向け・要確認）：本文変更（11/11 07:15）",
+  "link": "https://www.wam.go.jp/content/wamnet/pcpub/top/kdmsys/",
+  "category": "ページ更新",
+  "pub_iso": "2026-11-11T07:15:53.070206+09:00"
+ },
+ {
   "guid": "8be1a5c91fbe8e42598aa8a8a993ffc5",
   "title": "【こ家庁/ページ更新】こども誰でも通園制度：資料追加1・本文変更（11/10 17:15）",
   "link": "https://www.cfa.go.jp/policies/hoiku/daredemo-tsuen",
@@ -1034,19 +1048,5 @@
   "link": "https://www.cfa.go.jp/press/2020862d-cd0d-4ae3-9ba9-6d93e3ba2a2f",
   "category": "報道発表",
   "pub_iso": "2026-09-30T09:00:00+09:00"
- },
- {
-  "guid": "4939f2298a3864db28a58d663ac4fbe0",
-  "title": "【デジタル庁】第6回先進的AI利活用アドバイザリーボードの会議資料等を掲載しました",
-  "link": "https://www.digital.go.jp/councils/ai-advisory-board/162953b0-3dc0-46a6-a24c-0e3a335e0495",
-  "category": "デジタル庁",
-  "pub_iso": "2026-09-29T15:00:00+09:00"
- },
- {
-  "guid": "8c143e8ed8a9d6a923bb1ce609367879",
-  "title": "【厚労省】「令和８年版 労働経済の分析」を公表します ～分析テーマは「ＡＩ等技術革新が進む中での労働市場の現状と課題」～",
-  "link": "https://www.mhlw.go.jp/stf/newpage_75700.html",
-  "category": "厚労省",
-  "pub_iso": "2026-09-29T11:45:00+09:00"
  }
 ]
