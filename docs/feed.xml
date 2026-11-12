@@ -5,7 +5,14 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Thu, 12 Nov 2026 18:40:42 +0900</lastBuildDate>
+<lastBuildDate>Fri, 13 Nov 2026 03:08:00 +0900</lastBuildDate>
+<item>
+<title>【首相官邸】高市総理はフィジカルＡＩ関連企業との意見交換会を行いました</title>
+<link>https://www.kantei.go.jp/jp/105/actions/202611/12ikenkoukan.html</link>
+<guid isPermaLink="false">78694e90b00fb9c15806d53438d27409</guid>
+<pubDate>Thu, 12 Nov 2026 20:00:00 +0900</pubDate>
+<category>首相官邸</category>
+</item>
 <item>
 <title>【デジタル庁】一般競争入札：令和8年度AIを活用した情報システム調達の評価に係る調査等業務を掲載しました</title>
 <link>https://www.digital.go.jp/procurement</link>
@@ -1048,13 +1055,6 @@
 <guid isPermaLink="false">bd76832025c3f8c2bf89fa821a02f93e</guid>
 <pubDate>Wed, 30 Sep 2026 15:00:00 +0900</pubDate>
 <category>デジタル庁</category>
-</item>
-<item>
-<title>【こ家庁/会議等】旧優生保護法問題の全面解決に向けた協議（第3回）の会議資料を掲載しました</title>
-<link>https://www.cfa.go.jp/councils/kyuyusei-zemmeikaiketsu/0899e4c0</link>
-<guid isPermaLink="false">9e7c77d0b2d1a7077e72476caa14dd08</guid>
-<pubDate>Wed, 30 Sep 2026 09:00:00 +0900</pubDate>
-<category>会議等</category>
 </item>
 </channel>
 </rss>
