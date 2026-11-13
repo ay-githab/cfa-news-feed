@@ -5,7 +5,35 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Sat, 14 Nov 2026 01:06:57 +0900</lastBuildDate>
+<lastBuildDate>Sat, 14 Nov 2026 07:31:17 +0900</lastBuildDate>
+<item>
+<title>【こ家庁/ページ更新】保育ICTラボ：資料追加1・本文変更（11/14 07:29）</title>
+<link>https://www.cfa.go.jp/policies/hoiku/hoiku-ictlabo</link>
+<guid isPermaLink="false">436567d4eaca297c302c0d15bc51032b</guid>
+<pubDate>Sat, 14 Nov 2026 07:29:12 +0900</pubDate>
+<category>ページ更新</category>
+</item>
+<item>
+<title>【こ家庁/ページ更新】こ家庁 調達ポータル案内（入札公告・意見招請）：本文変更（11/14 07:29）</title>
+<link>https://www.cfa.go.jp/procurement/portal</link>
+<guid isPermaLink="false">e9549242c74a80febcee58bb0f96049b</guid>
+<pubDate>Sat, 14 Nov 2026 07:29:12 +0900</pubDate>
+<category>ページ更新</category>
+</item>
+<item>
+<title>【デジタル庁/ページ更新】デジタル庁 基幹業務システムの統一・標準化（親ページ）：本文変更（11/14 07:29）</title>
+<link>https://www.digital.go.jp/policies/local_governments</link>
+<guid isPermaLink="false">06a2c865672210b65fe2fdb02b1fb44c</guid>
+<pubDate>Sat, 14 Nov 2026 07:29:12 +0900</pubDate>
+<category>ページ更新</category>
+</item>
+<item>
+<title>【こ家庁/ページ更新】こども性暴力防止法（日本版DBS）ガイドライン：資料追加1・本文変更（11/14 07:29）</title>
+<link>https://www.cfa.go.jp/policies/child-safety/efforts/koseibouhou</link>
+<guid isPermaLink="false">9599cbe181d876f7f618f17c5a3385c3</guid>
+<pubDate>Sat, 14 Nov 2026 07:29:12 +0900</pubDate>
+<category>ページ更新</category>
+</item>
 <item>
 <title>【こ家庁/会議等】旧優生保護法補償金等認定審査会（第2回）の会議資料を掲載しました</title>
 <link>https://www.cfa.go.jp/councils/kyuyusei-hoshokin/19f315bc</link>
@@ -1027,34 +1055,6 @@
 <guid isPermaLink="false">ebd4a4baebbee0910c5c486eee4fa84c</guid>
 <pubDate>Fri, 09 Oct 2026 09:00:00 +0900</pubDate>
 <category>会見</category>
-</item>
-<item>
-<title>【デジタル庁】一般競争入札：グローバルサウス諸国におけるガバメントAIの実装及びニーズに係る調査を掲載しました</title>
-<link>https://www.digital.go.jp/procurement</link>
-<guid isPermaLink="false">4c1cc647f88ccfab832f86264e55b681</guid>
-<pubDate>Tue, 06 Oct 2026 15:00:00 +0900</pubDate>
-<category>デジタル庁</category>
-</item>
-<item>
-<title>【こ家庁/会議等】ヒト受精胚を用いる生殖補助医療研究等に関する専門委員会（第16回）の会議情報を掲載しました</title>
-<link>https://www.cfa.go.jp/councils/shingikai/kagaku_gijutsu/art/1fba736a</link>
-<guid isPermaLink="false">a4eba744d133f4ccab2b57436dc2560c</guid>
-<pubDate>Tue, 06 Oct 2026 09:00:00 +0900</pubDate>
-<category>会議等</category>
-</item>
-<item>
-<title>【こ家庁/会見】中司大臣記者会見（令和8年10月6日）を掲載しました</title>
-<link>https://www.cfa.go.jp/speech/15435bb4</link>
-<guid isPermaLink="false">e4e7f311ea04570d97960ed9fa064e09</guid>
-<pubDate>Tue, 06 Oct 2026 09:00:00 +0900</pubDate>
-<category>会見</category>
-</item>
-<item>
-<title>【内閣府】AIの社会実装において、障害となる又は不十分な効果をもたらす規制・制度についての情報提供のお願い</title>
-<link>https://www8.cao.go.jp/kisei-kaikaku/kisei/forms/261002_forms.html</link>
-<guid isPermaLink="false">548dfb76f7e5ba350d00d568f573f4ea</guid>
-<pubDate>Fri, 02 Oct 2026 15:22:00 +0900</pubDate>
-<category>内閣府</category>
 </item>
 </channel>
 </rss>

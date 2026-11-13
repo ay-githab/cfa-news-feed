@@ -1,5 +1,33 @@
 [
  {
+  "guid": "436567d4eaca297c302c0d15bc51032b",
+  "title": "【こ家庁/ページ更新】保育ICTラボ：資料追加1・本文変更（11/14 07:29）",
+  "link": "https://www.cfa.go.jp/policies/hoiku/hoiku-ictlabo",
+  "category": "ページ更新",
+  "pub_iso": "2026-11-14T07:29:12.130600+09:00"
+ },
+ {
+  "guid": "e9549242c74a80febcee58bb0f96049b",
+  "title": "【こ家庁/ページ更新】こ家庁 調達ポータル案内（入札公告・意見招請）：本文変更（11/14 07:29）",
+  "link": "https://www.cfa.go.jp/procurement/portal",
+  "category": "ページ更新",
+  "pub_iso": "2026-11-14T07:29:12.130600+09:00"
+ },
+ {
+  "guid": "06a2c865672210b65fe2fdb02b1fb44c",
+  "title": "【デジタル庁/ページ更新】デジタル庁 基幹業務システムの統一・標準化（親ページ）：本文変更（11/14 07:29）",
+  "link": "https://www.digital.go.jp/policies/local_governments",
+  "category": "ページ更新",
+  "pub_iso": "2026-11-14T07:29:12.130600+09:00"
+ },
+ {
+  "guid": "9599cbe181d876f7f618f17c5a3385c3",
+  "title": "【こ家庁/ページ更新】こども性暴力防止法（日本版DBS）ガイドライン：資料追加1・本文変更（11/14 07:29）",
+  "link": "https://www.cfa.go.jp/policies/child-safety/efforts/koseibouhou",
+  "category": "ページ更新",
+  "pub_iso": "2026-11-14T07:29:12.130600+09:00"
+ },
+ {
   "guid": "311e110e6aa6be35a28335c1907bc861",
   "title": "【こ家庁/会議等】旧優生保護法補償金等認定審査会（第2回）の会議資料を掲載しました",
   "link": "https://www.cfa.go.jp/councils/kyuyusei-hoshokin/19f315bc",
@@ -1020,33 +1048,5 @@
   "link": "https://www.cfa.go.jp/speech/841eb9e1",
   "category": "会見",
   "pub_iso": "2026-10-09T09:00:00+09:00"
- },
- {
-  "guid": "4c1cc647f88ccfab832f86264e55b681",
-  "title": "【デジタル庁】一般競争入札：グローバルサウス諸国におけるガバメントAIの実装及びニーズに係る調査を掲載しました",
-  "link": "https://www.digital.go.jp/procurement",
-  "category": "デジタル庁",
-  "pub_iso": "2026-10-06T15:00:00+09:00"
- },
- {
-  "guid": "a4eba744d133f4ccab2b57436dc2560c",
-  "title": "【こ家庁/会議等】ヒト受精胚を用いる生殖補助医療研究等に関する専門委員会（第16回）の会議情報を掲載しました",
-  "link": "https://www.cfa.go.jp/councils/shingikai/kagaku_gijutsu/art/1fba736a",
-  "category": "会議等",
-  "pub_iso": "2026-10-06T09:00:00+09:00"
- },
- {
-  "guid": "e4e7f311ea04570d97960ed9fa064e09",
-  "title": "【こ家庁/会見】中司大臣記者会見（令和8年10月6日）を掲載しました",
-  "link": "https://www.cfa.go.jp/speech/15435bb4",
-  "category": "会見",
-  "pub_iso": "2026-10-06T09:00:00+09:00"
- },
- {
-  "guid": "548dfb76f7e5ba350d00d568f573f4ea",
-  "title": "【内閣府】AIの社会実装において、障害となる又は不十分な効果をもたらす規制・制度についての情報提供のお願い",
-  "link": "https://www8.cao.go.jp/kisei-kaikaku/kisei/forms/261002_forms.html",
-  "category": "内閣府",
-  "pub_iso": "2026-10-02T15:22:00+09:00"
  }
 ]
