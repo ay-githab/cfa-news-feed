@@ -1,5 +1,19 @@
 [
  {
+  "guid": "311e110e6aa6be35a28335c1907bc861",
+  "title": "【こ家庁/会議等】旧優生保護法補償金等認定審査会（第2回）の会議資料を掲載しました",
+  "link": "https://www.cfa.go.jp/councils/kyuyusei-hoshokin/19f315bc",
+  "category": "会議等",
+  "pub_iso": "2026-11-13T09:00:00+09:00"
+ },
+ {
+  "guid": "ec6e655ae8cf3df7c79175bd46c1eb95",
+  "title": "【こ家庁/会議等】人工妊娠中絶一時金認定審査部会（第21回）の会議資料を掲載しました",
+  "link": "https://www.cfa.go.jp/councils/jinkoninshinchuzetsu-ichijikin/ffc22b77",
+  "category": "会議等",
+  "pub_iso": "2026-11-13T09:00:00+09:00"
+ },
+ {
   "guid": "e7bdbbeb8d97b579516371bc1da002fc",
   "title": "【こ家庁/会見】中司大臣記者会見（令和8年11月13日）を掲載しました",
   "link": "https://www.cfa.go.jp/speech/e0b07d56",
@@ -1034,19 +1048,5 @@
   "link": "https://www8.cao.go.jp/kisei-kaikaku/kisei/forms/261002_forms.html",
   "category": "内閣府",
   "pub_iso": "2026-10-02T15:22:00+09:00"
- },
- {
-  "guid": "c951de7d6becb1985448881d7dbb4a12",
-  "title": "【こ家庁/会見】中司大臣記者会見（令和8年10月2日）を掲載しました",
-  "link": "https://www.cfa.go.jp/speech/9a360866",
-  "category": "会見",
-  "pub_iso": "2026-10-02T09:00:00+09:00"
- },
- {
-  "guid": "9c81802b2e5b35c6cad5ff5505867247",
-  "title": "【デジタル庁】自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）に係る「先行実施事業の実施状況」「自治体・自治体システムベンダー向けの情報」「システム利用規約（医療機関等向け）」を更新しました",
-  "link": "https://www.digital.go.jp/policies/health/public-medical-hub",
-  "category": "デジタル庁",
-  "pub_iso": "2026-10-01T18:12:00+09:00"
  }
 ]
