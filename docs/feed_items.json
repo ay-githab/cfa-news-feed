@@ -1,5 +1,33 @@
 [
  {
+  "guid": "e7bdbbeb8d97b579516371bc1da002fc",
+  "title": "【こ家庁/会見】中司大臣記者会見（令和8年11月13日）を掲載しました",
+  "link": "https://www.cfa.go.jp/speech/e0b07d56",
+  "category": "会見",
+  "pub_iso": "2026-11-13T09:00:00+09:00"
+ },
+ {
+  "guid": "2c966382c70fa46e94038fe25e241710",
+  "title": "【こ家庁/報道発表】第21回補償金・優生手術等一時金認定審査部会の審査結果について掲載しました",
+  "link": "https://www.cfa.go.jp/press/e1dbec42-c2aa-4131-b809-67083e5cc574",
+  "category": "報道発表",
+  "pub_iso": "2026-11-13T09:00:00+09:00"
+ },
+ {
+  "guid": "9e932ea1b890c358288762ed03280b85",
+  "title": "【こ家庁/調達情報】一般競争入札：令和8年度全国ひとり親世帯等調査に係る調査票受付・審査、データ入力・集計業務を掲載しました",
+  "link": "https://www.cfa.go.jp/procurement/portal",
+  "category": "調達情報",
+  "pub_iso": "2026-11-13T09:00:00+09:00"
+ },
+ {
+  "guid": "bf8245907718ce9b5b038c42e09fa295",
+  "title": "【こ家庁/会議等】補償金・優生手術等一時金認定審査部会（第21回）の議事要旨を掲載しました",
+  "link": "https://www.cfa.go.jp/councils/hoshokin-yuseishujutsu/9455a714",
+  "category": "会議等",
+  "pub_iso": "2026-11-13T09:00:00+09:00"
+ },
+ {
   "guid": "78694e90b00fb9c15806d53438d27409",
   "title": "【首相官邸】高市総理はフィジカルＡＩ関連企業との意見交換会を行いました",
   "link": "https://www.kantei.go.jp/jp/105/actions/202611/12ikenkoukan.html",
@@ -1020,33 +1048,5 @@
   "link": "https://www.digital.go.jp/policies/health/public-medical-hub",
   "category": "デジタル庁",
   "pub_iso": "2026-10-01T18:12:00+09:00"
- },
- {
-  "guid": "9d9f5e400b26e2e80c00ae5ee4ae3b4a",
-  "title": "【内閣府】第11回人工知能（AI）技術の利用と消費者問題に関する専門調査会【10月８日開催】",
-  "link": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/011/kaisai/index.html",
-  "category": "内閣府",
-  "pub_iso": "2026-10-01T15:56:00+09:00"
- },
- {
-  "guid": "37cf6f06c9ed2046fd16154010a5bab7",
-  "title": "【デジタル庁】熊本地震の被災自治体等へ、ガバメントAI 源内を緊急提供します（終了）",
-  "link": "https://www.digital.go.jp/news/cb912b3b-49c9-4a02-aa46-4056b96c1d4f",
-  "category": "デジタル庁",
-  "pub_iso": "2026-09-30T18:18:00+09:00"
- },
- {
-  "guid": "93048d8a29dd9127f163b93346400bd5",
-  "title": "【デジタル庁】地方公共団体におけるアナログ規制の見直しの取組紹介「和歌山県における衛星データとAIの活用事例」を掲載しました",
-  "link": "https://www.digital.go.jp/policies/digital-extraordinary-administrative-research-committee/local-government",
-  "category": "デジタル庁",
-  "pub_iso": "2026-09-30T15:00:00+09:00"
- },
- {
-  "guid": "bd76832025c3f8c2bf89fa821a02f93e",
-  "title": "【デジタル庁】自治体が実施する健康・医療・介護分野の事業のデジタル化（PMH）ー医療費助成に関するダッシュボードを公開しました",
-  "link": "https://www.digital.go.jp/resources/govdashboard/pmh-medical-expense-subsidies",
-  "category": "デジタル庁",
-  "pub_iso": "2026-09-30T15:00:00+09:00"
  }
 ]
