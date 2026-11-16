@@ -1,5 +1,12 @@
 [
  {
+  "guid": "1873282b5868f708527ef2804953b9ee",
+  "title": "【こ家庁/政策】令和8年度「はたらく母子家庭・父子家庭応援企業表彰」について掲載しました",
+  "link": "https://www.cfa.go.jp/policies/hitori-oya/kigyohyosho-r08",
+  "category": "政策",
+  "pub_iso": "2026-11-16T09:00:00+09:00"
+ },
+ {
   "guid": "436567d4eaca297c302c0d15bc51032b",
   "title": "【こ家庁/ページ更新】保育ICTラボ：資料追加1・本文変更（11/14 07:29）",
   "link": "https://www.cfa.go.jp/policies/hoiku/hoiku-ictlabo",
@@ -1041,12 +1048,5 @@
   "link": "https://www.digital.go.jp/policies/genai",
   "category": "デジタル庁",
   "pub_iso": "2026-10-09T15:00:00+09:00"
- },
- {
-  "guid": "ebd4a4baebbee0910c5c486eee4fa84c",
-  "title": "【こ家庁/会見】中司大臣記者会見（令和8年10月9日）を掲載しました",
-  "link": "https://www.cfa.go.jp/speech/841eb9e1",
-  "category": "会見",
-  "pub_iso": "2026-10-09T09:00:00+09:00"
  }
 ]
