@@ -1,5 +1,12 @@
 [
  {
+  "guid": "e9e8e03fdb11bb9c17cb406be19da151",
+  "title": "【こ家庁/会見】中司大臣記者会見（令和8年11月17日）を掲載しました",
+  "link": "https://www.cfa.go.jp/speech/b4691323",
+  "category": "会見",
+  "pub_iso": "2026-11-17T09:00:00+09:00"
+ },
+ {
   "guid": "c42243cbf319a1ff878000bce206e7cc",
   "title": "【こ家庁/報道発表】第21回 人工妊娠中絶一時金認定審査部会の審査結果について掲載しました",
   "link": "https://www.cfa.go.jp/press/22a2b9f0-7d28-4afc-a398-fa5b3498dcfb",
@@ -1041,12 +1048,5 @@
   "link": "https://www.digital.go.jp/procurement",
   "category": "デジタル庁",
   "pub_iso": "2026-10-14T15:00:00+09:00"
- },
- {
-  "guid": "cfc7936b20aecda796b271615ed0b44c",
-  "title": "【こ家庁/調達情報】一般競争入札：保育業務施設管理プラットフォームの軽微改修業務等（令和8年度）一式を掲載しました",
-  "link": "https://www.cfa.go.jp/procurement/service",
-  "category": "調達情報",
-  "pub_iso": "2026-10-13T09:00:00+09:00"
  }
 ]
