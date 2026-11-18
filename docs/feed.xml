@@ -5,7 +5,21 @@
 <link>https://www.cfa.go.jp/news</link>
 <description>こども家庭庁の新着全量と、4省庁RSSのこども政策関連記事をまとめた非公式フィードです(社内情報収集用)</description>
 <language>ja</language>
-<lastBuildDate>Wed, 18 Nov 2026 06:43:06 +0900</lastBuildDate>
+<lastBuildDate>Wed, 18 Nov 2026 12:36:09 +0900</lastBuildDate>
+<item>
+<title>【こ家庁/政策】社会総がかりで取り組むいじめ・不登校対策に向けた全国フォーラムの開催について掲載しました</title>
+<link>https://www.cfa.go.jp/policies/ijime-boushi/r08-ijime-futokoforum</link>
+<guid isPermaLink="false">fb10c27b2d28839f0c086cd8b285bca8</guid>
+<pubDate>Wed, 18 Nov 2026 09:00:00 +0900</pubDate>
+<category>政策</category>
+</item>
+<item>
+<title>【こ家庁/調達情報】意見招請：子ども・子育て支援勘定業務関連システム ガバメントクラウド上での再構築に係るテスト・切替 業務を掲載しました</title>
+<link>https://www.cfa.go.jp/procurement</link>
+<guid isPermaLink="false">7a04fef47ff02b93ba18bd5db88d3690</guid>
+<pubDate>Wed, 18 Nov 2026 09:00:00 +0900</pubDate>
+<category>調達情報</category>
+</item>
 <item>
 <title>【こ家庁/会見】中司大臣記者会見（令和8年11月17日）を掲載しました</title>
 <link>https://www.cfa.go.jp/speech/b4691323</link>
@@ -1041,20 +1055,6 @@
 <guid isPermaLink="false">dda7aebd3ba5f9c1795d7ff2f61d4113</guid>
 <pubDate>Thu, 15 Oct 2026 09:00:00 +0900</pubDate>
 <category>報道発表</category>
-</item>
-<item>
-<title>【デジタル庁】自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）に係る「医療費助成オンライン資格確認の導入済み医療機関・薬局リスト」「システム利用規約（医療機関等向け）」を更新しました</title>
-<link>https://www.digital.go.jp/policies/health/public-medical-hub</link>
-<guid isPermaLink="false">110cf3d861f6b6039591c010db08fd78</guid>
-<pubDate>Wed, 14 Oct 2026 15:00:00 +0900</pubDate>
-<category>デジタル庁</category>
-</item>
-<item>
-<title>【デジタル庁】企画競争：令和8年度 政府情報システムの設計開発及び運用保守における内部開発に対するAI有用性の調査研究事業（再度公告）を掲載しました</title>
-<link>https://www.digital.go.jp/procurement</link>
-<guid isPermaLink="false">c6304990926b21840778bfbdd3e6e005</guid>
-<pubDate>Wed, 14 Oct 2026 15:00:00 +0900</pubDate>
-<category>デジタル庁</category>
 </item>
 </channel>
 </rss>
