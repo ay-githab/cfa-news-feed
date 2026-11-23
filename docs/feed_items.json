@@ -1,5 +1,19 @@
 [
  {
+  "guid": "528ecff3aa8ca189d85cc50e4b3116c5",
+  "title": "【こ家庁/ページ更新】保活情報連携基盤：資料追加14・本文変更（11/23 17:52）",
+  "link": "https://www.cfa.go.jp/policies/hoiku/hokatsujoho-jichitaimuke",
+  "category": "ページ更新",
+  "pub_iso": "2026-11-23T17:52:24.368496+09:00"
+ },
+ {
+  "guid": "5a99416c3e61f3c5b3af37277ab68875",
+  "title": "【こ家庁/ページ更新】こども性暴力防止法（日本版DBS）ガイドライン：本文変更（11/23 17:52）",
+  "link": "https://www.cfa.go.jp/policies/child-safety/efforts/koseibouhou",
+  "category": "ページ更新",
+  "pub_iso": "2026-11-23T17:52:24.368496+09:00"
+ },
+ {
   "guid": "1899b1a02cdf4cc1a2a6d556242574d9",
   "title": "【デジタル庁】自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）に係る自治体・自治体システムベンダー向けの情報の「PIAひな形」を更新しました",
   "link": "https://www.digital.go.jp/policies/health/public-medical-hub",
@@ -1033,20 +1047,6 @@
   "title": "【こ家庁/会見】中司大臣記者会見（令和8年10月20日）を掲載しました",
   "link": "https://www.cfa.go.jp/speech/390f47b2",
   "category": "会見",
-  "pub_iso": "2026-10-20T09:00:00+09:00"
- },
- {
-  "guid": "5a84263a4a3854a74ad0c96693e1f286",
-  "title": "【こ家庁/報道発表】第7回特別養子縁組に関する支援の在り方に関する専門委員会の開催について掲載しました",
-  "link": "https://www.cfa.go.jp/press/0d4a17b6-ace6-46b2-9828-d758b0b2db3b",
-  "category": "報道発表",
-  "pub_iso": "2026-10-20T09:00:00+09:00"
- },
- {
-  "guid": "16fdda664fd2e2af29ef564bd9921898",
-  "title": "【こ家庁/報道発表】みて かんじて つながる劇体験 ～優良児童劇等公演事業～令和8年11月28日（土）和歌山県新宮市にて開催",
-  "link": "https://www.cfa.go.jp/press/9e7f7908-8f5a-4730-befe-d61c6d61c3ec",
-  "category": "報道発表",
   "pub_iso": "2026-10-20T09:00:00+09:00"
  }
 ]
